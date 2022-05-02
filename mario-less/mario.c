@@ -14,7 +14,7 @@ do
 
     n = get_int("Height: ");
 
-}while (n > 8 || n < 0);
+}while (n > 8 || n <= 0);
 
 else
     for (i = n; i < n; i++);
