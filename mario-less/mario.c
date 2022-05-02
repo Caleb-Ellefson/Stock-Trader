@@ -21,4 +21,5 @@ if (n <= 0)
 printf("Invaild Height choose a number 1-8.\n");
 
 }
+else (    int n = get_int("Height: ");)
 }
