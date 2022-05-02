@@ -9,7 +9,7 @@ int main(void) {
 do
 {
 
-    int n = get_int("Height: ");
+    return
 
 }while int n == (n > 8, n <= 0);
 
