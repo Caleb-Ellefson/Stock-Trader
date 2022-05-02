@@ -62,7 +62,7 @@ int calculate_quarters(int cents)
         (quarters = 0; cents > 25, cents - 25; quarters++ )
     }
 
-    while (cents > 25);
+    while (cents >= 25);
     // TODO
     return quarters * 25;
 }
