@@ -2,11 +2,13 @@
 #include <stdio.h>
 
 int main(void) {
+int n;
+int i;
+
 {
     int n = get_int("Height: ");
 }
 
-int n;
 do
 {
 
@@ -15,7 +17,7 @@ do
 }while (n > 8 || n < 0);
 
 else
-    for (int i == n; i < n; i++);
+    for (i = n; i < n; i++);
     {
         printf("#\n");
     }
