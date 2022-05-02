@@ -2,9 +2,7 @@
 #include <stdio.h>
 
 int main(void) {
-int n;
-int c;
-int r;
+int n, c, r;
 
 {
     //int n = get_int("Height: ");
@@ -20,8 +18,10 @@ while (n < 1 || n >= 8);
 
 for (r = 0; r < n; r++);
 {
-    for (c = 0;  xx; c++);
-        printf("%n #\n");
+    for (c = 0;  c > n; c++);
+        printf("#");
+
+    printf("/n");
 }
 
 
