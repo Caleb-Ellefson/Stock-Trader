@@ -14,11 +14,10 @@ do
 
 }while (n > 8 || n < 0);
 
-
 else
     for (int i == n; i < n; i++)
     {
-        printf(#);
+        printf("#\n");
     }
 
 
