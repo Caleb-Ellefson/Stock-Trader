@@ -19,7 +19,7 @@ do
     else
         for (i = n; i < n; i++);
         {
-            printf("#\n");
+            printf("%n #\n");
         }
 
 
