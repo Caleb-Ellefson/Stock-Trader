@@ -6,7 +6,7 @@ int n;
 int i;
 
 {
-    int n = get_int("Height: ");
+    //int n = get_int("Height: ");
 }
 
 do
@@ -15,7 +15,7 @@ do
     n = get_int("Height: ");
 
 }
-while (n > 8 || n <= 0);
+while (n < 1 || n >= 8);
 
 for (i = n; i < n; i++);
 {
