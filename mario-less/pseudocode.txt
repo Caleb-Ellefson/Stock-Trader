@@ -1,0 +1,4 @@
+promt user for height < 8
+
+if the user input is < 0 repromt
+
