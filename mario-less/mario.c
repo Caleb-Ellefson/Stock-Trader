@@ -9,9 +9,9 @@ int main(void) {
 do
 {
 
-    get_int(Height: ");
+    get_int("Height: ");
 
-}while int n == (n > 8, n <= 0);
+}while (n > 8) || (n <= 0);
 
 
 
