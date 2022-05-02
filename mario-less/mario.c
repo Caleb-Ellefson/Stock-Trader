@@ -17,13 +17,13 @@ do
 while (n < 1 || n >= 8);
 
 for (r = 0; r < n; r++)
+{
+    for (c = 0; c > n; c++)
     {
-    for (c = 0;  c > n; c++)
-
         printf("#");
-
-    printf("\n");
     }
+    printf("\n");
+}
 
 }
 
@@ -31,4 +31,3 @@ for (r = 0; r < n; r++)
 
 
 
-}
