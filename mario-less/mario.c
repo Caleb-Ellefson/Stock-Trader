@@ -15,7 +15,7 @@ do
 }while (n > 8 || n < 0);
 
 else
-    for (int n == i; i < n; i++)
+    for (int i == n; i < n; i++);
     {
         printf("#\n");
     }
