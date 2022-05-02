@@ -5,20 +5,17 @@ int main(void)
 
 {
 
-
-
-{
     int n = get_int("Height: ");
 
-}
 
-int n;
+
+
 do
 {
-    n = get_int("Height: ");
-}
 
-while int n == (n > 8, n <= 0);
+    n = get_int("Height: ");
+
+}while int n == (n > 8, n <= 0);
 
 
 
