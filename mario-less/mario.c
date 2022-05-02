@@ -3,7 +3,14 @@
 
 int main(void)
 
+{
 
+
+
+{
+    int n = get_int("Height: ");
+
+}
 
 int n;
 do
@@ -11,4 +18,8 @@ do
     n = get_int("Height: ");
 }
 
-while int n == (n > 8, n <= 0)
+while int n == (n > 8, n <= 0);
+
+
+
+}
