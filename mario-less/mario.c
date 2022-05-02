@@ -7,18 +7,8 @@ int main(void)
 {
     int n = get_int("Height: ");
 
-
-
-if (n > 8)
-{
-printf("Invaild Height choose a number 1-8.\n");
-
-}
-
-if (n <= 0)
-{
-
-printf("Invaild Height choose a number 1-8.\n");
-
-}
-}
+while int n == (n > 8, n <= 0)
+    {
+        printf("Invaild Height choose a number 1-8.\n");
+        int n = get_int("Height: ");
+    }
