@@ -4,11 +4,11 @@
 int main(void)
 
 
+
+int n;
+do
 {
-    int n = get_int("Height: ");
+    n = get_int("Height: ");
+}
 
 while int n == (n > 8, n <= 0)
-    {
-        printf("Invaild Height choose a number 1-8.\n");
-        int n = get_int("Height: ");
-    }
