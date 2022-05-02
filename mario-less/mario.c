@@ -6,6 +6,7 @@ int main(void) {
     int n = get_int("Height: ");
 }
 
+int n;
 do
 {
 
