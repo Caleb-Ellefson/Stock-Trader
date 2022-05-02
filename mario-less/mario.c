@@ -16,11 +16,11 @@ do
 
 }while (n > 8 || n <= 0);
 
-else
-    for (i = n; i < n; i++);
-    {
-        printf("#\n");
-    }
+    else
+        for (i = n; i < n; i++);
+        {
+            printf("#\n");
+        }
 
 
 
