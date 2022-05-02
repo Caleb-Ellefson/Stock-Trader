@@ -1,8 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main(void) {
-int n, c, r,s;
+int main(void){
+    int n, c, r, s;
 
 {
     //int n = get_int("Height: ");
