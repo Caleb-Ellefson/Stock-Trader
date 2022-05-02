@@ -10,9 +10,9 @@ int n;
 do
 {
 
-    get_int("Height: ");
+    n = get_int("Height: ");
 
-}while (n > 8);
+}while (n > 8 || n < 0);
 
 
 
