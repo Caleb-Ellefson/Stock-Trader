@@ -11,7 +11,7 @@ int main(void)
 {
     // Ask how many cents the customer is owed
 
-    
+
 
     // Calculate the number of quarters to give the customer
     int quarters = calculate_quarters(cents);
@@ -50,11 +50,12 @@ int get_cents(void)
 
 int calculate_quarters(int cents)
 {
+
     int quarters = 0
     while (cents >= 25);
     {
        cents = cents - 25;
-       quarters++
+       quarters++;
     }
     return quarters * 25;
 }
