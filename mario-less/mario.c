@@ -9,7 +9,7 @@ int main(void) {
 do
 {
 
-    return
+    get_int(Height: ");
 
 }while int n == (n > 8, n <= 0);
 
