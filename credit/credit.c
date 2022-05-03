@@ -24,7 +24,6 @@ int main(void)
                 {
                     total_sum += temp;
                 }
-
             }
             else
             {
