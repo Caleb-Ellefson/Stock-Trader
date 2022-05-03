@@ -9,7 +9,7 @@ int main(void)
     do
     {
         card_number = get_long("Enter your card number here  ");
-        card_number = card_copy;
+        card_copy = card_number;
 
         while (card_number != 0) {
             if (pos % 2 != 0) {
