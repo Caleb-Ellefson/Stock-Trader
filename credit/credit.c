@@ -40,7 +40,7 @@ int main(void)
     if((amex_start == 34 || amex_start == 37) && total_length == 15){
         printf("AMEX/n");
     }
-
+    long visa_start = card_copy / 10000000000000;
 // Visa 13 or 16 digits starts with the number 4
     }
 
