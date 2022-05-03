@@ -11,8 +11,10 @@ int main(void)
     }
     while (long == False )
 
-
-
+    if
+    {
+        long == 13
+    }
 // checksum multiply every other digit by 2 starting with the second to last digit
 
 // then add the products of the digits togther
