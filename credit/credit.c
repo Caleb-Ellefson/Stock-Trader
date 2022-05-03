@@ -7,7 +7,7 @@ int main(void)
         long 13,15,16 = get_long("Enter your card number here  ")
             else
                 printf("INVALID")
-    while ()
+    while (long == )
 // American Express 15 digits begins with 34 and 37
 
 // MasterCard 16 digits starts with 51,52,53,54 or 55
