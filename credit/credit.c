@@ -3,6 +3,7 @@
 
 int main(void)
 {
+    int total_sum = 0, pos = 0;
     long card_number;
     do
         {
