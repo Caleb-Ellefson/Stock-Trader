@@ -43,7 +43,7 @@ int main(void)
             return 0;
         }
         long visa_start = card_copy / 10000000000000;
-        if ((total_length == 13 || total_length == 16) && (visa_start == 4 || master_start % 10 == 4)){
+        if ((total_length == 13 || total_length == 16) && (visa_start == 4 || master_start / 10 == 4)){
             printf("VISA\n");
             return 0;
         }
