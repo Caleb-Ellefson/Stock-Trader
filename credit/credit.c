@@ -5,7 +5,7 @@ int main(void)
 {
     long card_number;
     do
-        card_number = 13,15,16 = get_long("Enter your card number here  ");
+        card_number = (13,15,16) == get_long("Enter your card number here  ");
     else
             {
             printf("INVALID");
