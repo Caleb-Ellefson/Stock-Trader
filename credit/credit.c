@@ -12,6 +12,7 @@ int main(void)
     while (card_number != 0)
 
         if (pos % 2 != 0) // every other diget
+            total_sum += 2 * (card_number % 10);
             else
             {
 
