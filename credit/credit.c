@@ -7,10 +7,9 @@ int main(void)
     do
         {
         card_number = get_long("Enter your card number here  ");
-        card_number != (13 || 15 || 16);
-        printf("INVAILD")
+        printf("INVAILD");
         }
-    while (card_number != (13 || 15 || 16))
+    while (card_number != (len == 13 || len == 15 || len == 16))
 
 
 // checksum multiply every other digit by 2 starting with the second to last digit
