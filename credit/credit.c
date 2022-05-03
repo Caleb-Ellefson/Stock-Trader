@@ -32,7 +32,7 @@ int main(void)
     if(total_sum % 10 ==0) {
     // MasterCard 16 digits starts with 51,52,53,54 or 55
         long master_start = card_copy / 10000000000000;
-        if ((total_length == 16) && (master_start >= 51 || master_start <= 55)){
+        if ((total_length == 16) && (master_start >= 51 && master_start <= 55)){
                         printf("MASTERCARD\n");
                         return 0;
         }
