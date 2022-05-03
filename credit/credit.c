@@ -5,9 +5,11 @@ int main(void)
 {
     int total_sum = 0, pos = 0, total_length = 0;
     long card_number;
+    long card_copy;
     do
     {
         card_number = get_long("Enter your card number here  ");
+        card_number = card_copy;
 
         while (card_number != 0) {
             if (pos % 2 != 0) {
@@ -28,10 +30,9 @@ int main(void)
     while(card_number != 0);
 
     if(total_sum % 10 ==0) {
-
-        // American Express 15 digits begins with 34 and 37
-
 // MasterCard 16 digits starts with 51,52,53,54 or 55
+    long master_start = card_copy / 10000000000000
+// American Express 15 digits begins with 34 and 37
 
 // Visa 13 or 16 digits starts with the number 4
     }
