@@ -10,19 +10,7 @@ int main(void)
         }
     while (card_number < 0);
 
-    if (card_validity(credit_number))
-        print_brand(credit_number);
-    else
-        {
-            printf("INVAILD");
-        }
-{
-bool check_vaildity(long credit_number)
-}
-    int len = find_length(credit_number)
 
-    if (len == 16 || len == 15 || len == 13)
-        checksum(credit_number)
 // checksum multiply every other digit by 2 starting with the second to last digit
 
 // then add the products of the digits togther
