@@ -36,7 +36,8 @@ int main(void)
         printf("MASTERCARD/n");
     }
 // American Express 15 digits begins with 34 and 37
-
+    long amex_start = card_copy / 1000000000000;
+    if((amex_start == 34 || amex_start == 37) && total_length == 15)
 // Visa 13 or 16 digits starts with the number 4
     }
 
