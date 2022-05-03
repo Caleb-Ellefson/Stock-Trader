@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int total_sum = 0, pos = 0;
+    int total_sum = 0, pos = 0, total_length = 0;
     long card_number;
     do
         {
@@ -22,6 +22,7 @@ int main(void)
             }
             card_number = card_number / 10;
             pos++;
+            total_length++;
         }
         }
     while(card_number != 0);
