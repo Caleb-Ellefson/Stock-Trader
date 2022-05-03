@@ -3,14 +3,17 @@
 
 int main(void)
 {
-    long 13,15,16 = get_long("Enter your card number here  ");
+    long card_number;
+    do
+        card_number = 13,15,16 = get_long("Enter your card number here  ");\
+    while (card_number < 0);
         else
             {
             printf("INVALID");
             }
     if (long == 16)
     {
-        
+
     }
 // checksum multiply every other digit by 2 starting with the second to last digit
 
