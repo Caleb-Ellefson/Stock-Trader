@@ -11,8 +11,12 @@ int main(void)
         }
     while (card_number != 0)
 
-        if (pos % 2 != 0)
+        if (pos % 2 != 0) // every other diget
+            else
+            {
 
+            }
+            pos++;
 // checksum multiply every other digit by 2 starting with the second to last digit
 
     // 1234
