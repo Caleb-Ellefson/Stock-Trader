@@ -11,7 +11,10 @@ int main(void)
         }
     while (card_number != 0)
 
-
+    if card_number == 13, 15, 16;
+        {
+        check_sum (card_number)
+        }
 
 // checksum multiply every other digit by 2 starting with the second to last digit
 
