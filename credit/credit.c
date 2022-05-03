@@ -27,7 +27,14 @@ int main(void)
     }
     while(card_number != 0);
 
-    if(total_sum % 10 ==0)
+    if(total_sum % 10 ==0) {
+
+        // American Express 15 digits begins with 34 and 37
+
+// MasterCard 16 digits starts with 51,52,53,54 or 55
+
+// Visa 13 or 16 digits starts with the number 4
+    }
 
         } else {
             printf("INVAILD")
