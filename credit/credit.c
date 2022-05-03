@@ -21,7 +21,7 @@ int main(void)
                     total_sum += card_number % 10;
                 }
             } else {
-            card_number = card_number % 10;
+                card_number = card_number % 10;
             }
             card_number = card_number / 10;
             pos++;
