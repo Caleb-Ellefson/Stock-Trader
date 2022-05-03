@@ -18,9 +18,10 @@ int main(void)
                 total_sum += (temp % 10 + temp / 10);
             }
             total_sum += 2 * (card_number % 10);
-                else{
+                }else{
                     total_sum += card_number % 10;
             }
+            else {
             card_number = card_number / 10;
             pos++;
             total_length++;
