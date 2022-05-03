@@ -9,15 +9,16 @@ int main(void)
         {
         card_number = get_long("Enter your card number here  ");
 
-    while (card_number != 0)
+    while (card_number != 0) {
 
-        if (pos % 2 != 0) // every other diget
+        if (pos % 2 != 0) {// every other diget
             total_sum += 2 * (card_number % 10);
-            } else
-            {
-            total_sum += card_number % 10;
+            } else{
+                total_sum += card_number % 10;
             }
+            card_number = card_number / 10;
             pos++;
+        }
 // checksum multiply every other digit by 2 starting with the second to last digit
 
     // 1234
