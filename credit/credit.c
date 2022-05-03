@@ -33,6 +33,7 @@ int main(void)
         }
 
 
+
 // checksum multiply every other digit by 2 starting with the second to last digit
 
     // 1234
