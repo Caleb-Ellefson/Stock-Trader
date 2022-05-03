@@ -7,12 +7,19 @@ int main(void)
     do
         {
         card_number = get_long("Enter your card number here  ");
-        printf("INVAILD");
         }
-    while (card_number != (len == 13 || len == 15 || len == 16))
+    while (card_number != 0)
+
 
 
 // checksum multiply every other digit by 2 starting with the second to last digit
+
+    // 1234
+    //sum of 1 + 3
+    //1234 % 10 => 4, pos = 0
+    //123 % 10 => 3, pos = 1 => odd
+    //12 % 10 => 2, pos = 2 => even
+    //1 % 10 => 1, pos = 3 => odd
 
 // then add the products of the digits togther
 
