@@ -7,6 +7,8 @@ int main(void)
     do
         {
         card_number = get_long("Enter your card number here  ");
+        len (card_number) == (13 || 15 || 16);
+        printf(")
         }
     while (card_number < 0);
 
