@@ -31,7 +31,10 @@ int main(void)
 
     if(total_sum % 10 ==0) {
 // MasterCard 16 digits starts with 51,52,53,54 or 55
-    long master_start = card_copy / 10000000000000
+    long master_start = card_copy / 10000000000000;
+    if((master_start >= 51 || master_start <= 55) && total_length == 16){
+        printf("MASTERCARD/n");
+    }
 // American Express 15 digits begins with 34 and 37
 
 // Visa 13 or 16 digits starts with the number 4
