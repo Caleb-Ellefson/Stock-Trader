@@ -5,12 +5,12 @@ int main(void)
 {
     long card_number;
     do
-        card_number = 13,15,16 = get_long("Enter your card number here  ");\
-    while (card_number < 0);
-        else
+        card_number = 13,15,16 = get_long("Enter your card number here  ");
+    else
             {
             printf("INVALID");
             }
+    while (card_number < 0);
     if (long == 16)
     {
 
