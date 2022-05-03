@@ -23,6 +23,16 @@ int main(void)
             card_number = card_number / 10;
             pos++;
         }
+        }
+    while(card_number != 0);
+
+    if(total_sum % 10 ==0)
+
+        } else {
+            printf("INVAILD")
+        }
+
+
 // checksum multiply every other digit by 2 starting with the second to last digit
 
     // 1234
