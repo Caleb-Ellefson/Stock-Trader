@@ -5,16 +5,11 @@ int main(void)
 {
     long card_number;
     do
-        card_number = (13,15,16) == get_long("Enter your card number here  ");
-    else
-            {
-            printf("INVALID");
-            }
+        {
+        card_number = get_long("Enter your card number here  ");
+        }
     while (card_number < 0);
-    if (long == 16)
-    {
 
-    }
 // checksum multiply every other digit by 2 starting with the second to last digit
 
 // then add the products of the digits togther
