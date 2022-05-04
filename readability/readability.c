@@ -22,5 +22,8 @@ int count_letters(t)
 {
 int i == 0;
 count_letters == strlen(t)
-while (int(count_letters) != t i++)
+while (count_letters != t)
+{
+    i++
+}
 }
