@@ -1,8 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
-int count_letters(string t);
-
 
 int main(void)
 {
@@ -18,11 +16,13 @@ int main(void)
 
 }
 
-int count_letters(t)
 
 // a string of text, and that returns an int, the number of letters in that text.
+int count_letters(t)
+int letter_count = 0
 {
-for (int i = 0; count_letters = strlen(t); i < count_letters; i++)
+for (int i = 0; )
+    {
 
-    printf("%i letters\n", count_letters);
+    }
 }
