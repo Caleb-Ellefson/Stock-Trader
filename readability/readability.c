@@ -19,5 +19,5 @@ int count_letters(t)
 {
 for (int i = 0, count_letters = strlen(t); i < count_letters, i++)
 
-    printf()
+    printf("%i letters\n", count_letters);
 }
