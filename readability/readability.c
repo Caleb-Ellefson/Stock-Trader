@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
-
+#include <ctype.h>
 int main(void)
 {
 //Your program must prompt the user for a string of text using get_string.
@@ -17,13 +17,42 @@ int main(void)
 }
 
 
-// a string of text, and that returns an int, the number of letters in that text.
-int count_letters(t)
+
+
+
+
+
+int count_letters(string text)
 {
-int letter_count = 0
-int i = 0
-for (int i = 0; i < strlen(t); i++)
+    // Initial number of letters is zero
+    int letterCount = 0;
+
+    // For statement that loops through the text to count the number of letters
+    for (int i = 0; i < strlen(text); i++)
     {
+        // Increases the letterCount variable if i is an alphabet
+        if (isalpha(text[i]) != 0)
+        {
+            letterCount++;
+        }
+    }
+    return letterCount;
+}
+
+
+
+
+
+// a string of text, and that returns an int, the number of letters in that text.
+int count_letters(string t)
+{
+    int letter_count = 0
+
+    for (int i = 0; i < strlen(t); i++)
+    {
+        if (isalpha(t[i]) != 0)
+        {
         letter_count++;
+        }
     }
 }
