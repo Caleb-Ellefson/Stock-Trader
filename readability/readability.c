@@ -21,7 +21,7 @@ int i = 0;
 
 while (t[i] != '\0')
 {
-    i++
+    i++;
 }
     printf("%i\n", i);
 }
