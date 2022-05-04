@@ -19,10 +19,11 @@ int main(void)
 
 // a string of text, and that returns an int, the number of letters in that text.
 int count_letters(t)
-int letter_count = 0
 {
-for (int i = 0; )
+int letter_count = 0
+int i = 0
+for (int i = 0; i < strlen(t); i++)
     {
-
+        letter_count++;
     }
 }
