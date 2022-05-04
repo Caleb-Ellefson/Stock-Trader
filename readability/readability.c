@@ -5,7 +5,7 @@
 #include <math.h>
 
 int count_letters(string t);
-int count_sentences(string t)
+int count_sentences(string t);
 
 int main(void)
 {
@@ -42,5 +42,11 @@ int count_sentences(string t)
     int sentence_count = 0;
 
     for (int i = 0; i <strlen(t); i++)
-        if(isalpha(t) 
+    {
+        if (t[i] == ! || t[i] == . || t[i] == ?)
+            {
+                sentence_count++;
+            }
+    }
+    return setence_count;
 }
