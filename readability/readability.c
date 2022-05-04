@@ -2,6 +2,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <math.h>
+
+int count_letters(string t);
+
 int main(void)
 {
 //Your program must prompt the user for a string of text using get_string.
@@ -52,7 +56,7 @@ int count_letters(string t)
     {
         if (isalpha(t[i]) != 0)
         {
-        letter_count++;
+            letter_count++;
         }
     }
 }
