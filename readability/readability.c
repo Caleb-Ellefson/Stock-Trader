@@ -3,11 +3,14 @@
 #include <string.h>
 int main(void)
 {
+    string t;
 //Your program must prompt the user for a string of text using get_string.
     do
-
-         t = get_string ("Text: ");
-
+    {
+        t = get_string ("Text: ");
+        printf("%s\n", t);
+    }
+    while (t > 0);
 //our program should count the number of letters, words, and sentences in the text.
 // any sequence of characters separated by spaces should count as a word and that any occurrence of a period, exclamation point, or question mark indicates the end of a sentence.
 //Your program should print as output "Grade X" where X is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.
