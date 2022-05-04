@@ -21,6 +21,6 @@ int count_letters(t)
 // a string of text, and that returns an int, the number of letters in that text.
 {
 int i == 0;
-count_letters == 
+count_letters == strlen(t)
 while (int(count_letters) != t i++)
 }
