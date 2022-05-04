@@ -19,7 +19,7 @@ int count_letters(t)
 
 // a string of text, and that returns an int, the number of letters in that text.
 {
-for (int i = 0, count_letters = strlen(t); i < count_letters, i++)
+for (int i = 0, count_letters = strlen(t); i < count_letters; i++)
 
     printf("%i letters\n", count_letters);
 }
