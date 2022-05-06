@@ -48,5 +48,7 @@ int count_sentences(string t)
                 sentence_count++;
             }
     }
+    {
     return sentence_count;
+    }
 }
