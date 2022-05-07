@@ -32,7 +32,9 @@ int count_letters(string t)
         {
             letter_count++;
         }
+    {
     return letter_count;
+    }
     }
 }
 
