@@ -17,7 +17,10 @@ int main(void)
     // Score both words
     int score1 = compute_score(word1);
     {
-        word[1]
+
+
+        
+        char word1[]
     }
     int score2 = compute_score(word2);
 
