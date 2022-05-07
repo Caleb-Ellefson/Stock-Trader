@@ -21,7 +21,7 @@ int main(void)
         char word1[]
         int POINTS[]
 
-        while POINTS[]
+        while POINTS[] < word1[]
     }
     int score2 = compute_score(word2);
 
