@@ -29,7 +29,7 @@ int compute_score(string word)
 int score = 0;
 for(int i = 0, len = strlen(word1); i < len; i++)
 
-    if (iupper(word[i]))
+    if ((iupper[word[i])) - A)
 
 
 
