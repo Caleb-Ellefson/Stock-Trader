@@ -31,6 +31,7 @@ for(int i = 0, len = strlen(word); i < len; i++)
     {
     if (iupper(word[i]))
     }
+        //Going through the array of points [i] taking the ASKII vaule of each char of "word" - 65 to match ASKII key then number of times adding the sum to "score" each time.
         score += POINTS[word[i] - 'A'];
 
     else if (ilower(word[i]))
