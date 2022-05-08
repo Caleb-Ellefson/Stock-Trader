@@ -29,7 +29,7 @@ int main(void)
         {
             count_letters++;
         }
-    return count_letters
+        return count_letters
     }
 
     int count_sentences(string t)
@@ -40,6 +40,6 @@ int main(void)
             {
                 count_sentences++;
             }
-    return count_sentences;
+        return count_sentences;
 
     }
