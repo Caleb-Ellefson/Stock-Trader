@@ -27,9 +27,9 @@ int main(void)
         printf("Before Grade 1\n");
     }
 
-    else (int grade; grade = index;)
+    else
     {
-        printf("Grade %i\n", (int) round(grade));
+        printf("Grade %i\n", index);
     }
         }
 }
@@ -38,7 +38,7 @@ float index (string t, int count_words, int count_sentences, int count_letters)
 {
     float l = (float) count_letters / count_words;
     float s = (float) count_sentences / count_words;
-        int index = round(0.0588 * l - 0.296 * s - 15.8);
+    int index = round(0.0588 * l - 0.296 * s - 15.8);
     return index;
 }
 
