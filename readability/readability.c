@@ -34,7 +34,6 @@ int main(void)
 
         printf("Grade %i\n",(int) round(index));
 
-
 }
 
 //Your program should print as output "Grade X" where X is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.
