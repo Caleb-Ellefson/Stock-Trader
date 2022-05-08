@@ -22,32 +22,21 @@ int main(void)
 }
 
 // a string of text, and that returns an int, the number of letters in that text.
-int count_letters(string t)
-{
-    int letter_count = 0;
-
-    for (int i = 0; i < strlen(t); i++)
+    int count_letters(string t)
+    int count_letters = 0
     {
-        if (isalpha(t[i]) != 0)
+        for (int i = 0; i < strlen(t), i++)
         {
-            letter_count++;
+            count_letters++;
         }
+    return count_letters
     }
-    return letter_count;
-
-}
-
 
 int count_sentences(string t)
-{
-    int sentence_count = 0;
-
-    for (int i = 0; i <strlen(t); i++)
+int count_setences = 0
     {
-        else if (t[i] == '.' || t[i] == '!' || t[i] == '?')
-            {
-                sentence_count++;
-            }
+        for (int i = 0; i < strlen(t), i++)
+        {
+            count_setences++
+        }
     }
-    return sentence_count;
-}
