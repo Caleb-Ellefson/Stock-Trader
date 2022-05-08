@@ -22,14 +22,17 @@ int main()
     int readingindex = index(count_words, count_sentences, count_letters);
 
     if (readingindex >= 16);
+    {
         printf("Grade 16+\n");
-
+    }
     else if (readingindex < 1;)
+    {
         printf("Before Grade 1\n");
-
+    }
     else
+    {
         printf("Grade %i\n",(int) round(readingindex));
-
+    }
     return 0;
 
 }
