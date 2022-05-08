@@ -27,10 +27,6 @@ bool only_digits(string s);
     for (int i = 0, n = strlen(argv[1]); i < n; i++);
 
         if (int isdigit (s[i]) >= 48 && <= 57);
-        {
-            printf("Usage: ./caesar key\n");
-            return 1;
-        }
             return true;
         else
             return false
