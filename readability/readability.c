@@ -11,27 +11,22 @@ float index (string t, int count_words, int count_sentences, int count_letters);
 
 int main(void)
 {
-float index;
     {
         //prompt the user for a string of text using get_string.
         string t = get_string ("Text: ");
     }
-    if (index > 16);
-    {
-    {
-            //your program should output "Grade 16+"
-    printf("Grade 16+\n");
-    }
-
-    else if (float index < 1);
-    {
-        printf("Before Grade 1\n");
-    }
-
-    else
-    {
-        printf("Grade %i\n", index);
-    }
+    if (index > 16)
+        {
+                //your program should output "Grade 16+"
+        printf("Grade 16+\n");
+        }
+     if (index < 1)
+        {
+            printf("Before Grade 1\n");
+        }
+        else
+        {
+            printf("Grade %f\n", index);
         }
 }
 //Your program should print as output "Grade X" where X is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.
