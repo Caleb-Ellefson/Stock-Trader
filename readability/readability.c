@@ -11,17 +11,15 @@ float index (string t, int count_words, int count_sentences, int count_letters);
 
 int main(void)
 {
-//Your program must prompt the user for a string of text using get_string.
-do
-{
+float index;
     {
+        //prompt the user for a string of text using get_string.
         string t = get_string ("Text: ");
     }
-}
-//your program should output "Grade 16+"
 if (index > 16);
     {
     {
+        //your program should output "Grade 16+"
         printf("Grade 16+\n");
     }
 
@@ -37,11 +35,11 @@ if (index > 16);
     }
 }
 //Your program should print as output "Grade X" where X is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.
-float index (int count_words, int count_sentences, int count_letters)
+float index (string t, int count_words, int count_sentences, int count_letters)
 {
     float l = (count_letters / count_words);
     float s = (count_sentences / count_words);
-    float index == (0.0588 * l - 0.296 * s - 15.8);
+        float index == (0.0588 * l - 0.296 * s - 15.8);
     return index;
 }
 
