@@ -16,10 +16,10 @@ int main(void)
         string t = get_string ("Text: ");
     }
 
-int count_words(string t);
-int count_letters(string t);
-int count_sentences(string t);
-int index (string t, int count_words, int count_sentences, int count_letters);
+    int count_words(string t);
+    int count_letters(string t);
+    int count_sentences(string t);
+    int index (int count_words, int count_sentences, int count_letters);
 
     if (index >= 16)
     {
@@ -32,7 +32,7 @@ int index (string t, int count_words, int count_sentences, int count_letters);
     }
     else
     {
-        printf("Grade %i\n",(int) index);
+        printf("Grade %i\n",(int) round(index);
     }
 
 }
