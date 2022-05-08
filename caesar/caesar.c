@@ -22,4 +22,4 @@ int main(int argc, string argv[])
         // Rotate the character if it's a letter
 }
 
-string only_digits
+string only_digits()
