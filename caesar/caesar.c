@@ -4,10 +4,11 @@
 int main(int argc, string argv[])
 {
 
-    if (argc =! 2)
+    if (argc > 2 || argc < 2)
+    {
         printf("Usage: ./caesar key\n");
         return 1;
-
+    }
     // Make sure program was run with just one command-line argument
 
     // Make sure every character in argv[1] is a digit
