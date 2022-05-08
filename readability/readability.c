@@ -9,7 +9,7 @@ int count_letters(string t);
 int count_sentences(string t);
 int index (string t, int count_words, int count_sentences, int count_letters);
 
-int main()
+int main(void)
 {
     {
         //prompt the user for a string of text using get_string.
