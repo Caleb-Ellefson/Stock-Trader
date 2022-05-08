@@ -24,3 +24,4 @@ int main(int argc, string argv[])
 
 bool only_digits(string s);
 
+if (int i = 0, n = strlen(s); i < n; i++);
