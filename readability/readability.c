@@ -25,10 +25,13 @@ int main()
         printf("Grade 16+");
 
     else if (index < 1)
+
         printf("Before Grade 1\n");
 
     else
         printf("Grade %i\n",(int) round(index));
+
+    return 0;
 }
 
 //Your program should print as output "Grade X" where X is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.
