@@ -16,20 +16,20 @@ int main()
         string t = get_string ("Text: ");
     }
 
-    int count_words(string t);
-    int count_letters(string t);
-    int count_sentences(string t);
-    int index(count_words, count_sentences, count_letters);
+    int words = count_words(t);
+    int letters = count_letters(t);
+    int sentences = count_sentences(t);
+    int readingindex = index(count_words, count_sentences, count_letters);
 
-    if (index >= 16)
+    if (readingindex >= 16);
         printf("Grade 16+");
 
-    else if (index < 1)
+    else if (readingindex < 1);
 
         printf("Before Grade 1\n");
 
     else
-        printf("Grade %i\n",(int) round(index));
+        printf("Grade %i\n",(int) round(readingindex));
 
     return 0;
 }
