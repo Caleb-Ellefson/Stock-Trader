@@ -27,7 +27,7 @@ int index (string t, int count_words, int count_sentences, int count_letters)
         if (index > 16)
             {
             //your program should output "Grade 16+"
-            return printf("Grade 16+\n");
+            return ("Grade 16+")
             }
         if (index < 1)
             {
