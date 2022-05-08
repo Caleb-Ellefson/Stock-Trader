@@ -20,35 +20,36 @@ int main(void)
     {
         if (score1 > score2)
             {
-                printf("Player 1 wins!");
+                printf("Player 1 wins!\n");
             }
         else if (score1 == score2 )
             {
-                printf("It's a draw!");
+                printf("It's a draw!\n");
             }
             else
             {
-                printf("Player 2 wins!");
+                printf("Player 2 wins!\n");
             }
     }
 
     // TODO: Print the winner
 }
 
-int compute_score(string word)
-{
-    // TODO: Compute and return score for string
-int score = 0;
-for(int i = 0, len = strlen(word); i < len; i++)
-
-    if (isupper(word[i]))
+    int compute_score(string word)
     {
-        //Going through the array of points [i] taking the ASKII vaule of each char of "word" - 65 to match ASKII key then number of times adding the sum to "score" each time.
-        score += POINTS[word[i] - 'A'];
-    }
-    else if (islower(word[i]))
-    {
-        score += POINTS[word[i] - 'a'];
-    }
+        // TODO: Compute and return score for string
+    int score = 0;
+    for(int i = 0, len = strlen(word); i < len; i++)
 
-}
+        if (isupper(word[i]))
+        {
+            //Going through the array of points [i] taking the ASKII vaule of each char of "word" - 65 to match ASKII key then number of times adding the sum to "score" each time.
+            score += POINTS[word[i] - 'A'];
+        }
+        else if (islower(word[i]))
+        {
+            score += POINTS[word[i] - 'a'];
+        }
+    return score;
+
+    }
