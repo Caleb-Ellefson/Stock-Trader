@@ -29,7 +29,7 @@ int count_letters(string t)
     {
         count_letters++;
     }
-    return count_letters
+    return count_letters;
     }
 
 int count_sentences(string t)
