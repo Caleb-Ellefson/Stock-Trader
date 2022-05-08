@@ -23,8 +23,8 @@ int main(int argc, string argv[])
 }
 
 bool only_digits(string s);
-{
-    for (int i = 0, n = strlen(s); i < n; i++);
+
+    for (int i = 0, n = strlen(argv[1]); i < n; i++);
 
         if (int isdigit (s[i]) >= 48 && <= 57);
             return true;
@@ -32,4 +32,3 @@ bool only_digits(string s);
             return false
 
 
-}
