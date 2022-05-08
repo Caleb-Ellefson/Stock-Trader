@@ -38,7 +38,7 @@ float index (string t, int count_words, int count_sentences, int count_letters)
 {
     float l = (count_letters / count_words);
     float s = (count_sentences / count_words);
-        float index == (0.0588 * l - 0.296 * s - 15.8);
+        int index = round(0.0588 * l - 0.296 * s - 15.8);
     return index;
 }
 
