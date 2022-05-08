@@ -14,10 +14,11 @@ int main(void)
     string word2 = get_string("Player 2: ");
 
     // Score both words
+    // Print the winner
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
     {
-        if int score1 > int score2;
+        if (score1 > score2);
             {
                 printf("Player 1 wins!");
             }
@@ -26,7 +27,6 @@ int main(void)
                 printf("Player 2 wins!");
             }
     }
-        int score2 = compute_score(word2);
 
     // TODO: Print the winner
 }
