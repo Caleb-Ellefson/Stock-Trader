@@ -7,11 +7,10 @@
 int count_words(string t);
 int count_letters(string t);
 int count_sentences(string t);
-float index (string t, int count_words, int count_sentences, int count_letters);
+int index (string t, int count_words, int count_sentences, int count_letters);
 
 int main(void)
 {
-    float index;
     {
         //prompt the user for a string of text using get_string.
         string t = get_string ("Text: ");
@@ -27,11 +26,11 @@ int main(void)
         }
         else
         {
-            printf("Grade %f\n", index);
+            printf("Grade %i\n", index);
         }
 }
 //Your program should print as output "Grade X" where X is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.
-float index (string t, int count_words, int count_sentences, int count_letters)
+int index (string t, int count_words, int count_sentences, int count_letters)
 {
     float l = (float) count_letters / count_words;
     float s = (float) count_sentences / count_words;
