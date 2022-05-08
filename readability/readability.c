@@ -9,7 +9,7 @@ int count_letters(string t);
 int count_sentences(string t);
 int index (string t, int count_words, int count_sentences, int count_letters);
 
-int main(void)
+int main()
 {
     {
         //prompt the user for a string of text using get_string.
@@ -22,18 +22,13 @@ int main(void)
     int index (int count_words, int count_sentences, int count_letters);
 
     if (index >= 16)
-
-    //your program should output "Grade 16+"
         printf("Grade 16+");
 
     else if (index < 1)
-
         printf("Before Grade 1\n");
 
     else
-
         printf("Grade %i\n",(int) round(index));
-
 }
 
 //Your program should print as output "Grade X" where X is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.
@@ -55,8 +50,7 @@ int count_letters(string t)
         count_letters++;
     }
     return count_letters;
-
-    }
+}
 
 //Calculate how many sentences are in the string.
 int count_sentences(string t)
