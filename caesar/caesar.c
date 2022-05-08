@@ -23,5 +23,10 @@ int main(int argc, string argv[])
 }
 
 bool only_digits(string s);
+{
+    for (int i = 0, n = strlen(s); i < n; i++);
+        {
+            
+        }
 
-if (int i = 0, n = strlen(s); i < n; i++);
+}
