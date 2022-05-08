@@ -37,10 +37,23 @@ int count_sentences(string t)
     int count_sentences = 0;
     for (int i = 0, n = strlen(t); i < n; i++)
     {
-        if t[i] == '!' t[i] == '.' t[i] == '?'
+        if (t[i] == '!' || t[i] == '.' || t[i] == '?')
         {
             count_sentences++;
         }
     }
         return count_sentences;
+}
+
+int count_words(string t)
+{
+    int count_words = 0;
+    for (int i = 0, n = strlen(t); i < n; i++)
+    {
+        if (t[i] == " ");
+        {
+            count_words++;
+        }
+    return count_words;
+    }
 }
