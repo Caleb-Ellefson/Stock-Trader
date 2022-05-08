@@ -25,7 +25,7 @@ int main(void)
     int count_letters(string t)
     {
         int count_letters = 0
-        for (int i = 0, n strlen(t); i < n; i++)
+        for (int i = 0, n = strlen(t); i < n; i++)
         {
             count_letters++;
         }
@@ -35,7 +35,7 @@ int main(void)
 int count_sentences(string t)
 {
     int count_sentences = 0;
-    for (int i = 0, n strlen(t); i < n; i++)
+    for (int i = 0, n = strlen(t); i < n; i++)
     {
         if (t[i] == '!' t[i] == '.' t[i] == '?')
         {
