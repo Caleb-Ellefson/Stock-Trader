@@ -15,18 +15,19 @@ float index;
 //Your program must prompt the user for a string of text using get_string.
     {
         string t = get_string ("Text: ");
-        printf("%s\n", t);
     }
 //your program should output "Grade 16+"
-    if index > 16
-    {
-        printf("Grade 16+\n");
-    }
+        if index > 16
+        {
+            printf("Grade 16+\n");
+        }
 
-    else if index < 1
-    {
-        printf("Before Grade 1\n");
-    }
+        else if index < 1
+        {
+            printf("Before Grade 1\n");
+        }
+
+        else ()
 
 }
 //Your program should print as output "Grade X" where X is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.
