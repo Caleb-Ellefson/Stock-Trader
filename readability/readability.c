@@ -36,7 +36,7 @@ int main(void)
     {
     int count_sentences = 0
         for (int i = 0; i < strlen(t), i++)
-            if (t[i] == '!' == '.' == '?')
+            if (t[i] == '!' t[i] == '.' t[i] == '?')
             {
                 count_sentences++;
             }
