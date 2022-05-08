@@ -32,10 +32,9 @@ int count_letters(string t)
         {
             letter_count++;
         }
-
+    }
     return letter_count;
 
-    }
 }
 
 
@@ -45,7 +44,7 @@ int count_sentences(string t)
 
     for (int i = 0; i <strlen(t); i++)
     {
-        if (t[i] == ! || t[i] == . || t[i] == ?)
+        if (t[i] == '!', || t[i] == '.', || t[i] == '?')
             {
                 sentence_count++;
             }
