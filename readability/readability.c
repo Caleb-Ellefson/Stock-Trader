@@ -36,8 +36,8 @@ int main(void)
 //Your program should print as output "Grade X" where X is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.
 float index (string t, int count_words, int count_sentences, int count_letters)
 {
-    float l = (count_letters / count_words);
-    float s = (count_sentences / count_words);
+    float l = (float) count_letters / count_words;
+    float s = (float) count_sentences / count_words;
         int index = round(0.0588 * l - 0.296 * s - 15.8);
     return index;
 }
