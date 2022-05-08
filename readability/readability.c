@@ -11,14 +11,14 @@ float index (string t, int count_words, int count_sentences, int count_letters);
 
 int main(void)
 {
-    float index
+    float index;
     {
         //prompt the user for a string of text using get_string.
         string t = get_string ("Text: ");
     }
     if (index > 16)
         {
-                //your program should output "Grade 16+"
+        //your program should output "Grade 16+"
         printf("Grade 16+\n");
         }
      if (index < 1)
