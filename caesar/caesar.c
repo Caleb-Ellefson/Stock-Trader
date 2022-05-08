@@ -26,7 +26,10 @@ bool only_digits(string s);
 {
     for (int i = 0, n = strlen(s); i < n; i++);
         {
-            int isdigit
+            if (int isdigit (s[i]) >= 48 && <= 57)
+                return true;
+            else
+                return false
         }
 
 }
