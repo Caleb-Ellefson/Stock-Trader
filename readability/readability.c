@@ -32,9 +32,9 @@ int count_letters(string t)
         {
             letter_count++;
         }
-    {
+
     return letter_count;
-    }
+
     }
 }
 
@@ -50,7 +50,5 @@ int count_sentences(string t)
                 sentence_count++;
             }
     }
-    {
     return sentence_count;
-    }
 }
