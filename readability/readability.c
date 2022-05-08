@@ -19,7 +19,7 @@ int main()
     int count_words(string t);
     int count_letters(string t);
     int count_sentences(string t);
-    int index (int count_words, int count_sentences, int count_letters);
+    int index(count_words, count_sentences, count_letters);
 
     if (index >= 16)
         printf("Grade 16+");
