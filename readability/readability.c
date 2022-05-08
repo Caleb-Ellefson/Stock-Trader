@@ -18,7 +18,10 @@ int main(void)
 
 }
 //Your program should print as output "Grade X" where X is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.
-
+float l (string t, int count_words,)
+{
+    float l == (int count_words / 100);
+}
 
 //Calculate how many letters are in the string.
 int count_letters(string t)
