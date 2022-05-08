@@ -22,7 +22,11 @@ int main(void)
             {
                 printf("Player 1 wins!");
             }
-        else
+        else if (score1 == score2 )
+            {
+                printf("It's a draw!");
+            }
+            else
             {
                 printf("Player 2 wins!");
             }
