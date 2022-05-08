@@ -15,6 +15,7 @@ int main(void)
         //prompt the user for a string of text using get_string.
         string t = get_string ("Text: ");
     }
+
     if (index > 16)
         {
         //your program should output "Grade 16+"
