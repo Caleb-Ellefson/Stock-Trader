@@ -1,11 +1,13 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main(int argc, int argv[])
+int main(int argc, string argv[])
 {
 
-    if int (argc =! 2)
+    if (argc =! 2)
+        printf("Usage: ./caesar key\n");
         return 1;
+
     // Make sure program was run with just one command-line argument
 
     // Make sure every character in argv[1] is a digit
