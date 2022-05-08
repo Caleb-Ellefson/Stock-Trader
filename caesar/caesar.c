@@ -3,7 +3,9 @@
 
 int main(int argc, int argv[])
 {
-    if 
+
+    if int (argc =! 2)
+        return 1;
     // Make sure program was run with just one command-line argument
 
     // Make sure every character in argv[1] is a digit
