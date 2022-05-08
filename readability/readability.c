@@ -32,14 +32,15 @@ int main(void)
         return count_letters
     }
 
-    int count_sentences(string t)
+int count_sentences(string t)
+{
+    int count_sentences = 0;
+    for (int i = 0; i < strlen(t), i++)
     {
-    int count_sentences = 0
-        for (int i = 0; i < strlen(t), i++)
-            if (t[i] == '!' t[i] == '.' t[i] == '?')
-            {
-                count_sentences++;
-            }
-        return count_sentences;
-
+        if (t[i] == '!' t[i] == '.' t[i] == '?')
+        {
+            count_sentences++;
+        }
     }
+        return count_sentences;
+}
