@@ -44,7 +44,7 @@ int count_sentences(string t)
 
     for (int i = 0; i <strlen(t); i++)
     {
-        if (t[i] == '!', || t[i] == '.', || t[i] == '?')
+        else if (t[i] == '.' || t[i] == '!' || t[i] == '?')
             {
                 sentence_count++;
             }
