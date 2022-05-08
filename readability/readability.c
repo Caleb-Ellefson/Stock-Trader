@@ -22,14 +22,14 @@ int main(void)
 }
 
 // a string of text, and that returns an int, the number of letters in that text.
-    int count_letters(string t)
+int count_letters(string t)
+{
+    int count_letters = 0
+    for (int i = 0, n = strlen(t); i < n; i++)
     {
-        int count_letters = 0
-        for (int i = 0, n = strlen(t); i < n; i++)
-        {
-            count_letters++;
-        }
-        return count_letters
+        count_letters++;
+    }
+    return count_letters
     }
 
 int count_sentences(string t)
