@@ -13,16 +13,20 @@ int main(void)
     {
         string t = get_string ("Text: ");
         printf("%s\n", t);
+
+
+        
     }
 //If the resulting index number is 16 or higher (equivalent to or greater than a senior undergraduate reading level), your program should output "Grade 16+" instead of giving the exact index number. If the index number is less than 1, your program should output "Before Grade 1".
 
 }
 //Your program should print as output "Grade X" where X is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.
-float average (string t, int count_words, int count_sentences, int count_letters)
+float index (string t, int count_words, int count_sentences, int count_letters)
 {
-    
     float l == (count_letters / count_words);
     float s == (count_setences / count_words);
+    index = (0.0588 * l - 0.296 * s - 15.8);
+    return index;
 }
 
 //Calculate how many letters are in the string.
