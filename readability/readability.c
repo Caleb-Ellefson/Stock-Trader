@@ -23,8 +23,8 @@ int main(void)
 
 // a string of text, and that returns an int, the number of letters in that text.
     int count_letters(string t)
-    int count_letters = 0
     {
+        int count_letters = 0
         for (int i = 0; i < strlen(t), i++)
         {
             count_letters++;
@@ -32,11 +32,14 @@ int main(void)
     return count_letters
     }
 
-int count_sentences(string t)
-int count_setences = 0
+    int count_sentences(string t)
     {
+    int count_sentences = 0
         for (int i = 0; i < strlen(t), i++)
-        {
-            count_setences++
-        }
+            if (t[i] == '!' == '.' == '?')
+            {
+                count_sentences++;
+            }
+    return count_sentences;
+
     }
