@@ -24,7 +24,7 @@ int main(void)
             }
         else if (score1 == score2 )
             {
-                printf("It's a draw!\n");
+                printf("Tie!\n");
             }
             else
             {
