@@ -5,13 +5,21 @@ bool only_digits(string s);
 
 int main(int argc, string argv[])
 {
-
+// only 2 inputs on the command line
     if (argc > 2 || argc < 2)
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    // Make sure program was run with just one command-line argument
+
+
+    if only_digits(agrv[1]) == false
+        (
+            printf("Usage: ./caesar key\n");
+            return 1;
+        )
+    else
+        return 0;
 
     // Make sure every character in argv[1] is a digit
 
