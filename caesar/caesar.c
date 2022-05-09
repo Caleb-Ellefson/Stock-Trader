@@ -8,18 +8,16 @@ char rotate;
 
 int main(int argc, string argv[])
 {
-    int length, i;
+    int length, i, k;
     string p;
-// only 2 inputs on the command line
+
     if (argc != 2 || !only_digits(argv[1]))
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
-
+    k = atoi(argv[1]);
     p = get_string("ciphertext: ");
-
-    int k = atoi(argv[1]);
     length = strlen(p);
     char cypher[length + 1];
 
