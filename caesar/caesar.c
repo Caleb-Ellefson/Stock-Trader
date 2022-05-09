@@ -23,7 +23,7 @@ int main(int argc, string argv[])
 
     // For each character in the plaintext:
 
-        // Rotate the character if it's a letter
+    // Rotate the character if it's a letter
 }
 
 bool only_digits(string s)
@@ -38,9 +38,9 @@ bool only_digits(string s)
 
 char rotate(char c, int n)
 {
-    for(int i = 0; i < strlen(s); i++)
+    for(int i = 0; i < strlen(argv[1]); i++)
     {
-        if (isupper(s[i]))
-            encrypt += 
+        if (isupper(argv[1][i]))
+             += k(argv[1][i] - 'A']
     }
 }
