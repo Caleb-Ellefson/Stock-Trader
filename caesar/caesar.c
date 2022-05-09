@@ -24,11 +24,11 @@ int main(int argc, string argv[])
         // Rotate the character if it's a letter
 }
 
-bool only_digits(string s);
+bool only_digits(string s)
 {
-    for(int i = 0, i < strlen(s); i++);
+    for(int i = 0; i < strlen(s); i++)
     {
-        if(!isdigit (s[i]));
+        if(!isdigit (s[i]))
             return false;
     }
     return true;
