@@ -3,7 +3,7 @@
 
 bool only_digits(string s);
 string plaintext;
-k = atio(argv[1]);
+int k = atio(argv[1]);
 int main(int argc, string argv[])
 {
     int k, length;
@@ -15,13 +15,17 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    k = atio(argv[1]);
+
     p = get_string("ciphertext: ");
     length = strlen(p);
+    char cypher[length + 1];
     for (int i = 0; i < length; i++)
     {
-        p[i] = rotate(p[i]);
+        cypher[i] = rotate(p[i]);
     }
+    cypher[1] = '\0';
+
+    printf("ciphertext: %s",cypher);
     // Make sure every character in argv[1] is a digit
 
     // Convert argv[1] from a `string` to an `int`
