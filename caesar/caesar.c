@@ -1,12 +1,13 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 bool only_digits(string s);
 string plaintext;
 
 int main(int argc, string argv[])
 {
-    int length;
+    int length, i;
     string p;
 // only 2 inputs on the command line
     if (argc != 2 || !only_digits(argv[1]))
@@ -21,7 +22,7 @@ int main(int argc, string argv[])
     length = strlen(p);
     char cypher[length + 1];
 
-    for (int i = 0; i < length; i++)
+    for (i = 0; i < length; i++)
     {
         cypher[i] = rotate(p[i]);
     }
