@@ -55,6 +55,7 @@ char rotate(char c, int n)
 {
     char c;
     int k;
+    
 string p = plaintext;
     if (isupper(p))
     {
