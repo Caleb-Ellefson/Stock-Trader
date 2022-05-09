@@ -41,6 +41,12 @@ bool only_digits(string s)
 char rotate(char c, int n)
 {
 string p = plaintext;
-
-    c[] = (p[] + k) % 26;
+    if (isupper(p))
+    {
+        c = (p - 'A' + k) % 26;
+    }
+    else if (islower(p))
+    {
+        c = (p - 'A' + k) % 26;
+    }
 }
