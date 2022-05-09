@@ -1,12 +1,12 @@
 #include <cs50.h>
 #include <stdio.h>
-
+#include <stdlib.h>
 bool only_digits(string s);
 string plaintext;
-int k = atio(argv[1]);
+
 int main(int argc, string argv[])
 {
-    int k, length;
+    int length;
     string p;
 // only 2 inputs on the command line
     if (argc != 2 || !only_digits(argv[1]))
@@ -14,8 +14,7 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-
-
+    int k = atoi(argv[1]);
     p = get_string("ciphertext: ");
     length = strlen(p);
     char cypher[length + 1];
@@ -50,6 +49,7 @@ bool only_digits(string s)
 char rotate(char c, int n)
 {
     char c;
+    int k;
 string p = plaintext;
     if (isupper(p))
     {
