@@ -53,19 +53,19 @@ char rotate(char c, int n)
 {
     char c;
 
-string p = plaintext;
-    if (isupper(p))
-    {
-        c = (p - 'A' + k) % 26 + 'A';
-    }
-    else if (islower(p))
-    {
-        c = (p - 'a' + k) % 26 + 'a';
-    }
-    else
-    {
-        c = p;
-    }
+    string p = plaintext;
+        if (isupper(p))
+        {
+            c = (p - 'A' + k) % 26 + 'A';
+        }
+        else if (islower(p))
+        {
+            c = (p - 'a' + k) % 26 + 'a';
+        }
+        else
+        {
+            c = p;
+        }
 
-    return c;
+        return c;
 }
