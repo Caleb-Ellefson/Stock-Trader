@@ -6,7 +6,7 @@ string plaintext;
 k = atio(argv[1]);
 int main(int argc, string argv[])
 {
-    int k;
+    int k, length;
     string p;
 // only 2 inputs on the command line
     if (argc != 2 || !only_digits(argv[1]))
@@ -17,6 +17,11 @@ int main(int argc, string argv[])
 
     k = atio(argv[1]);
     p = get_string("ciphertext: ");
+    length = strlen(p);
+    for (int i = 0; i < length; i++)
+    {
+        p[i] = rotate(p[i]);
+    }
     // Make sure every character in argv[1] is a digit
 
     // Convert argv[1] from a `string` to an `int`
@@ -40,13 +45,20 @@ bool only_digits(string s)
 
 char rotate(char c, int n)
 {
+    char c;
 string p = plaintext;
     if (isupper(p))
     {
-        c = (p - 'A' + k) % 26;
+        c = (p - 'A' + k) % 26 + 'A';
     }
     else if (islower(p))
     {
-        c = (p - 'A' + k) % 26;
+        c = (p - 'a' + k) % 26 + 'a';
     }
+    else
+    {
+        c = p;
+    }
+
+    return c;
 }
