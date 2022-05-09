@@ -16,7 +16,7 @@ int main(int argc, string argv[])
     }
 
     p = get_string("ciphertext: ");
-    
+
     int k = atoi(argv[1]);
     length = strlen(p);
     char cypher[length + 1];
