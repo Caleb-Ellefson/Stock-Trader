@@ -2,11 +2,12 @@
 #include <stdio.h>
 
 bool only_digits(string s);
-
+string plaintext;
+k = atio(argv[1]);
 int main(int argc, string argv[])
 {
     int k;
-    string plaintext;
+    string p;
 // only 2 inputs on the command line
     if (argc != 2 || !only_digits(argv[1]))
     {
@@ -15,7 +16,7 @@ int main(int argc, string argv[])
     }
 
     k = atio(argv[1]);
-    plaintext = get_string("ciphertext: ");
+    p = get_string("ciphertext: ");
     // Make sure every character in argv[1] is a digit
 
     // Convert argv[1] from a `string` to an `int`
@@ -38,6 +39,8 @@ bool only_digits(string s)
 }
 
 char rotate(char c, int n)
-{ k = plaintext;
+{
+string p = plaintext;
+
     c = (p + k) % 26;
 }
