@@ -42,5 +42,5 @@ char rotate(char c, int n)
 {
 string p = plaintext;
 
-    c = (p + k) % 26;
+    c[] = (p[] + k) % 26;
 }
