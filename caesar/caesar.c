@@ -14,10 +14,13 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    int k = atoi(argv[1]);
+
     p = get_string("ciphertext: ");
+    
+    int k = atoi(argv[1]);
     length = strlen(p);
     char cypher[length + 1];
+
     for (int i = 0; i < length; i++)
     {
         cypher[i] = rotate(p[i]);
