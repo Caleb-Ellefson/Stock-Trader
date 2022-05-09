@@ -25,7 +25,7 @@ int main(int argc, string argv[])
 
     for (i = 0; i < length; i++)
     {
-        cypher[i] = rotate(p[i]);
+        cypher[i] = rotate(p[i], k);
     }
     cypher[1] = '\0';
 
@@ -54,8 +54,7 @@ bool only_digits(string s)
 char rotate(char c, int n)
 {
     char c;
-    int k;
-    
+
 string p = plaintext;
     if (isupper(p))
     {
