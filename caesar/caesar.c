@@ -23,11 +23,11 @@ int main(int argc, string argv[])
 
     for (i = 0; i < length; i++)
     {
-        cypher[i] = rotate(p[i], k);
+        cypher[i] = rotate(p[i]);
     }
     cypher[1] = '\0';
 
-    printf("ciphertext: %s",cypher);
+    printf("ciphertext: %s", cypher);
     // Make sure every character in argv[1] is a digit
 
     // Convert argv[1] from a `string` to an `int`
