@@ -4,7 +4,6 @@
 #include <string.h>
 bool only_digits(string s);
 string plaintext;
-char rotate;
 
 int main(int argc, string argv[])
 {
@@ -23,7 +22,7 @@ int main(int argc, string argv[])
 
     for (i = 0; i < length; i++)
     {
-        cypher[i] = rotate(p[i]);
+        cypher[i] = rotate(p[i],);
     }
     cypher[1] = '\0';
 
