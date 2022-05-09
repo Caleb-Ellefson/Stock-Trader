@@ -41,6 +41,6 @@ char rotate(char c, int n)
     for(int i = 0; i < strlen(argv[1]); i++)
     {
         if (isupper(argv[1][i]))
-             += k(argv[1][i] - 'A']
+            k[argv[1][i] - 'A']
     }
 }
