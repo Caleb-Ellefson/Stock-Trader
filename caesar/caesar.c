@@ -41,6 +41,6 @@ char rotate(char c, int n)
     for(int i = 0; i < strlen(s); i++)
     {
         if (isupper(s[i]))
-        rotate = 
+            encrypt += 
     }
 }
