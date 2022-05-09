@@ -49,7 +49,7 @@ bool only_digits(string s)
     return true;
 }
 
-char rotate(char c, int n)
+char rotate(char p, int k)
 {
     char c;
 
