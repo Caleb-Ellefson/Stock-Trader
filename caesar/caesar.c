@@ -7,4 +7,5 @@ char rotate(char p, int k);
 
 int main(int argc, string argv[])
 {
+    
 }
