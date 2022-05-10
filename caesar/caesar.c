@@ -22,5 +22,8 @@ int atoi(argv[1]);
 
 bool only_digits(string s);
 {
-    if (int i = 0; i < strlen())
+    if (int i = 0, i < strlen(argv[1]); i++)
+    {
+        int isdigit(argv[1])
+    }
 }
