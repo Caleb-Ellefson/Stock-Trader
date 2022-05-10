@@ -8,7 +8,7 @@ char rotate(char p, int k);
 
 int main(int argc, string argv[])
 {
-    if (argc != 2)
+    if (argc != 2 || !only_digits(argv[1]))
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -20,10 +20,13 @@ int atoi(argv[1]);
     string plaintext = get_string("plaintext: ");
 }
 
-bool only_digits(string s);
+bool only_digits(string s)
 {
-    if (int i = 0, i < strlen(argv[1]); i++)
+    int length = strlen(s);
+    for(int i = 0; i < length; i++)
     {
-        int isdigit(argv[1])
+        if(!isdigit(s[i]));
+            return false;
     }
+    return true;
 }
