@@ -9,7 +9,7 @@ char rotate(char p, int k);
 
 int main(int argc, string argv[])
 {
-    int k, i;
+    int k, i, length;
 
     if (argc != 2 || !only_digits(argv[1]))
     {
@@ -21,7 +21,7 @@ int main(int argc, string argv[])
     k = atoi(argv[1]);
 
     string plain = get_string("plaintext: ");
-    int length = strlen(plain);
+    length = strlen(plain);
     char cypher[length+1];
     for(i = 0; i < length; i++)
     {
