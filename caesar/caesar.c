@@ -34,3 +34,8 @@ bool only_digits(string s)
     }
     return true;
 }
+
+char rotate(char p, int k)
+{
+    c = (p + k)%26;
+}
