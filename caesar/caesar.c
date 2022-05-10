@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 bool only_digits(string s);
 char rotate(char p, int k);
@@ -25,7 +26,7 @@ bool only_digits(string s)
     int length = strlen(s);
     for(int i = 0; i < length; i++)
     {
-        if(!isdigit(s[i]));
+        if(!isdigit(s[i]))
             return false;
     }
     return true;
