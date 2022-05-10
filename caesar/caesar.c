@@ -29,7 +29,7 @@ int main(int argc, string argv[])
     }
         cypher[i] = '\0';
 
-    printf("ciphertext: %s", cypher);
+    printf("ciphertext: %s\n", cypher);
 }
 
 bool only_digits(string s)
