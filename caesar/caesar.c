@@ -15,9 +15,12 @@ int main(int argc, string argv[])
     }
     else
         return 0;
+
+int atoi(argv[1]);
+    string plaintext = get_string("plaintext: ");
 }
 
 bool only_digits(string s);
 {
-    
+
 }
