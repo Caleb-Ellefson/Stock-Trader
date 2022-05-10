@@ -9,6 +9,7 @@ char rotate(char p, int k);
 
 int main(int argc, string argv[])
 {
+    int k, i;
 
     if (argc != 2 || !only_digits(argv[1]))
     {
@@ -17,16 +18,16 @@ int main(int argc, string argv[])
     }
 
     // Change argv[1] int an int
-    int k = atoi(argv[1]);
+    k = atoi(argv[1]);
 
     string plain = get_string("plaintext: ");
     int length = strlen(plain);
     char cypher[length+1];
-    for(int i = 0; i < length; i++)
+    for(i = 0; i < length; i++)
     {
-        cypher[i] = roate(plain[i]);
+        cypher[i] = rotate(plain[i], k);
     }
-    cypher[i] = '\0';
+        cypher[i] = '\0';
 
     printf("ciphertext: %s", cypher);
 }
