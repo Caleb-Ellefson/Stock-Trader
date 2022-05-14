@@ -1,11 +1,11 @@
 sort1 uses: TODO
-Random 50,000 = 5.516s
+reversed 50,000 = 5.516s
 How do you know?: TODO
 
 sort2 uses: TODO
-Random 50,000 = .005s
+reversed 50,000 = .485s
 How do you know?: TODO
 
 sort3 uses: TODO
-Random 50,000 = .002s
+reversed 50,000 = 3.584
 How do you know?: TODO
