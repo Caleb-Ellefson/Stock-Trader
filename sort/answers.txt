@@ -6,6 +6,9 @@ sort2 uses: TODO
 reversed 50,000 = .485s
 How do you know?: TODO
 
+Sort2 is merge sort being the fastest running time of the of the three.
+
+
 sort3 uses: TODO
 reversed 50,000 = 3.584
 How do you know?: TODO
