@@ -1,14 +1,18 @@
 sort1 uses: TODO
 reversed 50,000 = 5.516s
+sorted 50,000 = .403s
 How do you know?: TODO
+Bubble sort has a Ω(n) running time meaning sorted files will run faster than a selection sort.
 
 sort2 uses: TODO
 reversed 50,000 = .485s
 How do you know?: TODO
 
-Sort2 is merge sort being the fastest running time of the of the three.
+Sort2 is merge sort being the fastest running time of the of the three with a running time of O(n log⁡ n).
 
 
 sort3 uses: TODO
 reversed 50,000 = 3.584
+Sorted 50,000 = 3.151s
 How do you know?: TODO
+Having the same omega running time of reversed sort and already sorted files. Meaning sort3 is selection sort.
