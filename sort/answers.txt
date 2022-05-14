@@ -1,5 +1,5 @@
 sort1 uses: TODO
-
+Real .035s
 How do you know?: TODO
 
 sort2 uses: TODO
