@@ -1,11 +1,11 @@
 sort1 uses: TODO
-Real .035s
+Random 50,000 = .003s
 How do you know?: TODO
 
 sort2 uses: TODO
-
+Random 50,000 = .005s
 How do you know?: TODO
 
 sort3 uses: TODO
-
+Random 50,000 = .002s
 How do you know?: TODO
