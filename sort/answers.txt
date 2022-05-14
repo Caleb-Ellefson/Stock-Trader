@@ -1,5 +1,5 @@
 sort1 uses: TODO
-Random 50,000 = .003s
+Random 50,000 = 5.516s
 How do you know?: TODO
 
 sort2 uses: TODO
