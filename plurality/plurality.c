@@ -66,36 +66,64 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    for (int i = 0; i < candidate_count; i++)
-    {
-        if (strcmp(name, candidates[i].name) == 0)
-            candidates[i].votes++;
-        return true;
+
+
+    // to vote we must count each vote and
+    // give that vote to the correct candidate
+    for (int currCandidate = 0; currCandidate < candidate_count; currCandidate++) {
+
+        // c has a function called strcmp that
+        // compares two strings, most languages
+        // have built in features like this
+        if (strcmp(name, candidates[currCandidate].name) == 0) {
+            // this will take the candidate we are
+            // currently iterating over and add 1
+            // to their vote count
+            candidates[currCandidate].votes++;
+
+            // completes the condition of our function
+            // that states that we'll return a bool
+            return true;
+        }
     }
+
+    // TODO
+    // we must return false because in the main function
+    // we check for true or false
     return false;
 }
 
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    int i = 0;
 
-    while (i < candidate_count)
+    int topCandidateNumberOfVotes = 0;
+
+    // keeps track of the candidate we are looking at
+    int currCandidate = 0;
+    while(currCandidate < candidate_count)
     {
-        if (i < candidates[i].votes)
+        if(topCandidateNumberOfVotes < candidates[currCandidate].votes)
         {
-            i = candidates[i].votes;
+            topCandidateNumberOfVotes = candidates[currCandidate].votes;
         }
 
-        i++;
+        // to go over to the next candidate
+        currCandidate++;
     }
-    for (i = 0; i < candidates[i].votes; i++)
+
+
+    // I've already declared currCandidate above so no need to redeclare
+    // and I'm resetting this to 0 to save some RAM :)
+    // extra variables do add to our space complexity
+    for (currCandidate = 0; currCandidate < candidate_count; currCandidate++)
     {
-        if(candidates[i].votes == i)
-            printf("%s\n", candidates[i].name);
+        if(candidates[currCandidate].votes == topCandidateNumberOfVotes)
+        {
+            printf("%s\n", candidates[currCandidate].name);
+        }
     }
 
-
-
+    // TODO
     return;
 }
