@@ -192,7 +192,7 @@ int find_min(void)
             min_votes = canidate[i].votes
         }
     }
-    return min_votes == MAX_CANDIDATE * MAX_VOTERS + 100 ? 0 : min_votes;
+    return min_votes == MAX_VOTERS * MAX_VOTERS + 1000 ? 0 : min_votes;
     // TODO
 }
 
