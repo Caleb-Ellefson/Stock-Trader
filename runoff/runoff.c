@@ -136,7 +136,7 @@ bool vote(int voter, int rank, string name)
         {
             //Increases that candiates votes by 1
             canidates[i].votes++;
-            canidates[i].rank++;
+            canidates[i].rank = j;
             return true;
         }
     }
