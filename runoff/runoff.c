@@ -131,7 +131,7 @@ bool vote(int voter, int rank, string name)
     //Match inputted name to a canidate name then update the arrary
     for (int i = 0; i < candidate_count; i++)
     {
-        strcmp(name)[i].name
+        strcmp(name)[i]candidates.name
     }
 
     return false;
