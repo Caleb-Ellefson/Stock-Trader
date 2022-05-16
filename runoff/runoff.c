@@ -174,7 +174,7 @@ bool print_winner(void)
     {
         if (candidates[i].votes > target)
         {
-            printf("%s\n", candidates.name);
+            printf("%s\n", candidates[i].name);
             return true;
         }
     }
@@ -187,9 +187,9 @@ int find_min(void)
     int min_votes = MAX_VOTERS * MAX_VOTERS + 1000;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (!candidates[i].eleminated && candidates[i].votes < min_votes)
+        if (!candidates[i].eliminated && candidates[i].votes < min_votes)
         {
-            min_votes = canidate[i].votes
+            min_votes = candidates[i].votes;
         }
     }
     return min_votes == MAX_VOTERS * MAX_VOTERS + 1000 ? 0 : min_votes;
@@ -199,21 +199,21 @@ int find_min(void)
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    int first_non_elimnated_count = -1;
+    int first_non_eliminated_count = -1;
     int total_counts = 0;
     int matching = 0;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (!candidate[i].elimnated)
+        if (!candidates[i].eliminated)
         {
-            first_non_elimnated_count = candidates[i].vote;
+            first_non_eliminated_count = candidates[i].votes;
             total_counts++;
         }
     }
 
     for (int i = 0; i < candidate_count; i++)
     {
-        if (!candidate[i].elimnated && candidates[i].vote == first_non_elimnated_count)
+        if (!candidates[i].eliminated && candidates[i].votes == first_non_eliminated_count)
         {
             matching++;
         }
