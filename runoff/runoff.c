@@ -128,11 +128,17 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
-    //Match inputted name to a canidate name then update the arrary
+    //Create a variable to repeated for the amount of canidates
     for (int i = 0; i < candidate_count; i++)
     {
-        if strcmp(name)[i] == candidates.name
+        // String compare the inputted name to the list of canidates if they match returns true
+        if (strcmp(name, canidates[i].name) == 0)
+        {
+            //Increases that candiates votes by 1
+            canidates[i].votes++;
+            canidates[i].rank++;
             return true;
+        }
     }
 
     return false;
