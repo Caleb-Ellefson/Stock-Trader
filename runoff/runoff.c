@@ -129,13 +129,16 @@ bool vote(int voter, int rank, string name)
 {
     // TODO
     //Create a variable to repeated for the amount of canidates
+    int foundindex = -1;
     for (int i = 0; i < candidate_count; i++)
     {
         // String compare the inputted name to the list of canidates if they match returns true
         if (strcmp(name == canidates[i].name) == 0)
         {
-            
+            foundindex = i;
+            break;
         }
+    
     }
 
     return false;
