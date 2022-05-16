@@ -200,24 +200,25 @@ int find_min(void)
 bool is_tie(int min)
 {
     int first_non_elimnated_count = -1;
-    int total_counts;
+    int total_counts = 0;
     int matching = 0;
     for (int i = 0; i < candidate_count; i++)
     {
         if (!candidate[i].elimnated)
         {
-        first_non_elimnated_count = candidates[i].vote;
-        total_counts++;
+            first_non_elimnated_count = candidates[i].vote;
+            total_counts++;
         }
     }
 
-    for (int i = 0; < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (!candidate[i].elimnated && candidates[i].vote == first_non_elimnated_count)
         {
             matching++;
         }
     }
+
     return matching == total_counts;
 }
 
