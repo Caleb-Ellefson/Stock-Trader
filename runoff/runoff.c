@@ -228,7 +228,7 @@ void eliminate(int min)
     int min_votes = find_min();
     for (int i = 0; i < candidate_count; i++)
     {
-        if(canidate[i].votes == min_votes)
+        if(candidates[i].votes == min_votes)
         {
             candidates[i].eliminated = true;
         }
