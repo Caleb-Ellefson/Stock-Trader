@@ -218,10 +218,7 @@ bool is_tie(int min)
             matching++;
         }
     }
-
-
-    // TODO
-    return false;
+    return matching == total_counts;
 }
 
 // Eliminate the candidate (or candidates) in last place
