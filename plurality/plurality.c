@@ -89,7 +89,7 @@ void print_winner(void)
 
         i++;
     }
-    for (i = 0; i < candidates;[i].votes; i++)
+    for (i = 0; i < candidates[i].votes; i++)
     {
         if(candidates[i].votes == i)
             printf("%s\n", candidates[i].name);
