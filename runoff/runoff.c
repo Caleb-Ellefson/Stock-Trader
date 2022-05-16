@@ -135,7 +135,7 @@ bool vote(int voter, int rank, string name)
         // String compare the inputted name to the list of canidates if they match returns true
         if (strcmp(candidates[i].name, name) == 0)
         {
-            foundindex = i;
+            foundindex = i++;
             break;
         }
             if (foundindex == -1)
