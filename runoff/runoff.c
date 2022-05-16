@@ -138,8 +138,11 @@ bool vote(int voter, int rank, string name)
             foundindex = i;
             break;
         }
-    
+            if (foundindex = -1;)
+            return false;
     }
+    preferences[voter][rank] = foundindex;
+        return true;
 
     return false;
 }
