@@ -134,10 +134,7 @@ bool vote(int voter, int rank, string name)
         // String compare the inputted name to the list of canidates if they match returns true
         if (strcmp(name == canidates[i].name) == 0)
         {
-            //Increases that candiates votes by 1
-            canidates[i].votes++;
-            canidates[i].rank = j;
-            return true;
+            
         }
     }
 
