@@ -128,6 +128,8 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
+    //Match inputted name to a canidate name then update the arrary
+    
     return false;
 }
 
