@@ -133,12 +133,12 @@ bool vote(int voter, int rank, string name)
     for (int i = 0; i < candidate_count; i++)
     {
         // String compare the inputted name to the list of canidates if they match returns true
-        if (strcmp(name == canidates[i].name) == 0)
+        if (strcmp(name, canidates[i].name) == 0)
         {
             foundindex = i;
             break;
         }
-            if (foundindex = -1;)
+            if (foundindex == -1)
             return false;
     }
     preferences[voter][rank] = foundindex;
@@ -150,6 +150,13 @@ bool vote(int voter, int rank, string name)
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
+    for (int i = 0; i < voter_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            int pref_index = preferences[i][j];
+        }
+    }
     // TODO
     return;
 }
