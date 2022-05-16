@@ -169,7 +169,8 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
-
+    target = voter_count / 2;
+    for (int i = 0; i < )
     return false;
 }
 
