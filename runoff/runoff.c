@@ -184,10 +184,13 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    int min_votes = MAX_VOTERS + 1;
+    int min_votes = MAX_VOTERS * + 1;
     for (int i = 0; i < candidate_count; i++)
     {
+        if (!candidates[i].ele)
         if (min_votes < candidate.votes)
+            canidate.votes = min_votes
+            return
     }
 
     // TODO
