@@ -3,6 +3,8 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
+    //create a loop that repeats for each row in the image
+    // c
     return;
 }
 
