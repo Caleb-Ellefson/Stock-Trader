@@ -3,11 +3,12 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
+    while ()
     //create a loop that repeats for each row in the image
     // create a loop that repeats for each pixel the in the row
     // average the color values of red, green, and blue
     // assiasgn the new average back to red, green and blue
-    //return new image 
+    //return new image
     return;
 }
 
