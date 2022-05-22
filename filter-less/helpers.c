@@ -3,9 +3,17 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
+    float red = image[][].rgbtRed;
+    float green = image[][].rgbtGreen;
+    float blue = image [][].rgbtBlue;
+
+
     while (int i = 0; i < image[height - 1], i++)
     {
         while (int j = 0; j < image[width], j++)
+        {
+            red
+        }
     }
     //create a loop that repeats for each row in the image
     // create a loop that repeats for each pixel the in the row
