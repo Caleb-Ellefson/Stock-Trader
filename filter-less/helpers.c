@@ -86,20 +86,23 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for(int c = 0; c < 3; c++)
                     {
+                        int count = 0;
                         int curRow = rowcoords[r];
                         int curCol = colcoords[c];
 
                         if (curRow >= 0 && curRow < height && curCol >= 0 && curCol < width)
                         {
                             RGBTRIPLE pixel = image[curRow][curCol];
-                            totalR += image[i][j].rgbtRed;
-                            totalB += image[i][j].rgbtBlue;
-                            totalG += image[i][j].rgbtGreen;
-                            count++;
+                            float totalR += image[i][j].rgbtRed;
+                            float totalB += image[i][j].rgbtBlue;
+                            float totalG += image[i][j].rgbtGreen;
+                             count++;
                         }
                     }
                 }
-
+                image[i][j].rgbtRed = round(totalR / count);
+                image[i][j].rgbtBlue = round(totalB / count);
+                image[i][j].rgbtGreen = round(totalG / count);
             }
     }
 
