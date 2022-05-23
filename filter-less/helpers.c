@@ -78,15 +78,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
             for (int j = 0; j < width; j++)
             {
-                int countR = 0;
-                int[] rowcoords = { row - 1, row , row+1 };
-                int[] colcoords = { col - 1, col , col+1 };
+                int count = 0;
+                int rowcoords[] = { row - 1, row , row+1 };
+                int colcoords[] = { col - 1, col , col+1 };
 
                 for(int r = 0; r < 3; r++)
                 {
                     for(int c = 0; c < 3; c++)
                     {
-                        int count = 0;
                         int curRow = rowcoords[r];
                         int curCol = colcoords[c];
 
