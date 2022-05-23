@@ -9,19 +9,19 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     float blue[] = image [][].rgbtBlue;
 
     //create a loop that repeats for each row in the image
-    while (int i = 0; i < image[height - 1], i++)
+    for (int i = 0; i < height, i++)
     {
         // create a loop that repeats for each pixel the in the row
-        while (int j = 0; j < image[width], j++)
+        for (int j = 0; j < width, j++)
         {
                 // average the color values of red, green, and blue
                 // assiasgn the new average back to red, green and blue
-            float gray = 3.0 / (image[][].rgbtRed + image[][].rgbtBlue + image[][].rgbtBlue);
+            float gray = 3.0 / (image[i][j].rgbtRed + image[i][j].rgbtBlue + image[i][j].rgbtBlue);
             round(gray);
             // assiasgn the new average back to red, green and blue
-            image[][].rgbtRed = gray;
-            image[][].rgbtBlue = gray;
-            image[][].rgbtBlue = gray;
+            image[i][j].rgbtRed = gray;
+            image[i][j].rgbtBlue = gray;
+            image[i][j].rgbtBlue = gray;
         }
     }
     //return new image
