@@ -5,10 +5,10 @@
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
     //create a loop that repeats for each row in the image
-    for (int i = 0; i < height, i++)
+    for (int i = 0; i < height; i++)
     {
         // create a loop that repeats for each pixel the in the row
-        for (int j = 0; j < width, j++)
+        for (int j = 0; j < width; j++)
         {
             // average the color values of red, green, and blue
             // assiasgn the new average back to red, green and blue
@@ -27,12 +27,12 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (int i = 0; i < height, i++)
+    for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < width, j++)
+        for (int j = 0; j < width; j++)
         {
-            RBGTRIPLE pixel = image[i][j];
-            
+            RGBTRIPLE pixel = image[i][j];
+
             float sepiaRed = round(.393 * pixel.rgbtRed + .769 * pixel.rgbtGreen + .189 * pixel.rgbtBlue);
             float sepiaGreen = round(.349 * pixel.rgbtRed + .686 * pixel.rgbtGreen + .168 * pixel.rgbtBlue);
             float sepiaBlue = round(.272 * pixel.rgbtRed + .534 * pixel.rgbtGreen + .131 * pixel.rgbtBlue);
