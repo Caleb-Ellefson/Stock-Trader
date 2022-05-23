@@ -33,7 +33,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width, j++)
         {
             RBGTRIPLE pixel = image[i][j];
-            int orginalRed = image[i][j].rgbtRed
+            float orginalRed = pixel.rgbtRed;
 
             sepiaRed = .393 * originalRed + .769 * originalGreen + .189 * originalBlue
             sepiaGreen = .349 * originalRed + .686 * originalGreen + .168 * originalBlue
