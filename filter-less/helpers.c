@@ -10,8 +10,8 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         // create a loop that repeats for each pixel the in the row
         for (int j = 0; j < width, j++)
         {
-                // average the color values of red, green, and blue
-                // assiasgn the new average back to red, green and blue
+            // average the color values of red, green, and blue
+            // assiasgn the new average back to red, green and blue
             int gray = 3.0 / (image[i][j].rgbtRed + image[i][j].rgbtBlue + image[i][j].rgbtBlue);
             round(gray);
             // assiasgn the new average back to red, green and blue
