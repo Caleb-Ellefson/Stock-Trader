@@ -19,7 +19,8 @@ int main(int argc, char *argv[])
     {
         printf("File could not be opened.\n");
     }
-    BYTE buffer
+    BYTE buffer[BLOCK_SIZE];
+    
  // Repeat until end of card
     //Read 512 bytes into buffer
     // If start of new JPEG
