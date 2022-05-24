@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-BLOCK_SIZE == 512
+
+#define BLOCK_SIZE 512
+typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
     //one command-line argument
-    if (argc =! 1)
+    if (argc =! 2)
     {
         printf("Invaild");
         return 1;
@@ -13,7 +15,7 @@ int main(int argc, char *argv[])
 
  // Open the memory card
     FILE *file = fopen(argv[1], "r");
-    if (file != NULL)
+    if (file == NULL)
     {
         printf()
     }
