@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    FILE *file = fopen(argv[1], "r");
+    CARD.RAW *card.raw = fopen(argv[1], "r");
  // Open the memory card
  // Repeat until end of card
     //Read 512 bytes into buffer
