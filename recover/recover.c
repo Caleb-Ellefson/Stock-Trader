@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     //one command-line argument
     if (argc =! 2)
     {
-        printf("Invaild");
+        printf("Invaild\n");
         return 1;
     }
 
@@ -17,8 +17,9 @@ int main(int argc, char *argv[])
     FILE *file = fopen(argv[1], "r");
     if (file == NULL)
     {
-        printf()
+        printf("File could not be opened.\n");
     }
+    BYTE buffer
  // Repeat until end of card
     //Read 512 bytes into buffer
     // If start of new JPEG
