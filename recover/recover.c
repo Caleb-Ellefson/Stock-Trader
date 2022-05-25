@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     //one command-line argument
     if (argc =! 2)
     {
-        printf("Invaild\n");
+        printf("Usage: ./recover image\n");
         return 1;
     }
 
