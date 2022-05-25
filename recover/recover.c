@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     FILE *current_file;
     char filename[100];
     int current_filenumber = 0;
-    bool found_jpeg = false
+    bool found_jpeg = false;
 
     while (true)
     {
@@ -61,13 +61,15 @@ int main(int argc, char *argv[])
         }
         else
         {
-            if (found_jped)
+            if (found_jpeg)
             {
                 fwrite(buffer, sizeof(BYTE), bytes_read, current_file);
             }
                 //Else
             //If already found a JPEG
         }
+        
+        return 0;
 
 
     }
