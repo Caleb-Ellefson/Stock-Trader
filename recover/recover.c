@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
     if (file == NULL)
     {
         printf("File could not be opened.\n");
+        return 1;
     }
     BYTE buffer[BLOCK_SIZE];
 
