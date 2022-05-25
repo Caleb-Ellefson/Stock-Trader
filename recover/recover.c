@@ -24,6 +24,10 @@ int main(int argc, char *argv[])
 
     BYTE buffer[BLOCK_SIZE];
     size_t bytes_read;
+    bool is_first_jpeg = false;
+    FILE *current_file;
+    char filename[100];
+    int current_filenumber = 0;
 
     while (true)
     {
@@ -35,7 +39,29 @@ int main(int argc, char *argv[])
             break; // end of file
         }
         // If start of new JPEG
-        if ()
+        if ((buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && buffer[3] && 0xf0 == 0xe0))
+        {
+            //if first JPEG
+            //MARK IT
+            if(!is_first_jpeg)
+            {
+                is_first_jpeg = true;
+            }
+
+            else
+            {
+                fclose(current_file);
+                sprintf(current_filename, %03i.jpg, current_filenumber);
+                current_file = fopen(current_filename, "w");
+            }
+                    //If first JPEG
+                    //Else close old and open new file
+        }
+        else
+        {
+                //Else
+            //If already found a JPEG
+        }
 
 
     }
