@@ -55,9 +55,11 @@ int main(int argc, char *argv[])
                 sprintf(current_filename, "%03i.jpg", current_filenumber);
                 current_file = fopen(current_filename, "w");
             }
+            sprintf(current_filename, "%03i.jpg", current_filenumber);
+            current_file = fopen(current_filename, "w");
+            fwrite(buffer, sizeof(BYTE), bytes_read, current_file);
             current_filenumber++;
-                    //If first JPEG
-                    //Else close old and open new file
+
         }
         else
         {
@@ -68,7 +70,7 @@ int main(int argc, char *argv[])
                 //Else
             //If already found a JPEG
         }
-        
+
         return 0;
 
 
