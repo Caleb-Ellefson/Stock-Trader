@@ -23,8 +23,19 @@ int main(int argc, char *argv[])
     }
 
     BYTE buffer[BLOCK_SIZE];
+    size_t bytes_read;
 
     while (true)
+    {
+        // Repeat until end of card
+        //Read 512 bytes into buffer
+        bytes_read = fread(buffer, sizeof(BYTE), BLOCK_SIZE, file);
+        if (bytes_read == 0)
+        {
+            break; // end of file
+        }
+
+    }
  // Repeat until end of card
     //Read 512 bytes into buffer
     // If start of new JPEG
