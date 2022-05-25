@@ -71,7 +71,8 @@ int main(int argc, char *argv[])
                 //Else
             //If already found a JPEG
         }
-
+        fclose(file);
+        fclose(current_file);
         return 0;
 
 
