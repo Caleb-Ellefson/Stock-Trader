@@ -34,6 +34,9 @@ int main(int argc, char *argv[])
         {
             break; // end of file
         }
+        // If start of new JPEG
+        if ()
+
 
     }
  // Repeat until end of card
