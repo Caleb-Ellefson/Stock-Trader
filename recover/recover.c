@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
- // Open the memory card
+    // Open the memory card
     FILE *file = fopen(argv[1], "r");
     if (file == NULL)
     {
