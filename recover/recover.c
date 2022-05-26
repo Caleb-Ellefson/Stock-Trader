@@ -54,8 +54,6 @@ int main(int argc, char *argv[])
             else
             {
                 fclose(current_file);
-                sprintf(current_filename, "%03i.jpg", current_filenumber);
-                current_file = fopen(current_filename, "w");
             }
             sprintf(current_filename, "%03i.jpg", current_filenumber);
             current_file = fopen(current_filename, "w");
