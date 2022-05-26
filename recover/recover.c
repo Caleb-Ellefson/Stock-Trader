@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     size_t bytes_read;
     bool is_first_jpeg = false;
     FILE *current_file;
-    char filename[100];
+    char current_filename[100];
     int current_filenumber = 0;
     bool found_jpeg = false;
 
