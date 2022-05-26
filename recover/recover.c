@@ -8,7 +8,7 @@ typedef uint8_t BYTE;
 int main(int argc, char *argv[])
 {
     //one command-line argument
-    if (argc =! 2)
+    if (argc != 2)
     {
         printf("Usage: ./recover image\n");
         return 1;
