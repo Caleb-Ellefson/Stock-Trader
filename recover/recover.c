@@ -29,7 +29,11 @@ int main(int argc, char *argv[])
         {
             fwrite(buffer, BLOCK_SIZE, sizeof(uint8_t), output);
             JPEG_Count++;
+        }
 
+        else
+        {
+            
         }
     }
 
