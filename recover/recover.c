@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
         printf("INVAILD\n");
         return 1
     }
-
+    // Open Memory Card
     FILE *file = fopen(argv[1], "r");
-    
+
 }
