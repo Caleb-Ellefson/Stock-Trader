@@ -14,8 +14,12 @@ int main(int argc, char *argv[])
         return 1
     }
     // Create a buffer the size of a JPEG
-    
+
     // Open Memory Card
     FILE *file = fopen(argv[1], "r");
+
+    //check if the file is a JPEG
+    if (bytes[0] == 0xff && bytes[1] == 0xd8 && bytes[2] == 0xff)
+
 
 }
