@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
         return 1
     }
     // Create a buffer the size of a JPEG
-
+    buffer[BLOCK_SIZE];
     // Open Memory Card
     FILE *file = fopen(argv[1], "r");
 
