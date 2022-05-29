@@ -18,7 +18,10 @@ int fileError (char filename[])
 }
 bool isJpegHeader(BYTE buffer[])
 {
-    
+    return bytes[0] == 0xff
+        && bytes[1] == 0xd8
+        && bytes[2] == 0xff
+        && (buffer[3] & 0xf0) == 0xe0;
 }
 int main(int argc, char *argv[])
 {
@@ -48,9 +51,9 @@ int main(int argc, char *argv[])
     {
         if(isJpgHeader(buffer))
         {
-
+            
         }
-        if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+
     }
 
     return 0;
