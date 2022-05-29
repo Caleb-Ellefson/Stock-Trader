@@ -7,7 +7,6 @@
 typedef uint8_t BYTE;
 int JPEG_Count = 0;
 char *filename[];
-FILE *img = fopen(filename, "w");
 
 int main(int argc, char *argv[])
 {
@@ -63,7 +62,7 @@ int main(int argc, char *argv[])
         }
     }
     // close remaing files
-    fclose(img);
+    fclose(JPEG_Count);
     fclose(file);
     return 0;
 }
