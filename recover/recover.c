@@ -6,7 +6,7 @@
 #define BLOCK_SIZE 512
 typedef uint8_t BYTE;
 int JPEG_Count = 0;
-char filename = JPEG_Count;
+char *filename = "000.jpg";
 int main(int argc, char *argv[])
 {
     if (argc != 2)
