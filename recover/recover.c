@@ -13,7 +13,7 @@ int inputError()
 }
 int fileError (char filename[])
 {
-    printf("Unable to open file: %s\n", inputFile);
+    printf("Unable to open file: %s\n", filename);
     return 1;
 }
 int main(int argc, char *argv[])
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     FILE* inputPtr = fopen(inputFile, "r");
     if (inputPtr == NULL)
     {
-        return fileError;
+        return fileError(inputFile);
     }
 
     return 0;
