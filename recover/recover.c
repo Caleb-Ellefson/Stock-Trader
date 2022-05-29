@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 
     while(fread(buffer, sizeof(BYTE), BLOCKSIZE, inputPtr) || feof(inputPtr) == 0)
     {
-        if(isJpgHeader(buffer))
+        if(isJpegHeader(buffer))
         {
             if(outputPtr != NULL)
             {
