@@ -27,13 +27,14 @@ int main(int argc, char *argv[])
         //If first JPEG create a new file
         if (JPEG_Count == 0)
         {
+            sprintf(filename)
             fwrite(buffer, BLOCK_SIZE, sizeof(uint8_t), output);
             JPEG_Count++;
         }
 
         else
         {
-            
+
         }
     }
 
