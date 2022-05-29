@@ -6,7 +6,6 @@
 #define BLOCK_SIZE 512
 typedef uint8_t BYTE;
 int JPEG_Count = 0;
-char *filename[];
 
 int main(int argc, char *argv[])
 {
@@ -18,8 +17,11 @@ int main(int argc, char *argv[])
 
     // Create a buffer the size of a JPEG
     BYTE buffer[BLOCK_SIZE];
+    char *filename[];
+    FILE *img = fopen(filename, "w");
 
     // Open Memory Card
+
     FILE *file = fopen(argv[1], "r");
 
     while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
@@ -42,13 +44,13 @@ int main(int argc, char *argv[])
                 // Close file
                 fclose(img);
                 //create new filename
-                sprintf(filename, "%03i.jpg", JPEG_Count);
+                sprintf(filename, "%03i.jpg", img);
 
                 // open new file
                 FILE *img = fopen(filename, "w");
 
                 // write to new file
-                fwrite(buffer, 1, BLOCK_SIZE, JPEG_Count);
+                fwrite(buffer, 1, BLOCK_SIZE, img);
             }
         }
         else
