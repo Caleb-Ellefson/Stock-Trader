@@ -6,7 +6,7 @@
 #define BLOCK_SIZE 512
 typedef uint8_t BYTE;
 int JPEG_Count = 0;
-char *filename = "000.jpg";
+char *filename[];
 FILE *img = fopen(filename, "w");
 int main(int argc, char *argv[])
 {
