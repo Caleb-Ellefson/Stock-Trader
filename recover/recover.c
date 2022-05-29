@@ -35,8 +35,16 @@ int main(int argc, char *argv[])
 
         else
         {
-
+            // Close file
+            // open new file
+            // write to new file
         }
     }
+    else
+    {
+        //if already found JPEG
+        //Read 512 check??
+    }
+    // close remaing files
 
 }
