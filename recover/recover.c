@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
         {
             sprintf(filename, "%03i.jpg", JPEG_Count);
             FILE *img = fopen(filename, "w");
-            fwrite(buffer, BLOCK_SIZE, sizeof(uint8_t), output);
+            fwrite(buffer, BLOCK_SIZE, sizeof(uint8_t), img);
             JPEG_Count++;
         }
 
