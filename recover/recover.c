@@ -16,6 +16,10 @@ int fileError (char filename[])
     printf("Unable to open file: %s\n", filename);
     return 1;
 }
+bool isJpegHeader(BYTE buffer[])
+{
+    
+}
 int main(int argc, char *argv[])
 {
     if (argc != 2)
@@ -40,6 +44,14 @@ int main(int argc, char *argv[])
     BYTE buffer[BLOCKSIZE];
     int jpgCounter = 0;
 
+    while(fread(buffer, sizeof(BYTE), BLOCKSIZE, inputPtr) || feof(inputPtr) == 0)
+    {
+        if(isJpgHeader(buffer))
+        {
+
+        }
+        if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+    }
 
     return 0;
 }
