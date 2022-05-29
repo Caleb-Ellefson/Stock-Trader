@@ -21,41 +21,44 @@ int main(int argc, char *argv[])
     // Open Memory Card
     FILE *file = fopen(argv[1], "r");
 
-    //check if the file is a JPEG
-    if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] == 0xf0) == 0xe0)
+    while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
-        //If first JPEG
-        if (JPEG_Count == 0)
+    //check if the file is a JPEG
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] == 0xf0) == 0xe0)
         {
-            sprintf(filename, "%03i.jpg", JPEG_Count);
-            FILE *img = fopen(filename, "w");
-            fwrite(buffer, 1, BLOCK_SIZE, img);
-            JPEG_Count++;
-        }
+            //If first JPEG
+            if (JPEG_Count == 0)
+            {
+                sprintf(filename, "%03i.jpg", JPEG_Count);
+                FILE *img = fopen(filename, "w");
+                fwrite(buffer, 1, BLOCK_SIZE, img);
+                JPEG_Count++;
+            }
 
+            else
+            {
+                JPEG_Count++;
+                // Close file
+                fclose(img);
+                //create new filename
+                sprintf(filename, "%03i.jpg", JPEG_Count);
+
+                // open new file
+                FILE *img = fopen(filename, "w");
+
+                // write to new file
+                fwrite(buffer, 1, BLOCK_SIZE, img);
+            }
+        }
         else
         {
-            JPEG_Count++;
-            // Close file
-            fclose(img);
-            //create new filename
-            sprintf(filename, "%03i.jpg", JPEG_Count);
-
-            // open new file
-            FILE *img = fopen(filename, "w");
-
-            // write to new file
-            fwrite(buffer, 1, BLOCK_SIZE, img);
+            if (JPEG_Count)
+            {
+                fwrite(buffer, 1, BLOCK_SIZE, img);
+            }
+            //if already found JPEG
+            //Read 512 check??
         }
-    }
-    else
-    {
-        if (JPEG_Count)
-        {
-            fwrite(buffer, 1, BLOCK_SIZE, img);
-        }
-        //if already found JPEG
-        //Read 512 check??
     }
     // close remaing files
     fclose(img);
