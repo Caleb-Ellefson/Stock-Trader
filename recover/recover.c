@@ -6,7 +6,7 @@
 #define BLOCK_SIZE 512
 typedef uint8_t BYTE;
 int JPEG_Count = 0;
-
+char filename = JPEG_Count;
 int main(int argc, char *argv[])
 {
     if (argc != 2)
@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
         if (JPEG_Count == 0)
         {
             sprintf(filename, "%03i.jpg", JPEG_Count);
+            FILE *img = fopen(filename, "w")
             fwrite(buffer, BLOCK_SIZE, sizeof(uint8_t), output);
             JPEG_Count++;
         }
