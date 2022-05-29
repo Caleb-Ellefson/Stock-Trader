@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#define BLOCK_SIZE 512
+#define BLOCKSIZE 512
 typedef uint8_t BYTE;
 
 int inputError()
@@ -51,7 +51,17 @@ int main(int argc, char *argv[])
     {
         if(isJpgHeader(buffer))
         {
-            
+            if(outputPtr == NULL)
+            {
+                fclose(outputPtr);
+            }
+            sprintf(filename, "%03i.jpg", jpgCounter);
+            outputPtr = fopen(filename, "w");
+            jpgCounter++;
+        }
+        if(outputPtr!= NULL)
+        {
+            fwrite(buffer, sizeof(BYTE), )
         }
 
     }
