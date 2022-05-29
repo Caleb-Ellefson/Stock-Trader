@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
     {
         if(isJpgHeader(buffer))
         {
-            if(outputPtr == NULL)
+            if(outputPtr != NULL)
             {
                 fclose(outputPtr);
             }
