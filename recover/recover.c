@@ -7,6 +7,7 @@
 typedef uint8_t BYTE;
 int JPEG_Count = 0;
 char *filename = "000.jpg";
+FILE *img = fopen(filename, "w");
 int main(int argc, char *argv[])
 {
     if (argc != 2)
@@ -29,7 +30,7 @@ int main(int argc, char *argv[])
         {
             sprintf(filename, "%03i.jpg", JPEG_Count);
             FILE *img = fopen(filename, "w");
-            fwrite(buffer, BLOCK_SIZE, sizeof(uint8_t), img);
+            fwrite(buffer, 1, BLOCK_SIZE, img);
             JPEG_Count++;
         }
 
@@ -37,7 +38,7 @@ int main(int argc, char *argv[])
         {
             JPEG_Count++;
             // Close file
-            fclose(filename);
+            fclose(img);
             //create new filename
             sprintf(filename, "%03i.jpg", JPEG_Count);
 
@@ -45,7 +46,7 @@ int main(int argc, char *argv[])
             FILE *img = fopen(filename, "w");
 
             // write to new file
-            fwrite(buffer, BLOCK_SIZE, sizeof(uint8_t), img);
+            fwrite(buffer, 1, BLOCK_SIZE, img);
         }
     }
     else
@@ -58,5 +59,7 @@ int main(int argc, char *argv[])
         //Read 512 check??
     }
     // close remaing files
-
+    fclose(img);
+    fclose(file);
+    return 0;
 }
