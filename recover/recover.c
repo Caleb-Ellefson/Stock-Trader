@@ -35,9 +35,17 @@ int main(int argc, char *argv[])
 
         else
         {
+            JPEG_Count++;
             // Close file
+            fclose(filename);
+            //create new filename
+            sprintf(filename, "%03i.jpg", JPEG_Count);
+
             // open new file
+            FILE *img = fopen(filename, "w");
+
             // write to new file
+            fwrite(buffer, BLOCK_SIZE, sizeof(uint8_t), img);
         }
     }
     else
