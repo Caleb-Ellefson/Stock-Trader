@@ -36,5 +36,6 @@ int main(int argc, char *argv[])
         return fileError(inputFile);
     }
 
+    
     return 0;
 }
