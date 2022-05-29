@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
         }
         if(outputPtr!= NULL)
         {
-            fwrite(buffer, sizeof(BYTE), )
+            fwrite(buffer, sizeof(buffer), 1, outputPtr);
         }
 
     }
@@ -76,6 +76,5 @@ int main(int argc, char *argv[])
         fclose(outputPtr);
 
     }
-    fclose()
     return 0;
 }
