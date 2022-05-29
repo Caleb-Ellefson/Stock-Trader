@@ -29,13 +29,17 @@ int main(int argc, char *argv[])
         return inputError();
     }
 
-
     FILE* inputPtr = fopen(inputFile, "r");
     if (inputPtr == NULL)
     {
         return fileError(inputFile);
     }
 
-    
+    char filename[8];
+    FILE* outputPtr = NULL;
+    BYTE buffer[BLOCKSIZE];
+    int jpgCounter = 0;
+
+
     return 0;
 }
