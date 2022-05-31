@@ -41,7 +41,7 @@ person *create_family(int generations)
 {
     // TODO: Allocate memory for new person
     person *p = malloc(sizeof(person));
-    if (person == null)
+    if (p == NULL)
     {
         free_family;
         return 1;
