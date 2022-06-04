@@ -2,6 +2,9 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <studio.h>
+#include <stdlib.h>
+#include <stdbool.h>
 
 #include "dictionary.h"
 
