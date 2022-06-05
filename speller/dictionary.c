@@ -50,7 +50,7 @@ bool load(const char *dictionary)
         table[i] = NULL;
     }
 
-    node* tmpword[LENGTH + 1];
+    char tmpword[LENGTH + 1];
 
     while(fscanf(filePtr, "%s\n", tmpword) != EOF)
     {
@@ -58,7 +58,7 @@ bool load(const char *dictionary)
 
         strcpy(tmpNode->word, tmpword);
 
-        int key = hash(tempword);
+        int key = hash(tmpword);
 
         if(table[key] == NULL)
         {
