@@ -56,7 +56,7 @@ bool load(const char *dictionary)
     {
         node* tmpNode = malloc(sizeof(node));
 
-        strcpy(tmpNode->word, tempword);
+        strcpy(tmpNode->word, tmpword);
 
         int key = hash(tempword);
 
