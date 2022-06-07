@@ -117,7 +117,7 @@ bool unload(void)
             nodePtr = nodePtr->next;
             free(deleteme);
         }
-        table[i];
+        table[i] = NULL;
     }
     return true;
 }
