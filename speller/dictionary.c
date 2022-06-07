@@ -107,5 +107,17 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    return false;
+    for(int i = 0; i < N; i++)
+    {
+        node* nodePtr = table[i];
+
+        while(nodePtr != NULL)
+        {
+            node* deleteme = nodePtr;
+            nodePtr = nodePtr->next;
+            free(deleteme);
+        }
+        table[i];
+    }
+    return true;
 }
