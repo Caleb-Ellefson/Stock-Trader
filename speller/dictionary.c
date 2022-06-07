@@ -26,6 +26,18 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    int key = hash(word);
+    node* nodePtr = table[i];
+
+    while(nodePtr == NULL)
+    {
+        if(strcasecmp(nodePtr->word, word) == 0)
+        {
+            return true;
+        }
+        nodePtr = nodePtr->next;
+    }
+
     return false;
 }
 
