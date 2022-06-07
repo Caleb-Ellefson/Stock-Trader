@@ -28,7 +28,7 @@ bool check(const char *word)
 {
     // TODO
     int key = hash(word);
-    node* nodePtr = table[key];
+    node* nodePtr = table[key]; 
 
     while(nodePtr == NULL)
     {
