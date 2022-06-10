@@ -16,11 +16,21 @@ def main():
 
     teams = []
     # TODO: Read teams into memory from file
+
+    # file is equal the arguemtn inputted
     filename = sys.argv[1]
     with open(filename) as f:
+
+        #Dict reader allows each row the in file to be stored as a diconary
         reader = csv.DictReader(f)
+
+        #Going though each row in the file
         for team in reader:
+
+            #changing each teams rating from a string to a int
             teams["rating"] = int(team["rating"])
+
+            #adding the new int rating to the dictonary
             teams.append(team)
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
