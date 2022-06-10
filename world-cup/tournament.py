@@ -32,6 +32,7 @@ def main():
 
             #adding the new int rating to the dictonary
             teams.append(team)
+
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
 
