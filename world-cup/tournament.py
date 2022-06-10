@@ -28,7 +28,7 @@ def main():
         for team in reader:
 
             #changing each teams rating from a string to a int
-            teams["rating"] = int(team["rating"])
+            team["rating"] = int(team["rating"])
 
             #adding the new int rating to the dictonary
             teams.append(team)
