@@ -8,7 +8,6 @@ if (h < 1 or h > 8):
     print("Invaild Height")
 
 
-else
-    for i in range(n):
-        print("#")
+for i in range(n):
+    print("#")
 
