@@ -10,5 +10,5 @@ if (h < 1 or h > 8)
 
 else
 {
-    
+    for (i = 0; )
 }
