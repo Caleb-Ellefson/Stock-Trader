@@ -9,6 +9,8 @@ if (h < 1 and h > 8):
 
 
 for i in range(h):
-    print("#")
+    for j range(h):
+        print (" ")
+        
 
 
