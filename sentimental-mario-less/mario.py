@@ -9,8 +9,8 @@ if (h < 1 and h > 8):
 
 
 for i in range(h):
-    for j range(h):
-        if i + j >= n - 1:
+    for j in range(h):
+        if i + j >= h - 1:
             print("#", end=" ")
         else:
             print(" ", end=" ")
