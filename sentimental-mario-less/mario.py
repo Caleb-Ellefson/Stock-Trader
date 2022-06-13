@@ -4,11 +4,11 @@ from cs50 import get_string
 h = get_string ("Height: ")
 
 if (h < 1 or h > 8):
-{
+
     print("Invaild Height")
-}
+
 
 else
-{
     for i in range(n):
-}
+        print("#")
+
