@@ -5,4 +5,5 @@ while True:
     if h >= 1 and h <=8:
         break
 
-for i in range(0, h):
+for i in range(n):
+    
