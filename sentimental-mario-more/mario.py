@@ -12,3 +12,10 @@ for i in range(h):
             print(" ", end="")
     print()
 
+for i in range(h):
+    for j in range(h):
+        if i + j >= h - 1:
+            print("#", end="")
+        else:
+            print("", end="")
+    print()
