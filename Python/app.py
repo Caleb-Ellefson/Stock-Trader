@@ -15,6 +15,7 @@ class Dog:
 
 class GoldenRetriver(dog):
 
-    def speak()
+    def speak(self, sound="Bark"):
+        return super().speak(sound)
 
 
