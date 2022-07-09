@@ -13,7 +13,7 @@ class Dog:
 
 
 
-class GoldenRetriver(dog):
+class GoldenRetriver(Dog):
 
     def speak(self, sound="Bark"):
         return super().speak(sound)
