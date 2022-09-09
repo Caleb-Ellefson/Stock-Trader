@@ -3,17 +3,7 @@ HOURS_WORKED = 42
 PAY_RATE = 7.25
 TOTAL_PAY = (HOURS_WORKED * PAY_RATE)
 
-overtime_pay()
-
-print(TOTAL_PAY)
-
-
-
-
-
-
-
-def ovetime_pay(HOURS_WORKED, PAY_RATE, TOTAL_PAY):
+def overtime_pay(HOURS_WORKED, PAY_RATE, TOTAL_PAY):
 
     #Enter function if employee has over 40 hours
     if (HOURS_WORKED > 40):
@@ -25,3 +15,12 @@ def ovetime_pay(HOURS_WORKED, PAY_RATE, TOTAL_PAY):
 
     else:
         return(1)
+
+
+
+
+overtime_pay(HOURS_WORKED, PAY_RATE, TOTAL_PAY)
+
+print(TOTAL_PAY)
+
+
