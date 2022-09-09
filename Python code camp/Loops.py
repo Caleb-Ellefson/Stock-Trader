@@ -1,2 +1,4 @@
-for i in range(6):
-    print i
+word = input("Enter word: ")
+
+for character in word:
+    print(character)
