@@ -1,2 +1,3 @@
 SELECT AVG(energy) FROM songs WHERE artist_id = (SELECT id FROM artists WHERE name = 'Drake');
-SELECT AVG()
+SELECT COUNT(title) FROM movies JOIN ratings ON movies.id = ratings.movie_id WHERE rating == 10;
+SELECT AVG(rating) FROM ratings JOIN movies ON 
