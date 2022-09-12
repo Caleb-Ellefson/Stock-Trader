@@ -1,0 +1,1 @@
+SELECT name FROM songs ORDER by duratoin_ms LIMIT 5;
