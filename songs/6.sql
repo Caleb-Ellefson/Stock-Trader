@@ -1,1 +1,2 @@
-Select * FROM songs WHERE artist_id = '54';()
+
+Select * FROM songs WHERE artist_id = '54';
