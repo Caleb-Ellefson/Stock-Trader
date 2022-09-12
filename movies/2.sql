@@ -1,2 +1,2 @@
-SELECT * FROM people WHERE name = 'Emma Stone';
-SELECT birth FROM people WHERE id = '1297015'
+
+SELECT birth FROM people WHERE name = (SELECT * FROM people WHERE name = 'Emma Stone');
