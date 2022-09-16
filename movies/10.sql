@@ -1,1 +1,1 @@
-SELECT person_id
+SELECT person_id FROM directors
