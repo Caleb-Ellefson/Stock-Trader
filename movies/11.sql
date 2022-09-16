@@ -1,1 +1,1 @@
-SELECT title FROM movies
+SELECT movies.title FROM people
