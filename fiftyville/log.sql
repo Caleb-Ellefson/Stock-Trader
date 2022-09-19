@@ -62,8 +62,5 @@ WHERE year = 2021 AND month = 7 AND day = 28 AND duration < 60;
 -- BRUCE -- Phone number an License plate match and both suspects would not be on the same flight.
 -- (375) 555-8161 Phone number of suspect
 
-SELECT name
-FROM people
-JOIN phone_calls ON phone_calls.caller = people.phone_number
-WHERE year = 2021 AND month = 7 AND day = 28 AND duration < 60;
+
 
