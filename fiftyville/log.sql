@@ -27,3 +27,7 @@ WHERE year = 2021 AND month = 7 AND day = 28;
 --  | 266 | 2021 | 7     | 28  | 10   | 23     | exit     | 322W7JE       |
 --  | 267 | 2021 | 7     | 28  | 10   | 23     | exit     | 0NTHK55       |
 --  | 268 | 2021 | 7     | 28  | 10   | 35     | exit     | 1106N58       |
+
+SELECT *
+FROM atm_transactions
+WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street';
