@@ -18,6 +18,7 @@ WHERE year = 2021 AND month = 7 AND day = 28;
 
 -- Partner bought the first flight out of Fiftyville for 7/29/2021
 -- Leggett Street atm before 10:15 am
+-- Phonecall after 10:15 AM < 1 min
 --  | 260 | 2021 | 7     | 28  | 10   | 16     | exit     | 5P2BI95       |
 --  | 261 | 2021 | 7     | 28  | 10   | 18     | exit     | 94KL13X       |
 --  | 262 | 2021 | 7     | 28  | 10   | 18     | exit     | 6P58WS2       |
@@ -43,3 +44,18 @@ FROM people
 JOIN passengers ON passengers.passport_number = people.passport_number
 WHERE flight_id = 36;
 
+--+--------+--------+----------------+-----------------+---------------+-----------+-----------------+------+
+--|   id   |  name  |  phone_number  | passport_number | license_plate | flight_id | passport_number | seat |
+--+--------+--------+----------------+-----------------+---------------+-----------+-----------------+------+
+--| 953679 | Doris  | (066) 555-9701 | 7214083635      | M51FA04       | 36        | 7214083635      | 2A   |
+--| 398010 | Sofia  | (130) 555-0289 | 1695452385      | G412CB7       | 36        | 1695452385      | 3B   |
+--| 686048 | Bruce  | (367) 555-5533 | 5773159633      | 94KL13X       | 36        | 5773159633      | 4A   |
+--| 651714 | Edward | (328) 555-1152 | 1540955065      | 130LD9Z       | 36        | 1540955065      | 5C   |
+--| 560886 | Kelsey | (499) 555-9472 | 8294398571      | 0NTHK55       | 36        | 8294398571      | 6C   |
+--| 449774 | Taylor | (286) 555-6063 | 1988161715      | 1106N58       | 36        | 1988161715      | 6D   |
+--| 395717 | Kenny  | (826) 555-1652 | 9878712108      | 30G67EN       | 36        | 9878712108      | 7A   |
+--| 467400 | Luca   | (389) 555-5198 | 8496433585      | 4328GD8       | 36        | 8496433585      | 7B
+
+SELECT *
+FROM phone_calls
+WHERE year = 2021 AND month = 7 AND day = 28 AND duration < 60;
