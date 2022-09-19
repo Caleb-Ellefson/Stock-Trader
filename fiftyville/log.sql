@@ -35,4 +35,4 @@ WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street'
 
 SELECT *
 FROM flights
-WHERE id = 264, 267, 258, 259;
+WHERE year = 2021 AND month = 7 AND day = 29
