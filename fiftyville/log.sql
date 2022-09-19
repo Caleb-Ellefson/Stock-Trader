@@ -17,6 +17,7 @@ FROM interviews
 WHERE year = 2021 AND month = 7 AND day = 28;
 
 -- Partner bought the first flight out of Fiftyville for 7/29/2021
+-- Leggett Street atm before 10:15 am
 --  | 260 | 2021 | 7     | 28  | 10   | 16     | exit     | 5P2BI95       |
 --  | 261 | 2021 | 7     | 28  | 10   | 18     | exit     | 94KL13X       |
 --  | 262 | 2021 | 7     | 28  | 10   | 18     | exit     | 6P58WS2       |
