@@ -40,6 +40,6 @@ WHERE year = 2021 AND month = 7 AND day = 29
 
 SELECT id
 FROM people
-JOIN passengers ON passport_number = people.passport_number
+JOIN passengers ON passengers.passport_number = people.passport_number
 WHERE flight_id = 36;
 
