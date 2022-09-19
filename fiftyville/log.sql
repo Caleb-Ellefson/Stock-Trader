@@ -67,9 +67,9 @@ FROM people
 WHERE phone_number = '(375) 555-8161';
 -- ROBIN
 
-SELECT destination_airport_id
+SELECT *
 FROM flights
-WHERE year = 2021 AND month = 7 AND day = 28 AND id = 36;
+WHERE id = 36 and year = 2021 AND month = 7 AND day = 28;
 -- 4
 
 
