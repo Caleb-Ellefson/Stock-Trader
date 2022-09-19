@@ -69,7 +69,7 @@ WHERE phone_number = '(375) 555-8161';
 
 SELECT destination_airport_id
 FROM flights
-WHERE id = 36;
+WHERE year = 2021 AND month = 7 AND day = 28 AND id = 36;
 -- 4
 
 
