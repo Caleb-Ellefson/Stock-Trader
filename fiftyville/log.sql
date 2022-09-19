@@ -6,3 +6,5 @@ AND street = "Humphrey Street";
 
 -- 10:15am @ humphrey Street bakery 3 Witnesses
 
+SELECT *
+FROM bakery_security_log
