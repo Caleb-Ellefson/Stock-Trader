@@ -7,4 +7,5 @@ AND street = "Humphrey Street";
 -- 10:15am @ humphrey Street bakery 3 Witnesses
 
 SELECT *
-FROM bakery_security_log
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND hour = 10 AND minute = 15;
