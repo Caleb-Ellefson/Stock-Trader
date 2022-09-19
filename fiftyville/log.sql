@@ -67,3 +67,13 @@ FROM people
 WHERE phone_number = '(375) 555-8161';
 -- ROBIN
 
+SELECT destination_airport_id
+FROM flights
+WHERE id = 36;
+-- 4
+
+
+SELECT full_name
+FROM airports
+WHERE id = 4;
+Laguardia Airport
