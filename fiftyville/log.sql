@@ -8,7 +8,7 @@ AND street = "Humphrey Street";
 
 SELECT *
 FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND hour = 10 AND minute = 15;
+WHERE month = 7 AND day = 28 AND hour = 10;
 
 -- ID = 258 Entered the store @ 10:08 License_plate = R3G7486
 -- ID = 259 @ 10:14 License_plate = 13FNH73
@@ -31,4 +31,8 @@ WHERE year = 2021 AND month = 7 AND day = 28;
 SELECT *
 FROM atm_transactions
 WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street';
--- 264, 267, 
+-- 264, 267,
+
+SELECT *
+FROM bakery_security_logs
+WHERE month = 7 AND day = 28 AND hour = 9
