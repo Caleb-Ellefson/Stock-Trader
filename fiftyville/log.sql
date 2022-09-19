@@ -59,5 +59,7 @@ WHERE flight_id = 36;
 SELECT *
 FROM phone_calls
 WHERE year = 2021 AND month = 7 AND day = 28 AND duration < 60;
--- BRUCE
+-- BRUCE -- Phone number an License plate match and both suspects would not be on the same flight.
+
+
 
