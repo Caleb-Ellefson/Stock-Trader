@@ -38,6 +38,8 @@ FROM flights
 WHERE year = 2021 AND month = 7 AND day = 29
 -- FLIGHT id 36
 
-SELECT passport_number
+SELECT id
 FROM people
-WHERE id = 267
+JOIN passengers ON passport_number = people.passport_number
+WHERE flight_id = 36;
+
