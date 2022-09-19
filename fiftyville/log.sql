@@ -31,8 +31,5 @@ WHERE year = 2021 AND month = 7 AND day = 28;
 SELECT *
 FROM atm_transactions
 WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street';
--- 264, 267,
+-- 264, 267 id's that match the id's leaving the bakery after the robbery.
 
-SELECT *
-FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND hour = 9
