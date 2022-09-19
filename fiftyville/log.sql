@@ -31,3 +31,4 @@ WHERE year = 2021 AND month = 7 AND day = 28;
 SELECT *
 FROM atm_transactions
 WHERE year = 2021 AND month = 7 AND day = 28 AND atm_location = 'Leggett Street';
+-- 264, 267, 
