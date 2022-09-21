@@ -27,6 +27,18 @@
                     })
 
                 }
+
+                document.querySelector('#check').addEvenListener('click', function(){
+                    let input = document.querySelector('input');
+                    if (input.vaule === 'Switzerland'){
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#feedback2').innerHTML = 'Correct!';
+                    }
+                        else {
+                            input.style.backgroundColor = 'red';
+                            document.querySelector('#feedback2').innerHTML = 'Incorrect';
+                        }
+                })
             }
 
 
