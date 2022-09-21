@@ -7,7 +7,19 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            
+            //Run script one the entire DOM is loaded
+            document.addEventListener('DOMContentLoaded', function(){
+                //When correct answer is clicked, change color to green
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function(){
+                    //Change background style color of button to green
+                    correct.style.backgroundColor = 'green';
+                    //Add text to the blank pr under the question displaying Correct
+                    document.querySelector('#question1').innerHTML = 'Correct!';
+                })
+            })
+
+
         </script>
     </head>
     <body>
