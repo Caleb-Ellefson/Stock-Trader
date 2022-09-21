@@ -7,7 +7,20 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            
+            // Wait until the DOM is loaded to run the JS code
+            document.addEventListener('DOMContentLoaded',Function(){
+                // Button with class "Correct"
+                let correct = document.querySelector('.Correct');
+                // Waiting for when button is clicked do function()
+                correct.addEventListener('click',
+                // Self
+                function() {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback1').innerHTML = 'Correct!';
+                });
+
+            }
+
         </script>
     </head>
     <body>
