@@ -18,8 +18,15 @@
                     document.querySelector('#feedback1').innerHTML = 'Correct!';
                 });
 
-                let incorrect = document.querySelector('.Incorrect');
-                correct.addEventListener
+                let incorrects = document.querySelectorAll('.Incorrect');
+                for (let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click', function(){
+                        incorrects[i].style.background = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect';
+
+                    })
+
+                }
             }
 
 
