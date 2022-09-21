@@ -16,7 +16,16 @@
                     correct.style.backgroundColor = 'green';
                     //Add text to the blank pr under the question displaying Correct
                     document.querySelector('#question1').innerHTML = 'Correct!';
-                })
+                });
+
+                //When any incorrect answer is clicked change color to red
+                //Selecting all buttons with class incorrect
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++){
+                    incorrects[i].addEventListener('click', function(){
+                        incorrects[i].style.background = 'red';
+                    })
+                }
             })
 
 
