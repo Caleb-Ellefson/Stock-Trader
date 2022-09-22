@@ -21,8 +21,11 @@
                 //When any incorrect answer is clicked change color to red
                 //Selecting all buttons with class incorrect
                 let incorrects = document.querySelectorAll('.incorrect');
+                //For the amount of buttons in class incorrect
                 for (let i = 0; i < incorrects.length; i++){
+                    //For each button when clicked call function
                     incorrects[i].addEventListener('click', function(){
+                        //Change the i'th button background to red
                         incorrects[i].style.background = 'red';
                     })
                 }
