@@ -27,9 +27,10 @@
                     incorrects[i].addEventListener('click', function(){
                         //Change the i'th button background to red
                         incorrects[i].style.background = 'red';
-                    })
+                        document.querySelector('#question2').innerHTML = 'WRONG!';
+                    });
                 }
-            })
+            }
 
 
         </script>
