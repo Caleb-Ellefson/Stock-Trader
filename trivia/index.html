@@ -5,49 +5,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
-        <script>
-            // TODO: Add code to check answers to questions
-            //Run script one the entire DOM is loaded
-            document.addEventListener('DOMContentLoaded', function(){
-                //When correct answer is clicked, change color to green
-                let correct = document.querySelector('.correct');
-                correct.addEventListener('click', function() {
-                    //Change background style color of button to green
-                    correct.style.backgroundColor = 'green';
-                    //Add text to the blank pr under the question displaying Correct
-                    document.querySelector('#question1').innerHTML = 'Correct!';
-                });
-
-                //When any incorrect answer is clicked change color to red
-                //Selecting all buttons with class incorrect
-                let incorrects = document.querySelectorAll('.incorrect');
-                //For the amount of buttons in class incorrect
-                for (let i = 0; i < incorrects.length; i++) {
-                    //For each button when clicked call function
-                    incorrects[i].addEventListener('click', function(){
-                        //Change the i'th button background to red
-                        incorrects[i].style.background = 'red';
-                        document.querySelector('#question2').innerHTML = 'WRONG!';
-                    });
-                }
-                // When submit is clicked
-                document.querySelector('#check').addEventListener('click',function() {
-                    //Set variable input to what they submitted
-                    let input = document.querySelector('input');
-                    //Use .value to compare what the wrote to the correct awnser
-                    if (input.vaule === 'Switzerland'){
-                        input.style.backgroundColor = 'green';
-                        document.querySelector('#question2').innerHTML = 'Correct!';
-                        else{
-                            intput.style.backgroundColor = 'red';
-                            document.querySelctor('#question2').innerHTML = 'WRONG!';
-                        }
-                    }
-                });
-            }
-
-
-        </script>
     </head>
     <body>
         <div class="header">
