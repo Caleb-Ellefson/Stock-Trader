@@ -70,6 +70,6 @@ h2 { font-size: var(--fs-h1)}
 
 .section__subtitle--intro,
 .section__subtitle--about {
-    background: var(--clr--accent);
-    font-family: var(--ff--secondary);
+    background: var(--clr-accent);
+    font-family: var(--ff-secondary);
 }
