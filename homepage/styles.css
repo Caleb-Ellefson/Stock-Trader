@@ -33,5 +33,9 @@
 }
 
 body {
-    background: var(--clr)
+    background: var(--clr);
+    color: var(--clr-dark);
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
 }
