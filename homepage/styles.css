@@ -10,9 +10,9 @@
     --ff-secondary: 'Source Code Pro', momospace;
 
     --fw-reg: 300;
-    --fw-bold 900;
+    --fw-bold: 900;
 
-    --clr-light: #fff:
+    --clr-light: #fff;
     --clr-dark: #303030;
     --clr-accent: #16e0bd;
 
@@ -33,7 +33,7 @@
 }
 
 body {
-    background: var(--clr);
+    background: var(--clr-light);
     color: var(--clr-dark);
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
