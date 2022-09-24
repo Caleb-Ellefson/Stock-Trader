@@ -73,3 +73,11 @@ h2 { font-size: var(--fs-h1)}
     background: var(--clr-accent);
     font-family: var(--ff-secondary);
 }
+
+@media (min-width: 6000px) {
+    .intro {
+        display grid;
+        grid-template-areas:
+        "img title"
+    }
+}
