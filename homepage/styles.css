@@ -7,7 +7,7 @@
 
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff-secondary: 'Source Code Pro', momospace;
+    --ff-secondary: 'Source Code Pro', monospace;
 
     --fw-reg: 300;
     --fw-bold: 900;
@@ -57,7 +57,7 @@ h3 {
 
 h1 { font-size: var(--fs-h1)}
 h2 { font-size: var(--fs-h1)}
-h2 { font-size: var(--fs-h1)}
+h3 { font-size: var(--fs-h1)}
 
 .section__title {
     margin-bottom .25em;
