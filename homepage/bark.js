@@ -11,6 +11,6 @@ function changetext() {
     if (x.innerHTML === "Kora doesn't like to be touched.") {
       x.innerHTML = "Now, why would you do that?";
     } else {
-      x.innerHTML = "Hello";
+      x.innerHTML = "Kora doesn't like to be touched.";
     }
   }
