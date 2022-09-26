@@ -2,6 +2,7 @@
     position: relative;
     float:right;
     margin: -600px 700px 0 0;
+    filter: drop-shadow(10px 10px 10px black);
 }
 
 body{
@@ -12,7 +13,7 @@ body{
     font-size: 150px;
     padding: 3rem;
     font-family: 'Source Sans Pro', sans-serif;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 4px 4px #000000;
 }
 
 .title {
