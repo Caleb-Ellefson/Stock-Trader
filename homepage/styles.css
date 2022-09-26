@@ -1,12 +1,14 @@
 .picRight {
+    position: relative;
     float:right;
     margin: -600px 700px 0 0;
 }
 
 .intro {
-    font-size: 150px;
     position: relative;
+    font-size: 150px;
     padding: 3rem;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .title {
