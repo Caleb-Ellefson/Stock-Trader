@@ -1,5 +1,5 @@
 function bark() {
- var image = document.getElementById("picRight");
+ var image = document.getElementById("changeimg");
  if (image.scr.match("/Kora/Sitting.png")) {
     image.src = "/Kora/barking-removebg-preview.png";
  }
