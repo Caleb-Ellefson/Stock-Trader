@@ -14,6 +14,12 @@ body{
     font-family: 'Source Sans Pro', sans-serif;
     text-shadow: 2px 4px 4px #000000;
 }
+.intro_subheader {
+    position: relative;
+    font-size: 125px;
+    padding: 5rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
 
 .title {
 
