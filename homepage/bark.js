@@ -1,10 +1,7 @@
 function bark() {
- var image = document.getElementById("changeimg");
- if (image.scr.match("/Kora/Sitting.png")) {
+ var image = document.querySelector('#changeimg');
+ image.onclick = function() {
     image.src = "/Kora/barking-removebg-preview.png";
- }
- else {
-    image.src = "/Kora/Sitting.png";
- }
-
+};
 }
+
