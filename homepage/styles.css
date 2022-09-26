@@ -1,0 +1,10 @@
+.into_img{
+    width: 100px;
+        }
+
+    .into_img img{
+    float: left;
+    margin-left: 0px 0px 0px 30px;
+    width: 150px;
+    height: 38px;
+    }
