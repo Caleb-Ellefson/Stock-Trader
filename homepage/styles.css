@@ -1,12 +1,12 @@
 .picRight {
     float:right;
-    margin: 0 0 0 200;
+    margin: -600px 700px 0 0;
 }
 
 .intro {
     font-size: 150px;
     position: relative;
-    left:
+    padding: 3rem;
 }
 
 .title {
