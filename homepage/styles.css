@@ -9,6 +9,7 @@
     font-size: 150px;
     padding: 3rem;
     font-family: 'Source Sans Pro', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .title {
