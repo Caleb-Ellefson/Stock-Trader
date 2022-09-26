@@ -10,19 +10,18 @@ body{
 .intro {
     position: relative;
     font-size: 150px;
-    font-size: 4.2vw;
     padding: 3rem;
     font-family: 'Source Sans Pro', sans-serif;
     text-shadow: 2px 4px 4px #000000;
 }
 .intro_subheader {
     position: relative;
-    font-size: 125px;
+    font-size: 100px;
     padding: 5rem;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 4.2vw;
 }
 
-.title {
 
+@media {
+    
 }
