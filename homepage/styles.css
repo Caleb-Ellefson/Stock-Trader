@@ -45,8 +45,7 @@ body{
 
 @media only screen and (min-width: 375px){
     .intro {
-        font-size: 100px;
-        padding: 2rem;
+        font-size: 50px;
         font-family: 'Source Sans Pro', sans-serif;
         text-shadow: 2px 4px 4px #000000;
     }
@@ -57,4 +56,8 @@ body{
         padding: 1rem;
         font-family: 'Source Sans Pro', sans-serif;
         }
+    .navbar navbar-expand-lg bg-light{
+        display: none;
+    }
+
 }
