@@ -81,6 +81,7 @@ body {
 .text_storage {
     border: 1px solid gray ;
     padding: 1rem;
+    background-color:#cccccc;
 }
 
 .storage_header {
