@@ -91,16 +91,14 @@ body {
 }
 
 .text {
-    border: 2px solid gray;
 }
 .text p {
-    font-size: 3rem;
+    font-size: 1rem;
     font-family: 'Source Sans Pro', sans-serif;
     color: black;
     font-weight: 100;
     line-height: .4;
     text-shadow: 2px 2px 4px #000000
-}
 
 
 
