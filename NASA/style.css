@@ -68,12 +68,14 @@ body {
 
 
 /*WHY */
-.storage {
-
-}
 
 .storage_header {
-
+    font-size: 6rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    font-weight: 100;
+    line-height: .4;
+    text-shadow: 2px 2px 4px #000000
 }
 
 .text_storage {
