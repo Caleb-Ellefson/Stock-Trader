@@ -124,7 +124,7 @@ body {
 }
 
 .storage_picture {
-    margin: auto 5px;
+    object-position: center top;
 
 
 }
