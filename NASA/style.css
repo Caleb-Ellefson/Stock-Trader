@@ -68,7 +68,7 @@ body {
 
 
 
-/*WHY */
+/*SECTION 2 */
 .storage{
     display: flex;
     justify-content: space-between;
@@ -129,10 +129,6 @@ body {
 }
 
 
-
-
-
-
 .text_storage {
 
 }
@@ -145,11 +141,17 @@ body {
 }
 
 
+/*SECTION 3*/
 
+.section3{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    width: 100%;
+    margin: 10rem auto;
+    height: 100vh;
 
-
-
-
+}
 
 
 
