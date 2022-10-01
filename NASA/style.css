@@ -94,7 +94,7 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     position: relative;
     padding: 3rem;
-    right: 250px;
+    right: 300px;
 }
 
 .storage_subheader {
@@ -121,7 +121,7 @@ body {
     font-family: 'Oswald', sans-serif;
     text-align: left;
     right: 220px;
-    margin-bottom: 66px
+    margin-bottom: 66px;
 }
 
 
