@@ -68,7 +68,7 @@ body {
 
 
 /*WHY */
-.why {
+.storage {
     padding: 0;
     width: 100%;
     height: 100vh;
@@ -78,7 +78,7 @@ body {
     position: relative;
 }
 
-.why_header {
+.storage_header {
     margin-top: -100px;
     padding: 5rem;
     font-size: 5rem;
@@ -88,9 +88,6 @@ body {
     line-height: .4;
     text-shadow: 2px 2px 4px #000000;
     text-align: center;
-}
-.storage_header {
-    float: right;
 }
 
 
