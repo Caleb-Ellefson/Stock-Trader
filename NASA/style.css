@@ -9,7 +9,11 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-
+body {
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
+  
 .background {
     padding: 0;
     width: 100%;
