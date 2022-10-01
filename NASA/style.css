@@ -1,7 +1,13 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+</style>
+
 * {
     margin: 0;
     padding: 0:;
     box-sizing: border box;
     color: #fff;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
+
+
