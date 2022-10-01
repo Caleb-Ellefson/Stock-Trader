@@ -4,4 +4,5 @@
         let scrollPosition = window.pageYOffset;
 
         console.log(scrollPosition);
+        parallax.style.transform = 'translateY(' + scrollPosition * .5 + 'px')
     })
