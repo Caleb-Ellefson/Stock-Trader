@@ -78,13 +78,9 @@ body {
 
 }
 
-.text_storage {
-    border: 1px solid gray ;
-    padding: 1rem;
-}
 
 .storage_header {
-    text-align: right;
+    text-align: center;
     font-size: 6rem;
     font-family: 'Source Sans Pro', sans-serif;
     position: relative;
