@@ -66,6 +66,6 @@
     padding-right:20px;
   }
 
-  .nav.navbar-nav.navbar-right li a {
-    color: blue;
-}
+.navbar{
+    background-color: #009bdf;
+    }
