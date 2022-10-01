@@ -22,8 +22,8 @@
 }
 
 body {
-    overflow: hidden;
-    overflow-y: scroll;
+    scroll-behavior:smooth;
+
 }
 
 .text-wrapper {
