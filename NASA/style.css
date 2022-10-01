@@ -75,12 +75,11 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     padding: 3rem;
     position: relative;
-    height: 1000px;
 }
 
 .storage_header p {
     margin-top: 16px;
-    text-align: left;
+    text-align: right;
 }
 
 .text-boxleft {
@@ -93,7 +92,8 @@ body {
 }
 
 .storage_picture {
- post
+ position: static;
+
 }
 
 
