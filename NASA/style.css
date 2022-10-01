@@ -68,6 +68,13 @@ body {
 
 
 /*WHY */
+.storage{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    width: 100%;
+    margin: 10rem auto;
+}
 
 .storage_header {
     text-align: right;
@@ -75,11 +82,11 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     padding: 3rem;
     position: relative;
+    margin: 10rem auto;
 }
 
 .storage_header p {
-    margin-top: 16px;
-    text-align: right;
+
 }
 
 .text-boxleft {
@@ -92,7 +99,7 @@ body {
 }
 
 .storage_picture {
- position: static;
+
 
 }
 
