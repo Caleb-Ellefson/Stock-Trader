@@ -84,7 +84,7 @@ body {
     font-size: 6rem;
     font-family: 'Source Sans Pro', sans-serif;
     position: relative;
-    padding: 3rem;
+    padding: 1rem;
     right: 200px;
 }
 .storage_header2 {
@@ -124,7 +124,7 @@ body {
 }
 
 .storage_picture {
-    height: 100%
+    margin: auto 5px;
 
 
 }
