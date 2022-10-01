@@ -80,9 +80,9 @@ body {
     text-align: right;
     font-size: 6rem;
     font-family: 'Source Sans Pro', sans-serif;
-    padding: 3rem;
     position: relative;
-    margin: 10rem auto;
+    right: 300px;
+    padding: 1 rem;
 }
 
 .storage_header p {
@@ -99,6 +99,7 @@ body {
 }
 
 .storage_picture {
+    position: right;
 
 
 }
