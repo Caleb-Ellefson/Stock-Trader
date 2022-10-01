@@ -115,6 +115,7 @@ body {
 }
 
 .text-boxright {
+    padding: 1rem;
     font-size: 1.5rem;
     font-family: 'Oswald', sans-serif;
     text-align: left;
