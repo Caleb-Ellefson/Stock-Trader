@@ -146,10 +146,9 @@ body {
 
 .section3{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 40px;
     width: 100%;
-    margin: 10rem auto;
     height: 100vh;
 
 }
