@@ -80,6 +80,7 @@ body {
 
 .why_header {
     /*margin-top: -600px;*/
+    padding: 5rem;
     font-size: 5rem;
     font-family: 'Source Sans Pro', sans-serif;
     color: black;
@@ -89,7 +90,7 @@ body {
 }
 
 p {
-    
+
 }
 
 
