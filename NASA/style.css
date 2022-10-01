@@ -61,7 +61,7 @@
 
 /* NAV BAR */
 
-.collapse navbar-collapse {
-    text-align: center;
+.nav-link {
+  float: center;
 }
 
