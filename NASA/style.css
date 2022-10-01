@@ -82,6 +82,7 @@ body {
     border: 1px solid gray ;
     padding: 1rem;
     background-color:#cccccc;
+    font-color: white;
 }
 
 .storage_header {
