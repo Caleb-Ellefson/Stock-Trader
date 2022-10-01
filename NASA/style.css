@@ -19,7 +19,19 @@
     position: relative;
 }
 
-.headline {
-    font-size: 15rem;
-    font-family: 'Source Sans Pro', sans-serif;
+.text-wrapper {
+    text-align: center;
 }
+
+.headline {
+    font-size: 8rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    font-weight: 100;
+    line-height: .4;
+}
+
+.subheadline{
+
+}
+
