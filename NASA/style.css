@@ -31,7 +31,11 @@
     line-height: .4;
 }
 
-.subheadline{
-
+.sub-headline {
+    font-size: 6rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    font-weight: 100;
+    line-height: .4;
 }
 
