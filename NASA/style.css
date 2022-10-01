@@ -1,7 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
 * {
     margin: 0;
@@ -90,7 +89,7 @@ body {
 
 .storage p {
     font-size: 1.5rem;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-align: center;
 }
 
