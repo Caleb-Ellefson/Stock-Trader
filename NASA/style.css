@@ -21,6 +21,11 @@
     overflow: hidden;
 }
 
+.body {
+    overflow: hidden;
+
+}
+
 .text-wrapper {
     text-align: center;
 
