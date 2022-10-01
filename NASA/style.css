@@ -94,7 +94,15 @@ body {
 }
 
 .text-boxleft {
+    font-size: 1.5rem;
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
+}
 
+.text-boxright {
+    font-size: 1.5rem;
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
 }
 
 
