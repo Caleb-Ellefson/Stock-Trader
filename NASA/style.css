@@ -70,12 +70,14 @@ body {
 /*WHY */
 
 .storage_header {
+    text-align: right;
     font-size: 6rem;
     font-family: 'Source Sans Pro', sans-serif;
-    color: black;
-    font-weight: 100;
-    line-height: .4;
-    text-shadow: 2px 2px 4px #000000
+}
+
+.storage_header p {
+    margin-top: 16px;
+    text-align: left;
 }
 
 .text_storage {
