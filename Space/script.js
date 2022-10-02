@@ -3,7 +3,8 @@ const myChart = new Chart(ctx, {
     type: 'radar',
     data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
+        datasets: [
+            {
             label: '# of Votes',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
@@ -23,9 +24,10 @@ const myChart = new Chart(ctx, {
                 'rgba(255, 159, 64, 1)'
             ],
             borderWidth: 1
-        }]
+        }
+    ]
     },
-    
+
     options: {
         scales: {
             y: {
