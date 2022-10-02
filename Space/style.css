@@ -15,6 +15,13 @@
     width: 100%;
 }
 
+.header {
+    font-size: 3rem;
+    font-family: 'Oswald', sans-serif;
+    margin: auto;
+    padding: 2rem;
+}
+
 .main p{
     font-family: 'Oswald', sans-serif;
     font-size: 1.5rem;
@@ -22,14 +29,13 @@
     flex: 1;
     padding: 3rem;
 }
-.header {
-    font-size: 3rem;
-    font-family: 'Oswald', sans-serif;
-    padding: 1rem;
+.main a {
+    flex: 1;
 }
 
 .main_chart {
     width: 500px;
+    height: 500px;
     justify-content: center;
     padding: 1rem;
 
