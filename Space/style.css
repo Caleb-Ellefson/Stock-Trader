@@ -20,7 +20,7 @@
     font-size: 1.5rem;
     display: flex;
 }
-.main h2 {
+.header {
     font-size: 3rem;
     font-family: 'Oswald', sans-serif;
 }
