@@ -1,4 +1,15 @@
 const ctx = document.getElementById('myChart');
+const config = {
+  type: 'radar',
+  data: data,
+  options: {
+    elements: {
+      line: {
+        borderWidth: 3
+      }
+    }
+  },
+};
 const myChart = new Chart(ctx, {
     type: 'bar',
     const data = {
