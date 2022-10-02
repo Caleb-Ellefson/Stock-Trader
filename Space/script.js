@@ -6,7 +6,7 @@ const myChart = new Chart(ctx, {
         datasets: [
             {
             label: 'Titanium Niobate (TNO) HPNB',
-            data: [95, 75, 100, 100, 100, 50],
+            data: [.95, .75, 1.00, 1.00, 1.00, .50],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -27,7 +27,7 @@ const myChart = new Chart(ctx, {
         },
         {
             label: 'Lithium-Nickel-Cobalt-Aluminium (NCA)',
-            data: [100, 100, 50, 75, 100, 50],
+            data: [1.00, 1.00, .50, .75, 1.00, .50],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -48,7 +48,7 @@ const myChart = new Chart(ctx, {
         },
         {
             label: 'Lithium-Nickel-Manganese-Coblat (NMC)',
-            data: [100, 75, 75, 75, 75, 75],
+            data: [1.00, .75, .75, .75, .75, .75],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -68,7 +68,7 @@ const myChart = new Chart(ctx, {
             borderWidth: 1
         }, {
             label: 'Lithium-Manganese Spinel (LMO)',
-            data: [75, 75, 75, 50, 50, 75],
+            data: [.75, .75, .75, .50, .50, .75],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -89,7 +89,7 @@ const myChart = new Chart(ctx, {
         },
         {
             label: 'Lithium-Iron Phosphate (LFP)',
-            data: [50, 75, 100, 75, 100, 75],
+            data: [.50, .75, .100, .75, 1.00, .75],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -110,7 +110,7 @@ const myChart = new Chart(ctx, {
         },
         {
             label: 'Lithium-Titanate (LTO)',
-            data: [50, 75, 100, 100, 100, 25],
+            data: [.50, .75, 1.00, 1.00, 1.00, .25],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
