@@ -12,21 +12,20 @@
 .main {
     display: flex;
     height: 80vh;
+    width: 100%;
     justify-content: center;
 }
-.para {
+.main p{
     font-family: 'Oswald', sans-serif;
     font-size: 1.5rem;
     display: flex;
 }
-.header {
-    display: flex;
+.main h2 {
     font-size: 3rem;
     font-family: 'Oswald', sans-serif;
 }
 
 .main_chart {
-    display: flex;
     width: 600px;
     justify-content: center;
     padding: 1rem;
