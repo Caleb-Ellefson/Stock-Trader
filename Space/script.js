@@ -2,11 +2,11 @@ const ctx = document.getElementById('myChart');
 const myChart = new Chart(ctx, {
     type: 'radar',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Specific Energy', 'Specific Power', 'Safety', 'Performance', 'Life Span', 'Cost'],
         datasets: [
             {
             label: 'Titanium Niobate (TNO) HPNB',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [95, 75, 100, 100, 100, 50],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -27,7 +27,7 @@ const myChart = new Chart(ctx, {
         },
         {
             label: 'Lithium-Nickel-Cobalt-Aluminium (NCA)',
-            data: [-12, -19, -3, -5, -2, -3],
+            data: [100, 100, 50, 75, 100, 50],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -48,7 +48,7 @@ const myChart = new Chart(ctx, {
         },
         {
             label: 'Lithium-Nickel-Manganese-Coblat (NMC)',
-            data: [-12, -19, -3, -5, -2, -3],
+            data: [100, 75, 75, 75, 75, 75],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -68,7 +68,7 @@ const myChart = new Chart(ctx, {
             borderWidth: 1
         }, {
             label: 'Lithium-Manganese Spinel (LMO)',
-            data: [-12, -19, -3, -5, -2, -3],
+            data: [75, 75, 75, 50, 50, 75],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -89,7 +89,7 @@ const myChart = new Chart(ctx, {
         },
         {
             label: 'Lithium-Iron Phosphate (LFP)',
-            data: [-12, -19, -3, -5, -2, -3],
+            data: [50, 75, 100, 75, 100, 75],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -110,7 +110,7 @@ const myChart = new Chart(ctx, {
         },
         {
             label: 'Lithium-Titanate (LTO)',
-            data: [-12, -19, -3, -5, -2, -3],
+            data: [50, 75, 100, 100, 100, 25],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
