@@ -3,9 +3,7 @@
     <head>
         <meta name="viewport" content="with=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Oswald:wght@300&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     </head>
     <body>
@@ -25,7 +23,8 @@
 
 
         <!-- PLACE RADAR JS SCRIPT UNDER CANVAS-->
-        <script>const ctx = document.getElementById('myChart');
+        <script>
+        const ctx = document.getElementById('myChart');
             const myChart = new Chart(ctx, {
                 type: 'radar',
                 data: {
@@ -166,6 +165,7 @@
                         }
                     }
                 }
-            });</script>
+            });
+            </script>
    </body>
 </html>
