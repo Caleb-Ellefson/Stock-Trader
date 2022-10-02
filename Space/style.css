@@ -1,3 +1,10 @@
 .main {
+    display: flex;
     height: 80vh
+}
+
+.main_chart {
+    display: flex;
+    width: 400px;
+
 }
