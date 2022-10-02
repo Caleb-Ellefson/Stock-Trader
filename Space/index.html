@@ -4,9 +4,9 @@
         <meta name="viewport" content="with=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="path/to/chartjs/dist/chart.js"></script>
 
-    <!--</head>
+    </head>
+    <!--
     <body>
         <h2 class="header">How We Compare</h2>
         <section class="main">
@@ -15,17 +15,15 @@
                 materials today providing the most advanced technology that a
                 NASA battery can have and we called of High-performance
                 niobium battery (HPNB). </p>
+                <a></a>
             <div class="main_chart">
                 <canvas id="myChart"></canvas>
             </div>
-            <a></a>
         </section>
-
-
-
         PLACE RADAR JS SCRIPT UNDER CANVAS-->
-        <script>
-        const ctx = document.getElementById('myChart');
+
+        <canvas id="myChart"></canvas>
+        <script>const ctx = document.getElementById('myChart');
             const myChart = new Chart(ctx, {
                 type: 'radar',
                 data: {
@@ -166,7 +164,6 @@
                         }
                     }
                 }
-            });
-            </script>
+            });</script>
    </body>
 </html>
