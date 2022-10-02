@@ -29,3 +29,15 @@ const data = {
       pointHoverBorderColor: 'rgb(54, 162, 235)'
     }]
   };
+
+  const config = {
+    type: 'radar',
+    data: data,
+    options: {
+      elements: {
+        line: {
+          borderWidth: 3
+        }
+      }
+    },
+  };
