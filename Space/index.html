@@ -8,6 +8,8 @@
     </head>
     <body>
         <section class="chart">
+            <div>
+                <canvas id="myChart">
             <script>
             const data = {
                 labels: [
@@ -40,7 +42,7 @@
                 pointHoverBorderColor: 'rgb(54, 162, 235)'
                 }]
             };
-
+        <script>
             const config = {
                 type: 'radar',
                 data: data,
@@ -53,6 +55,8 @@
                 },
             };
         </script>
+        </canvas>
+        </div>
         </section>
     </body>
 
