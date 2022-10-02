@@ -20,10 +20,12 @@
     font-size: 1.5rem;
     display: flex;
     flex: 1;
+    padding: 3rem;
 }
 .header {
     font-size: 3rem;
     font-family: 'Oswald', sans-serif;
+    padding: 3rem;
 }
 
 .main_chart {
