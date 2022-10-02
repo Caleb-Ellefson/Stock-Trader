@@ -1,5 +1,4 @@
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -15,5 +14,6 @@
 .main_chart {
     display: flex;
     width: 400px;
+    justify-content: center;
 
 }
