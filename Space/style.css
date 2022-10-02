@@ -12,6 +12,11 @@
     justify-content: center;
 }
 
+.header {
+    display: flex;
+    font-size: 3rem;
+}
+
 .main_chart {
     display: flex;
     width: 600px;
