@@ -28,17 +28,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                    {% block body %}
-                        <ul>
                             {% for birthday in birthdays %}
-                                <li>{{birthday["*"] }}</li>
-
+                                <tr>
+                                    <td>{{ birthday.name }}</td>
+                                    <td>{{ birthday.month }}/{{ bithday.day }}</td>
+                                </tr>
                             {% endfor %}
-
-                        </ul>
-
                         <!-- TODO: Loop through the database entries to display them in this table -->
-                    {% endblock %}
                     </tbody>
                 </table>
             </div>
