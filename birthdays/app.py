@@ -35,7 +35,7 @@ def index():
         # TODO: Display the entries in the database on index.html
         # Query DB for all enteries
 
-        birthdays = db.execute ("SELECT DISTINCT name, month, day FROM birthdays;")
+        birthdays = db.execute ("SELECT * FROM birthdays")
 
         return render_template("index.html", birthdays=birthdays)
 
