@@ -117,33 +117,9 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     #GET display a register form
-    if request.method == "GET":
+   # if request.method == "GET":
         return render_template("register.html")
-    # Ensure username was submitted
-    elif:
-        if not request.form.get("username"):
-            return apology("must provide username", 403)
 
-        # Ensure password was submitted
-        elif not request.form.get("password"):
-            return apology("must provide password", 403)
-
-        #query db to see if username is taken
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
-
-        #check db if name is taken
-
-        #check db if password is taken
-
-        #submit form via post
-        request.form.get("password")
-        request.form.get("username")
-
-
-        #add user to data base
-        db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
-
-        #log user in
 
 
 @app.route("/sell", methods=["GET", "POST"])
