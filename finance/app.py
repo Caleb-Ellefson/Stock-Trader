@@ -113,17 +113,22 @@ def quote():
 
     #return html
     if request.method == "GET":
-        return render_template("lookup.html")
+        return render_template("quote.html")
 
     else:
 
         #ensure a stock was submitted
-        if not request.form.get("search"):
+        if not request.form.get("quote"):
             return apology("must provide stock", 403)
 
         #lookup stock
-        stock = lookup(request.form.get("search"))
-        return render_template()
+        stock = lookup(request.form.get("quote.upper"))
+
+        #if stock does not exist
+        if stock == None:
+            return apology("No stock found. :(")
+            
+        return render_template("quoted.html")
 
 
 
