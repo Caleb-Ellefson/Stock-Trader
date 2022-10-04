@@ -1,13 +1,14 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Log In
+    Search
 {% endblock %}
 
 {% block main %}
     <form action="/lookup" method="post">
         <div>
             <input class="form-control mx-auto w-auto" id="search" name="search" placeholder="Query" type="text">
+            <input type="submit" value="Search">
         </div>
     </form>
 {% endblock %}
