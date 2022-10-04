@@ -154,6 +154,7 @@ def register():
             return apology("Username already exists.", 403)
 
         #log user in
+        session["user_id"]
 
 
 
