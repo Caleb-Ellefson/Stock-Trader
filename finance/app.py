@@ -156,6 +156,8 @@ def register():
         #log user in
         session["user_id"]
 
+        return redirect("/")
+
 
 
 
