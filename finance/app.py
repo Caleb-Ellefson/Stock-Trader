@@ -121,11 +121,16 @@ def register():
     if request.method == "GET":
         return render_template("register.html")
 
-    elif:
-        #check if both passwords match
-        if request.form.get("password") != request.form.get("repassword"):
-            return apology("Passwords do not match.", 403)
+    else:
+        #get data from form
+        password = request.form.get("password")
+        repassword = request.form.get("repassword")
+        username = request.form.get("username")
         
+        #check if both passwords match
+        if password != repassword:
+            return apology("Passwords do not match.", 403)
+
 
 
 
