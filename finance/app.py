@@ -118,11 +118,22 @@ def quote():
 def register():
     #GET display a register form
 
+    # Ensure username was submitted
+    if not request.form.get("username"):
+        return apology("must provide username", 403)
+
+    # Ensure password was submitted
+    elif not request.form.get("password"):
+        return apology("must provide password", 403)
+        
     #check db if name is taken
 
     #check db if password is taken
 
     #submit form via post
+    request.form.get("password")
+    request.form.get("username")
+
 
     #add user to data base
     db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
