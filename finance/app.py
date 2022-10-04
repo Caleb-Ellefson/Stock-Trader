@@ -113,7 +113,14 @@ def quote():
 
     #return html
     if request.method == "GET":
-        
+        return render_template("lookup.html")
+
+    else:
+        stock = request.form.get("search")
+
+        if not request.form.get("search"):
+            return apology("must provide stock", 403)
+
     """Get stock quote."""
     return apology("TODO")
 
