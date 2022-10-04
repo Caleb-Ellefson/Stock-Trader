@@ -117,25 +117,43 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
 
+    #GET display a register form
     if request.method == "GET":
         return render_template("register.html")
-    # check username and password
-    username = request.form.get("username")
-    password = request.form.get("password")
-    confirmation = request.form.get("confirmation")
-    if username == "" or len(db.execute('SELECT username FROM users WHERE username = ?', username)) > 0:
-        return apology("Invalid Username: Blank, or already exists")
-    if password == "" or password != confirmation:
-        return apology("Invalid Password: Blank, or does not match")
-    # Add new user to users db (includes: username and HASH of password)
-    db.execute('INSERT INTO users (username, hash) \
-            VALUES(?, ?)', username, generate_password_hash(password))
-    # Query database for username
-    rows = db.execute("SELECT * FROM users WHERE username = ?", username)
-    # Log user in, i.e. Remember that this user has logged in
-    session["user_id"] = rows[0]["id"]
-    # Redirect user to home page
-    return redirect("/")
+
+    else:
+        #get data from form
+        password = request.form.get("password")
+        confirmation = request.form.get("confirmation")
+        username = request.form.get("username")
+
+        #if user did not submit username
+        if not request.form.get("username"):
+            return apology("must provide username", 403)
+
+        # Ensure password was submitted
+        elif not request.form.get("password"):
+            return apology("must provide password", 403)
+
+        #check if both passwords match
+        elif password != confirmation:
+            return apology("Passwords do not match.")
+
+        #convert password to password hash
+        hash = generate_password_hash(password)
+
+        try:
+            #insert new user into database
+            new_user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+        except:
+            #if user name is already in data base return error
+            return apology("Username already exists.", 403)
+
+        #log user in
+        session["user_id"] = new_user
+
+        return redirect("/")
+
 
 
 
