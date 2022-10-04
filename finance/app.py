@@ -124,7 +124,7 @@ def register():
     else:
         #get data from form
         password = request.form.get("password")
-        repassword = request.form.get("repassword")
+        repassword = request.form.get("confirmation")
         username = request.form.get("username")
 
         #if user did not submit username
@@ -133,10 +133,10 @@ def register():
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return apology("must provide password", 403) 
+            return apology("must provide password", 403)
 
         #check if both passwords match
-        elif password != repassword:
+        elif password != confirmation:
             return apology("Passwords do not match.")
 
         #convert password to password hash
