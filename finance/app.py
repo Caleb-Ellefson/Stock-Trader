@@ -123,6 +123,7 @@ def quote():
 
         #lookup stock
         stock = lookup(request.form.get("search"))
+        return render_template()
 
 
 
