@@ -137,7 +137,7 @@ def register():
 
         # Ensure repassword was submitted
         if not repassword:
-            return
+            return apology("please enter a password")
 
         #check if both passwords match
         if password != repassword:
