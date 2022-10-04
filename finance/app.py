@@ -124,7 +124,7 @@ def register():
     else:
         #get data from form
         password = request.form.get("password")
-        repassword = request.form.get("confirmation")
+        confirmation = request.form.get("confirmation")
         username = request.form.get("username")
 
         #if user did not submit username
