@@ -150,6 +150,7 @@ def register():
             #insert new user into database
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
         except:
+            #if user name is already in data base return error
             return apology("Username already exists.", 403)
 
         #log user in
