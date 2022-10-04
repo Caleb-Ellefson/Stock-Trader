@@ -137,7 +137,7 @@ def register():
 
         # Ensure repassword was submitted
         if not repassword:
-            return apology("please retype your password")
+            return
 
         #check if both passwords match
         if password != repassword:
@@ -148,7 +148,7 @@ def register():
 
         try:
             #insert new user into database
-            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+            new_user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
         except:
             #if user name is already in data base return error
             return apology("Username already exists.", 403)
