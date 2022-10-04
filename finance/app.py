@@ -143,10 +143,10 @@ def register():
         elif password != repassword:
             return apology("Passwords do not match.", 403)
 
+        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
 
 
-        #check for errors
         #add user to table
         #log user in
 
