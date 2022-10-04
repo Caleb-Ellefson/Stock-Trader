@@ -143,6 +143,9 @@ def register():
         if password != repassword:
             return apology("Passwords do not match.", 403)
 
+        #convert password to password hash
+        hash = generate_password_hash(password)
+
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
 
