@@ -125,6 +125,7 @@ def register():
     #submit form via post
 
     #add user to data base
+    db.execute("INSERT INTO birthdays (name, month, day) VALUES(?, ?, ?)", name, month, day)
 
     #log user in
     """Register user"""
