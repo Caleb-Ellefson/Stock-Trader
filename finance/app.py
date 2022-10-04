@@ -129,19 +129,19 @@ def register():
 
         #if user did not submit username
         if not username:
-            return apology("must provide username", 403)
+            return apology("must provide username")
 
         # Ensure password was submitted
         if not password:
-            return apology("its this one", 403)
+            return apology("please enter a password")
 
         # Ensure repassword was submitted
-        #if not repassword:
-            return apology("2", 403)
+        if not repassword:
+            return apology("please retype your password")
 
         #check if both passwords match
         if password != repassword:
-            return apology("Passwords do not match.", 403)
+            return apology("Passwords do not match.")
 
         #convert password to password hash
         hash = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
