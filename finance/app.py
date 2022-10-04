@@ -128,16 +128,16 @@ def register():
         username = request.form.get("username")
 
         #if user did not submit username
-        if not username:
-            return apology("must provide username")
+        if not request.form.get("username"):
+            return apology("must provide username", 403)
 
         # Ensure password was submitted
-        if not password:
-            return apology("please enter a password")
+        if not request.form.get("password"):
+            return apology("must provide password", 403)
 
         # Ensure repassword was submitted
-        if not repassword:
-            return apology("please enter a password")
+        if not request.form.get("repassword"):
+            return apology("reenter your password", 403)
 
         #check if both passwords match
         if password != repassword:
