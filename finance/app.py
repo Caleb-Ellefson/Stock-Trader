@@ -125,6 +125,9 @@ def register():
     # Ensure password was submitted
     elif not request.form.get("password"):
         return apology("must provide password", 403)
+
+    #query db to see if username is taken
+    rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
         
     #check db if name is taken
 
