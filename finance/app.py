@@ -116,13 +116,14 @@ def quote():
         return render_template("lookup.html")
 
     else:
+        #get stock submitted in search
         stock = request.form.get("search")
 
+        #ensure a stock was submitted
         if not request.form.get("search"):
             return apology("must provide stock", 403)
+        
 
-    """Get stock quote."""
-    return apology("TODO")
 
 
 @app.route("/register", methods=["GET", "POST"])
