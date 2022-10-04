@@ -116,6 +116,17 @@ def quote():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    #GET display a register form
+
+    #check db if name is taken
+
+    #check db if password is taken
+
+    #submit form via post
+
+    #add user to data base
+
+    #log user in
     """Register user"""
     return apology("TODO")
 
