@@ -144,7 +144,7 @@ def register():
             return apology("Passwords do not match.")
 
         #convert password to password hash
-        hash = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
+        hash = generate_password_hash(password)
 
         try:
             #insert new user into database
@@ -154,7 +154,7 @@ def register():
             return apology("Username already exists.", 403)
 
         #log user in
-        session["user_id"]
+        session["user_id"] = new_user
 
         return redirect("/")
 
