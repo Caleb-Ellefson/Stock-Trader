@@ -151,8 +151,6 @@ def register():
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
 
 
-
-        #add user to table
         #log user in
 
 
