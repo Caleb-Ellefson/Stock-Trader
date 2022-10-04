@@ -132,15 +132,15 @@ def register():
             return apology("must provide username", 403)
 
         # Ensure password was submitted
-        elif not request.form.get("password"):
+        if not request.form.get("password"):
             return apology("must provide password", 403)
 
         # Ensure repassword was submitted
-        elif not request.form.get("repassword"):
+        if not request.form.get("repassword"):
             return apology("must provide password", 403)
 
         #check if both passwords match
-        elif password != repassword:
+        if password != repassword:
             return apology("Passwords do not match.", 403)
 
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
