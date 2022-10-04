@@ -146,7 +146,9 @@ def register():
         #convert password to password hash
         hash = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
 
-        db.execute("INSERT INTO )
+        try:
+            #insert new user into database
+            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
 
 
 
