@@ -122,7 +122,7 @@ def quote():
             return apology("must provide stock", 403)
 
         #lookup stock
-        stock = lookup(request.form.get("quote.upper"))
+        stock = lookup(request.form.get("symbol.upper"))
 
         #if stock does not exist
         if stock == None:
