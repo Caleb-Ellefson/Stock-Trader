@@ -116,13 +116,14 @@ def quote():
         return render_template("quote.html")
 
     else:
+        symbol = request.form.get("symbol")
 
         #ensure a stock was submitted
         if not request.form.get("symbol"):
             return apology("must provide stock", 403)
 
         #lookup stock
-        stock = lookup(request.form.get("symbol.upper"))
+        stock = lookup("symbol.upper"())
 
         #if stock does not exist
         if stock == None:
