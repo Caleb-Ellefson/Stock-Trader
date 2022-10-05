@@ -123,7 +123,7 @@ def quote():
             return apology("must provide symbol")
 
         #lookup stock
-        stock = lookup("symbol.upper"())
+        stock = lookup(symbol.upper())
 
         #if stock does not exist
         if stock == None:
