@@ -118,7 +118,7 @@ def quote():
     else:
 
         #ensure a stock was submitted
-        if not request.form.get("quote"):
+        if not request.form.get("symbol"):
             return apology("must provide stock", 403)
 
         #lookup stock
