@@ -120,7 +120,7 @@ def quote():
 
         #ensure a stock was submitted
         if not request.form.get("symbol"):
-            return apology("must provide stock", 403)
+            return apology("must provide symbol")
 
         #lookup stock
         stock = lookup("symbol.upper"())
