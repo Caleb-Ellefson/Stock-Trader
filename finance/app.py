@@ -83,12 +83,15 @@ def buy():
         user_id = session["user_id"]
 
         #find user cash from data base
-        user_cash_db = db.execute("SELECT cash FROM users WHERE id = ?", id, id=user_id)
+        user_cash = db.execute("SELECT cash FROM users WHERE id = ?", id, id=user_id)
 
+        #check if user has enough cash
         if user_cash_db < price:
             return apology("Not enough funds. :(")
 
-        
+        (user_cash - price) = db.execute(")
+
+
 
 
 
