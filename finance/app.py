@@ -73,8 +73,8 @@ def buy():
         stock = lookup(symbol.upper())
         price = stock["price"]
 
-        #add table to data base containing 
-
+        #add table to data base containing who bought it the price and when
+        stock = db.execute ("CREATE TABLE {stock[name]} ())
 
 
 
