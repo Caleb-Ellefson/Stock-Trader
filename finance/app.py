@@ -100,7 +100,7 @@ def buy():
         new_user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
         date = datetime.datetime.now()
 
-        db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id) VALUES (?, ?, ?, ?)", symbol, quantity, price, date, user_id)
+        db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id) VALUES (?, ?, ?, ?)", stock["symbol"], quantity, stock["price"], date, user_id)
 
 
 
