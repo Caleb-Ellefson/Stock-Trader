@@ -74,7 +74,7 @@ def buy():
             return apology("No stock found. :(")
 
         stock = lookup(symbol.upper())
-        price = quantity * stock["price"]
+        price = quantity * int(stock["price"])
 
         user_id = session["user_id"]
 
