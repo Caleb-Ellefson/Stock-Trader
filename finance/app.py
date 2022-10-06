@@ -90,10 +90,10 @@ def buy():
         user_cash = user_cash_db[0]["cash"]
 
         #check if user has enough cash
-        if int(total_price) > user_cash:
+        if int(total_price) > int(user_cash):
             return apology("Not enough funds. :(")
 
-        updt_cash = user_cash - total_price
+        updt_cash = user_cash - int(total_price)
 
         #store updated cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
