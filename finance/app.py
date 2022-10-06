@@ -63,8 +63,8 @@ def buy():
             return apology("must provide symbol")
 
         #ensure quanity is submitted
-        if not request.form.get("quanity"):
-            return apology("must provide quanity")
+        if not request.form.get("quantity"):
+            return apology("must provide quantity")
 
         #lookup stock
         stock = lookup(symbol.upper())
@@ -78,7 +78,8 @@ def buy():
 
         user_id = session["user_id"]
 
-        user_cash_db = db.execute("SELECT cash FROM users WHERE id = ?, id, id=userid)
+        user_cash_db = db.execute("SELECT cash FROM users WHERE id = ?, id, id=userid")
+        return jsonify(user_cash_db)
 
 
 
