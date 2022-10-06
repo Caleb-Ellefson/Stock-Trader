@@ -84,13 +84,13 @@ def buy():
         user_id = session["user_id"]
 
         #find user cash from data base
-        user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id, id=user_id)
+        user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
 
         #take user cash from user_cash_db returned dict
         user_cash = user_cash_db[0]["cash"]
 
         #check if user has enough cash
-        if user_cash < total_price:
+        if user_cash < int(total_price):
             return apology("Not enough funds. :(")
 
         updt_cash = user_cash - total_price
