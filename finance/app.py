@@ -102,6 +102,8 @@ def buy():
 
         db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id) VALUES (?, ?, ?, ?)", stock["symbol"], quantity, stock["price"], date, user_id)
 
+        flash("Purschased!")
+
         return redirect("/")
 
 
