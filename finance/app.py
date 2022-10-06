@@ -73,12 +73,20 @@ def buy():
         if stock == None:
             return apology("No stock found. :(")
 
+        #find stock
         stock = lookup(symbol.upper())
+
+        #find total price
         price = quantity * int(stock["price"])
 
+        #find user id to select from database
         user_id = session["user_id"]
 
-        user_cash_db = db.execute("SELECT cash FROM users WHERE id = ?, id", id=user_id)
+        #find user cash from data base
+        user_cash_db = db.execute("SELECT cash FROM users WHERE id = ?", id, id=user_id)
+
+        if user_cash_db < price:
+            return apology("Not enough funds. :(")
         return jsonify(user_cash_db)
 
 
