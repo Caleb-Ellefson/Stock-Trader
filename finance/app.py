@@ -100,6 +100,8 @@ def buy():
         new_user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
         date = datetime.datetime.now()
 
+        date = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+
 
 
 
