@@ -63,7 +63,10 @@ def buy():
         if not request.form.get("quanity"):
             return apology("must provide quanity")
 
-        
+        stock = lookup(symbol.upper())
+        price = stock["price"]
+
+
 
 
 
