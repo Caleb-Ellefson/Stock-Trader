@@ -88,11 +88,14 @@ def buy():
         #check if user has enough cash
         if user_cash_db < price:
             return apology("Not enough funds. :(")
-            
+
         #take user cash from user_cash_db returned dict
         user_cash = user_cash_db[0]["cash"]
+
+        updt_cash = user_cash - price
+
         #store updated cash
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, id, cash=user_cash, id=user_id)
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", cash, id, cash=updt_cash, id=user_id)
 
 
 
