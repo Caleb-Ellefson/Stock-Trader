@@ -57,7 +57,7 @@ def buy():
     else:
         symbol = request.form.get("symbol")
         quantity = request.form.get("quantity")
-        
+
         #ensure a stock was submitted
         if not request.form.get("symbol"):
             return apology("must provide symbol")
@@ -76,8 +76,8 @@ def buy():
         stock = lookup(symbol.upper())
         price = stock["price"]
 
-        #add table to data base containing who bought it the price and when
-        stock = db.execute ("CREATE TABLE {stock[name]} ())
+        #add table to data base
+        db.execute ("CREATE TABLE Purchases (USER_ID int, symbol text, shares int, price float, date timestamp));
 
 
 
