@@ -87,7 +87,8 @@ def buy():
 
         if user_cash_db < price:
             return apology("Not enough funds. :(")
-        return jsonify(user_cash_db)
+
+        
 
 
 
