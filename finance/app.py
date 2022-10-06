@@ -78,7 +78,7 @@ def buy():
         stock = lookup(symbol.upper())
 
         #find total price
-        price = quantity * int(stock["price"])
+        total_price = quantity * int(stock["price"])
 
         #find user id to select from database
         user_id = session["user_id"]
@@ -90,14 +90,14 @@ def buy():
         user_cash = user_cash_db[0]["cash"]
 
         #check if user has enough cash
-        if user_cash < price:
+        if user_cash < total_price:
             return apology("Not enough funds. :(")
 
-        updt_cash = user_cash - price
+        updt_cash = user_cash - total_price
 
         #store updated cash
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", id=user_id)
-        new_user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
+
         date = datetime.datetime.now()
 
         db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id) VALUES (?, ?, ?, ?)", stock["symbol"], quantity, stock["price"], date, user_id)
