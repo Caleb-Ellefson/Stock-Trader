@@ -54,6 +54,16 @@ def buy():
     if request.method == "GET":
         return render_template("buy.html")
 
+    else:
+        #ensure a stock was submitted
+        if not request.form.get("symbol"):
+            return apology("must provide symbol")
+
+        #ensure quanity is submitted
+        if not request.form.get("quanity"):
+            return apology("must provide quanity")
+
+
 
 
 
