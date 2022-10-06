@@ -74,9 +74,13 @@ def buy():
             return apology("No stock found. :(")
 
         stock = lookup(symbol.upper())
-        price = stock["price"]
+        price = quantity * stock["price"]
 
-        
+        user_id = session["user_id"]
+
+        user_cash_db = db.execute("SELECT cash FROM users WHERE id = ?, id, id=userid)
+
+
 
 
 
