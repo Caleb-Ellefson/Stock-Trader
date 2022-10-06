@@ -97,6 +97,10 @@ def buy():
 
         #store updated cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", id=user_id)
+        new_user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+        date = datetime.datetime.now()
+
+
 
 
 
