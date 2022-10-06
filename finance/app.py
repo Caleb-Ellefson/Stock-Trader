@@ -76,8 +76,7 @@ def buy():
         stock = lookup(symbol.upper())
         price = stock["price"]
 
-        #add table to data base
-        db.execute ("CREATE TABLE Purchases (USER_ID int, symbol text, shares int, price float, date timestamp));
+        
 
 
 
