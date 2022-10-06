@@ -50,9 +50,10 @@ def index():
 @login_required
 def buy():
 
+    #display buy form
     if request.method == "GET":
-        return render_template("quote.html")
-    # Display buy form
+        return render_template("buy.html")
+
 
 
 
