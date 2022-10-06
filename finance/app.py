@@ -55,6 +55,9 @@ def buy():
         return render_template("buy.html")
 
     else:
+        symbol = request.form.get("symbol")
+        quantity = request.form.get("quantity")
+        
         #ensure a stock was submitted
         if not request.form.get("symbol"):
             return apology("must provide symbol")
