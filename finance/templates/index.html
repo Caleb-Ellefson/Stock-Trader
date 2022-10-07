@@ -17,9 +17,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-
-            {% for purchases in purchases %}
+           {% for purchases in purchases %}
 
             <tr>
                 <td> {{ purchases.symbol }} </td>
@@ -28,9 +26,8 @@
                 <td> {{ purchases.date }}n </td>
             </tr>
 
-                {% endfor %}
-
-        </tr>
+            {% endfor %}
+            
     </tbody>
  </table>
 {% endblock %}
