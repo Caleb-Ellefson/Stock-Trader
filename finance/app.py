@@ -46,7 +46,7 @@ def index():
 
     user_id = session["user_id"]
 
-    purchases_db = db.execute("SELECT SUM(shares) AS shares, price FROM purchases WHERE user_id = ?", user_id)
+    purchases_db = db.execute("SELECT SUM(PRICE))
     #total = purchases_db[1]["price"]
     cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     cash = cash_db[0]["cash"]
