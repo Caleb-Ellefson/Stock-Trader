@@ -50,7 +50,7 @@ def index():
     #total = purchases_db[1]["price"]
     cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     cash = cash_db[0]["cash"]
-    stocks_db = db.execute("SELECT * FROM purchases WHERE id = ?", user_id)
+    stocks_db = db.execute("SELECT * FROM purchases WHERE id = ? ORDER BY date", user_id)
 
     if request.method == "GET":
         return render_template("index.html", purchases=stocks_db, cash=cash, total=purchases_db)
