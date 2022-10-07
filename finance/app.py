@@ -57,7 +57,7 @@ def buy():
 
     else:
         symbol = request.form.get("symbol")
-        quantity = request.form.get("quantity")
+        quantity = int(request.form.get("quantity"))
 
         #ensure a stock was submitted
         if not request.form.get("symbol"):
@@ -78,7 +78,7 @@ def buy():
         stock = lookup(symbol.upper())
 
         #find total price
-        total_price = quantity * int(stock["price"])
+        total_price = quantity * stock["price"]
 
         #find user id to select from database
         user_id = session["user_id"]
