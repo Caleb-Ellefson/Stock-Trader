@@ -7,6 +7,7 @@
 {% block main %}
 <h3>Balence: {{cash}} </h3>
 <h3>Total Portfoilo: {{total}} </h3>
+<div class="section" >
  <table>
     <thead>
         <tr>
@@ -21,13 +22,14 @@
 
             <tr>
                 <td> {{ purchases.symbol }} </td>
-                <td> {{ purchases.shares }}n </td>
-                <td> {{ purchases.price }}n </td>
-                <td> {{ purchases.date }}n </td>
+                <td> {{ purchases.shares }} </td>
+                <td> {{ purchases.price }} </td>
+                <td> {{ purchases.date }} </td>
             </tr>
 
             {% endfor %}
-            
+
     </tbody>
  </table>
+ </div>
 {% endblock %}
