@@ -43,8 +43,15 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    """Show portfolio of stocks"""
-    return apology("TODO")
+
+    user_id = session["user_id"]
+
+    purchases_db = db.execute("SELECT symbol, SUM(shares) AS shares, price FROM purchases WHERE user_id = ?", user_id)
+    cash_db = db.execute("SELECT cash FROM users WHERE user_id = ?", user_id)
+    stocks_db = db.execute("SELECT * FROM purchases WHERE user_id = ?", user_id)
+
+    if request.method == "GET":
+        return render_template("index.html")
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -243,11 +250,3 @@ def register():
 @login_required
 def sell():
 
-    user_id = session["user_id"]
-
-    purchases_db = db.execute("SELECT symbol, SUM(shares) AS shares, price FROM purchases WHERE user_id = ?", user_id)
-    cash_db = db.execute("SELECT cash FROM users WHERE user_id = ?", user_id)
-    stocks_db = db.execute("SELECT * FROM purchases WHERE user_id = ?", user_id)
-
-    if request.method == "GET":
-        return render_template("index.html")

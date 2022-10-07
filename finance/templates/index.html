@@ -7,8 +7,29 @@
 {% block main %}
 <h3>Balence {{cash}}</h3>
  <table>
-    <tr>
-        <
-    </tr>
+    <thead>
+        <tr>
+            <th>Stock</th>
+            <th>Amount of Shares</th>
+            <th>Price</th>
+            <th>Date Purchased</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+            {% for purchases in purchases %}
+
+            <tr>
+                <td> {{ purchases.symbol }} </td>
+                <td> {{ purchases.shares }}n </td>
+                <td> {{ purchases.price }}n </td>
+                <td> {{ purchases.date }}n </td>
+            </tr>
+
+                {% endfor %}
+
+        </tr>
+    </tbody>
  </table>
 {% endblock %}
