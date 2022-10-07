@@ -243,5 +243,8 @@ def register():
 @login_required
 def sell():
 
+    user_id = session["user_id"]
+
+    purchases_db = db.execute("SELECT symbol FROM purchases)
     if request.method == "GET":
         return render_template("index.html")
