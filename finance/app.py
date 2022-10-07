@@ -53,7 +53,7 @@ def index():
     stocks_db = db.execute("SELECT * FROM purchases WHERE id = ? ORDER BY date", user_id)
 
     if request.method == "GET":
-        return render_template("index.html", purchases=stocks_db, cash=cash, total=total)
+        return render_template("index.html", purchases=stocks_db, cash=cash, total=purchases_db)
 
 
 
