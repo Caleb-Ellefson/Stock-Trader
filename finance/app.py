@@ -245,6 +245,7 @@ def sell():
 
     user_id = session["user_id"]
 
-    purchases_db = db.execute("SELECT symbol FROM purchases)
+    purchases_db = db.execute("SELECT symbol, SUM(shares) AS shares, price FROM purchases WHERE user_id = ?", user_id)
+    cash_db = db.execute("SELECT )
     if request.method == "GET":
         return render_template("index.html")
