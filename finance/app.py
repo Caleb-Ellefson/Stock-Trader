@@ -49,7 +49,7 @@ def index():
     purchases_db = db.execute("SELECT SUM(PRICE) FROM purchases WHERE user_id = ?", user_id)
     total = purchases_db[0]
     cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-    cash = round(cash_db[0]["cash"])
+    cash = round(cash_db[0]["cash"], 2)
     stocks_db = db.execute("SELECT * FROM purchases WHERE id = ? ORDER BY date", user_id)
 
     if request.method == "GET":
