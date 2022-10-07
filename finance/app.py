@@ -244,4 +244,4 @@ def register():
 def sell():
 
     if request.method == "GET":
-        return render_template("register.html")
+        return render_template("index.html")
