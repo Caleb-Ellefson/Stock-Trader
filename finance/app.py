@@ -46,13 +46,13 @@ def index():
 
     user_id = session["user_id"]
 
-    
+    purchases_db = db.execute("SELECT symbol, SUM(SHARES) AS shares, price FROM purchases WHERE user_id = ?", user_id)
     cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     cash = round(cash_db[0]["cash"], 2)
     stocks_db = db.execute("SELECT * FROM purchases WHERE id = ? ORDER BY date", user_id)
 
     if request.method == "GET":
-        return render_template("index.html", purchase=stocks_db, cash=cash, total=purchases_db)
+        return render_template("index.html", purchase=purchase_db, cash=cash, total=purchases_db)
 
 
 
