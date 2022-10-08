@@ -44,15 +44,23 @@ def after_request(response):
 @login_required
 def index():
 
+    #find user id
     user_id = session["user_id"]
 
-    purchases_db = db.execute("SELECT symbol, SUM(SHARES) AS shares, price FROM purchases WHERE user_id = ?", user_id)
+    #Select the symbol of stock add the shares togther and seperate the sum of shares by symbol
+    purchases_db = db.execute("SELECT symbol, SUM(SHARES) AS shares, price FROM purchases WHERE user_id = ? GROUP BY symbol", user_id)
+
+    total = db.execute("SELECT SUM(price) FROM purchases WHERE user_id = ?", user_id)
+    
+
+    #find users cash
     cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     cash = round(cash_db[0]["cash"], 2)
-    stocks_db = db.execute("SELECT * FROM purchases WHERE id = ? ORDER BY date", user_id)
 
-    if request.method == "GET":
-        return render_template("index.html", purchase=purchases_db, cash=cash, total=purchases_db)
+
+
+    #render the database to the template
+    return render_template("index.html", database=purchases_db, cash=cash, total=total)
 
 
 

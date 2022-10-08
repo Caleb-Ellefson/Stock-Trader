@@ -5,32 +5,43 @@
 {% endblock %}
 
 {% block main %}
-<h3>Balence: ${{cash}} </h3>
-<h3>Total Portfoilo: {{total}} </h3>
+<h3>Balence: ${{ cash }} </h3>
+
 <div class="section" >
- <table>
+ <table class="table table-striped-columns">
     <thead>
         <tr>
             <th scope="col">Stock</th>
             <th cope="col">Amount of Shares</th>
-            <th scope="col">Price</th>
-            <th scope="col">Date Purchased</th>
+            <th scope="col">Price / Share</th>
+            <th scope="col">Total</th>
+
         </tr>
     </thead>
     <tbody>
 
-        {% for row in purchase %}
+        {% for row in database %}
 
-            <tr>
-                <td> {{ purchase.symbol }} </td>
-                <td> {{ purchase.shares }} </td>
-                <td> {{ purchase.price }} </td>
-                <td> {{ purchase.date }} </td>
-            </tr>
+        <tr class="table-dark">
+            <td class="table-dark"> {{ row["symbol"] }} </td>
+            <td class="table-dark"> {{ row["shares"] }} </td>
+            <td class="table-dark"> {{ row["price"] }} </td>
+            <td class="table-dark"> {{ row["shares"] * row["price"] }} </td>
 
+
+
+          </tr>
         {% endfor %}
 
     </tbody>
+    <tfoot>
+        <tr class="table-dark">
+            <td></td>
+            <td></td>
+            <td class="table-dark" scope="col">Total:</td>
+            <td class="table-dark"> {{ total }} </td>
+        </tr>
+    </tfoot>
  </table>
  </div>
 {% endblock %}
