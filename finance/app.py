@@ -76,7 +76,7 @@ def buy():
 
     else:
         symbol = request.form.get("symbol")
-        quantity = request.form.get("quantity")
+        quantity = int(request.form.get("quantity"))
 
         #ensure a stock was submitted
         if not request.form.get("symbol"):
@@ -294,7 +294,7 @@ def sell():
 
         #ensure quanity is submitted
         if not request.form.get("shares"):
-            return apology("must provide amount of shares")
+            return apology("must provide quantity")
 
         #check if user has enough shares to sell.
         if quantity > shares:
