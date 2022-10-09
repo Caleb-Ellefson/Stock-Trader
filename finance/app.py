@@ -53,18 +53,13 @@ def index():
     #total amount of stocks purchased
     total = db.execute("SELECT SUM(price) AS total FROM purchases WHERE user_id = ?", user_id)
 
-
-
     #find users cash
     cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
     cash = round(cash_db[0]["cash"], 2)
 
-
-
     #render the database to the template
     return render_template("index.html", database=purchases_db, cash=cash, total=total)
-
-
+    
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
@@ -284,7 +279,7 @@ def sell():
 
         #find user cash
         user_balence = db.execute("SELECT cash FROM users WHERE id= ?", user_id)
-        user_balence = user_
+        user_balence = user_balence["price"]
 
         new_user_balence = user_balence + total_price
 
