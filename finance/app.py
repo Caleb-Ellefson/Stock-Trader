@@ -310,6 +310,8 @@ def sell():
 
         flash("Sold!")
 
+        return redirect("sell.html")
+
 
 
 
