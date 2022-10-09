@@ -276,6 +276,11 @@ def sell():
         #find the amount of shares user has in submitted stock
         shares = db.execute("SELECT shares FROM Purchases WHERE user_id = ?, AND symbol = ?", user_id, symbol)
 
+        #find the value of the shares
+        sold = db.execute("SELECT price FROM Purchases WHERE user_id = ?, AND symbol = ?", user_id, symbol)
+        user_balence = db.execute("SELECT cash FROM users WHERE user_id= ?", user_id)
+        
+
         #ensure symbol was submitted
         if not request.form.get("symbol"):
             return apology("must provide symbol")
