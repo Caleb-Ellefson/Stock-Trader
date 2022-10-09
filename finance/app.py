@@ -51,8 +51,8 @@ def index():
     purchases_db = db.execute("SELECT symbol, SUM(SHARES) AS shares, price FROM purchases WHERE user_id = ? GROUP BY symbol", user_id)
 
     #total amount of stocks purchased
-    total = db.execute("SELECT SUM(price) FROM purchases WHERE user_id = ?", user_id)
-    
+    total = db.execute("SELECT SUM(price) AS "total" FROM purchases WHERE user_id = ?", user_id)
+
 
 
     #find users cash
