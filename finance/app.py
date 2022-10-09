@@ -76,7 +76,7 @@ def buy():
 
     else:
         symbol = request.form.get("symbol")
-        quantity = int(request.form.get("quantity"))
+        quantity = request.form.get("quantity")
 
         #ensure a stock was submitted
         if not request.form.get("symbol"):
