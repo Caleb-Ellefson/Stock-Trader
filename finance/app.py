@@ -294,7 +294,7 @@ def sell():
 
         #ensure quanity is submitted
         if not request.form.get("shares"):
-            return apology("must provide quantity")
+            return apology("must provide amount of shares")
 
         #check if user has enough shares to sell.
         if quantity > shares:
