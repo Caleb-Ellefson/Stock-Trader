@@ -266,6 +266,7 @@ def sell():
         return render_template("sell.html")
 
     else:
+        #get users id
 
         #get symbol and quanity that was submitted
         symbol = request.form.get("symbol")
@@ -279,7 +280,9 @@ def sell():
         if not request.form.get("quantity"):
             return apology("must provide quantity")
 
-        
+        #find the amount of shares user has in submitted stock
+        shares = db.execute("SELECT shares FROM Purchases where)
+
 
 
 
