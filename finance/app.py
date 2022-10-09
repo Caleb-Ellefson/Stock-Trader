@@ -287,7 +287,6 @@ def sell():
 
         new_user_balence = (user_balence + total_price)
 
-
         #ensure symbol was submitted
         if not request.form.get("symbol"):
             return apology("must provide symbol")
