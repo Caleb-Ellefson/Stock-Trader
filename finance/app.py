@@ -288,7 +288,14 @@ def sell():
         if quantity > shares:
             return apology("You don't have enough shares to sell.")
 
-        
+        udpt_shares = (shares - quantity)
+
+        #update users shares
+        db.execute("UPDATE purchases SET shares= ?, WHERE user_id = ? AND symbol = ?", udpt_shares, user_id, symbol)
+
+
+
+
 
 
 
