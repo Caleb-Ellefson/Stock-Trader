@@ -273,6 +273,9 @@ def sell():
         symbol = request.form.get("symbol")
         quantity = request.form.get("quantity")
 
+        #find the amount of shares user has in submitted stock
+        shares = db.execute("SELECT shares FROM Purchases WHERE user_id = ?, AND symbol = ?", user_id, symbol)
+
         #ensure symbol was submitted
         if not request.form.get("symbol"):
             return apology("must provide symbol")
@@ -281,8 +284,11 @@ def sell():
         if not request.form.get("quantity"):
             return apology("must provide quantity")
 
-        #find the amount of shares user has in submitted stock
-        shares = db.execute("SELECT shares FROM Purchases WHERE user_id = ?, )
+        #check if user has enough shares to sell.
+        if quantity > shares:
+            return apology("You don't have enough shares to sell.")
+
+        
 
 
 
