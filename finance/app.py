@@ -274,7 +274,7 @@ def sell():
         quantity = request.form.get("shares")
 
         #find the amount of shares user has in submitted stock
-        shares = db.execute("SELECT shares FROM Purchases WHERE user_id = ?, AND symbol = ?", user_id, symbol)
+        shares = db.execute("SELECT shares FROM Purchases WHERE user_id = ? AND symbol = ?", user_id, symbol)
 
         #find stock
         stock = lookup(symbol.upper())
@@ -302,10 +302,10 @@ def sell():
         udpt_shares = (shares - quantity)
 
         #update users shares
-        db.execute("UPDATE purchases SET shares= ?, WHERE user_id = ? AND symbol = ?", udpt_shares, user_id, symbol)
+        db.execute("UPDATE purchases SET shares= ? WHERE user_id = ? AND symbol = ?", udpt_shares, user_id, symbol)
 
         #update users balence
-        db.execute("UPDATE users SET cash= ?, WHERE id = ?", new_user_balence, user_id)
+        db.execute("UPDATE users SET cash= ? WHERE id = ?", new_user_balence, user_id)
 
         flash("Sold!")
 
