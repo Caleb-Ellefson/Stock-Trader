@@ -52,6 +52,7 @@ def index():
 
     #total amount of stocks purchased
     total = db.execute("SELECT SUM(price) FROM purchases WHERE user_id = ?", user_id)
+    
 
 
     #find users cash
