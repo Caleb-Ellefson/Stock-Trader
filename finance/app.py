@@ -267,6 +267,7 @@ def sell():
 
     else:
         #get users id
+        user_id = session["user_id"]
 
         #get symbol and quanity that was submitted
         symbol = request.form.get("symbol")
@@ -281,7 +282,7 @@ def sell():
             return apology("must provide quantity")
 
         #find the amount of shares user has in submitted stock
-        shares = db.execute("SELECT shares FROM Purchases where)
+        shares = db.execute("SELECT shares FROM Purchases where )
 
 
 
