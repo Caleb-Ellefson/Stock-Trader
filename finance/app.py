@@ -280,12 +280,12 @@ def sell():
         stock = lookup(symbol.upper())
 
         #find total price
-        total_price = quantity * stock["price"]
+        total_price = quantity * int(stock["price"])
 
         #find user cash
         user_balence = db.execute("SELECT cash FROM users WHERE id= ?", user_id)
 
-        new_user_balence = (user_balence + total_price)
+        new_user_balence = user_balence + total_price
 
         #ensure symbol was submitted
         if not request.form.get("symbol"):
