@@ -267,10 +267,19 @@ def sell():
 
     else:
 
+        #get symbol and quanity that was submitted
+        symbol = request.form.get("symbol")
+        quantity = request.form.get("quantity")
+
+        #ensure symbol was submitted
         if not request.form.get("symbol"):
             return apology("must provide symbol")
 
         #ensure quanity is submitted
         if not request.form.get("quantity"):
             return apology("must provide quantity")
+
+        
+
+
 
