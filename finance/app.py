@@ -280,7 +280,7 @@ def sell():
 
         #find user cash
         user_balence = db.execute("SELECT cash FROM users WHERE id= ?", user_id)
-        int(user_balence) = user_balence[0]['user_balence']
+
 
         new_user_balence = user_balence + total_price
 
