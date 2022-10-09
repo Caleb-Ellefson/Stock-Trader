@@ -264,5 +264,13 @@ def sell():
 
     if request.method == "GET":
         return render_template("sell.html")
-        
-    return apology("Username already exists.", 403)
+
+    else:
+
+        if not request.form.get("symbol"):
+            return apology("must provide symbol")
+
+        #ensure quanity is submitted
+        if not request.form.get("quantity"):
+            return apology("must provide quantity")
+
