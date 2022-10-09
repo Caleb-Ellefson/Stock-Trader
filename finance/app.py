@@ -276,10 +276,17 @@ def sell():
         #find the amount of shares user has in submitted stock
         shares = db.execute("SELECT shares FROM Purchases WHERE user_id = ?, AND symbol = ?", user_id, symbol)
 
-        #find the value of the shares
-        sold = db.execute("SELECT price FROM Purchases WHERE user_id = ?, AND symbol = ?", user_id, symbol)
-        user_balence = db.execute("SELECT cash FROM users WHERE user_id= ?", user_id)
-        
+        #find stock
+        stock = lookup(symbol.upper())
+
+        #find total price
+        total_price = quantity * stock["price"]
+
+        #find user cash
+        user_balence = db.execute("SELECT cash FROM users WHERE id= ?", user_id)
+
+        new_user_balence = (user_balence + total_price)
+
 
         #ensure symbol was submitted
         if not request.form.get("symbol"):
@@ -297,6 +304,11 @@ def sell():
 
         #update users shares
         db.execute("UPDATE purchases SET shares= ?, WHERE user_id = ? AND symbol = ?", udpt_shares, user_id, symbol)
+
+        #update users balence
+        db.execute("UPDATE users SET cash= ?, WHERE id = ?", new_user_balence, user_id)
+
+        flash("Sold!")
 
 
 
