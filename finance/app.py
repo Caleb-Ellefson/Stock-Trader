@@ -308,9 +308,6 @@ def sell():
         if stock == None:
             return apology("No stock found. :(")
 
-        #find stock
-        stock = lookup(symbol.upper())
-
         #find total price
         total_price = quantity * stock["price"]
 
