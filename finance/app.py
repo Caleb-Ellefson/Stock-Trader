@@ -319,9 +319,7 @@ def sell():
 
         #take user cash from user_cash_db returned dict
         user_cash = float(user_cash_db[0]["cash"])
-
         updt_cash = user_cash + total_price
-
         user_shares = db.execute("SELECT shares FROM purchases WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)
         user_share_real = user_shares[0]["shares"]
 
