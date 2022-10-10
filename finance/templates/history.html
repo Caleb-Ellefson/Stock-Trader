@@ -15,18 +15,20 @@
             <th cope="col">Amount of Shares</th>
             <th scope="col">Price / Share</th>
             <th scope="col">Date</th>
+            <th scope="col">Order Type</th>
 
         </tr>
     </thead>
     <tbody>
 
-        {% for row in transactions %}
+        {% for row in database %}
 
         <tr class="table-dark">
             <td class="table-dark"> {{ row["symbol"] }} </td>
             <td class="table-dark"> {{ row["shares"] }} </td>
             <td class="table-dark"> {{ row["price"] }} </td>
             <td class="table-dark"> {{ row["date"] }} </td>
+            <td class="table-dark"> {{ row["transaction"] }} </td>
         </tr>
         {% endfor %}
 
