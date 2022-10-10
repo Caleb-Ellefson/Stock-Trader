@@ -113,7 +113,7 @@ def buy():
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
 
         #take user cash from user_cash_db returned dict
-        user_cash = float(user_cash_db[0]["cash"])
+        user_cash = usd(user_cash_db[0]["cash"])
 
         #check if user has enough cash
         if total_price > user_cash:
