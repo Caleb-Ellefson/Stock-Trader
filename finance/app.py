@@ -333,10 +333,8 @@ def sell():
         if user_shares == 0:
             return apology("You do not have enough shares.")
 
-        x = user_share_real - quantity
-
-        if x <= 0:
-            db.execute("DELETE FROM purchases WHERE symbol = ? AND user_id = ? AND shares = 0", stock["symbol"], user_id)
+        #get the sum of buy shares
+        
 
         #store updated cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
