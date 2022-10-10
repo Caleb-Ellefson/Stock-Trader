@@ -122,6 +122,7 @@ def buy():
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
 
         date = datetime.datetime.now()
+        print(transaction)
 
         db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id, transaction) VALUES (?, ?, ?, ?, ?,'BUY')", stock["symbol"], quantity, stock["price"], date, user_id)
 
