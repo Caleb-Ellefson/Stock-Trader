@@ -280,6 +280,7 @@ def sell():
         if stock == None:
             return apology("No stock found. :(")
 
+
         #find stock
         stock = lookup(symbol.upper())
 
@@ -296,6 +297,13 @@ def sell():
         user_cash = user_cash_db[0]["cash"]
 
         updt_cash = user_cash + total_price
+
+        user_shares = db.execute("SELECT shares FROM purchases WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)
+        user_share_real = user_shares[0]["shares"]
+
+        if quantity > user_share_real:
+            return return apology("You do not have enough shares.")
+
 
         #store updated cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
