@@ -328,6 +328,9 @@ def sell():
         if quantity > user_share_real:
             return apology("You do not have enough shares.")
 
+        if user_shares == 0:
+            return apology("You do not have enough shares.")
+
         #store updated cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
 
