@@ -338,8 +338,7 @@ def sell():
 
         db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id, type) VALUES (?, ?, ?, ?, ?, 'SELL')", stock["symbol"], quantity, stock["price"], date, user_id)
         purchases_db = db.execute("SELECT symbol, SUM(SHARES) AS shares, price FROM purchases WHERE user_id = ? AND shares >= 1 AND type = 'BUY' GROUP BY symbol", user_id)
-        updated_shares = purchases_db - quantity
-        db.excute
+        
 
         flash("Sold!")
 
