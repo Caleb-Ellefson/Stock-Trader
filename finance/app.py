@@ -259,7 +259,21 @@ def register():
 def sell():
 
     if request.method == "GET":
-        return render_template("sell.html")
+
+        user_id = session["user_id"]
+
+        #Select the symbol of stock add the shares togther and seperate the sum of shares by symbol
+        purchases_db = db.execute("SELECT symbol, SUM(SHARES) AS shares, price FROM purchases WHERE user_id = ? GROUP BY symbol", user_id)
+
+        #total amount of stocks purchased
+        total = db.execute("SELECT SUM(price) AS total FROM purchases WHERE user_id = ?", user_id)
+        total = total[0]['total']
+
+        #find users cash
+        cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+        cash = round(cash_db[0]["cash"], 2)
+
+        return render_template("sell.html", database=purchases_db, cash=cash, total=total)
 
     else:
         symbol = request.form.get("symbol")
@@ -279,7 +293,6 @@ def sell():
         #if stock does not exist
         if stock == None:
             return apology("No stock found. :(")
-
 
         #find stock
         stock = lookup(symbol.upper())
@@ -303,7 +316,6 @@ def sell():
 
         if quantity > user_share_real:
             return apology("You do not have enough shares.")
-
 
         #store updated cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
