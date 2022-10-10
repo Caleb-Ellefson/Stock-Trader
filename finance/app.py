@@ -326,12 +326,14 @@ def sell():
         #find user shares
         user_shares = db.execute("SELECT shares FROM purchases WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)
         user_share_real = user_shares[0]["shares"]
-        
+
         if quantity > user_share_real:
             return apology("You do not have enough shares.")
 
         if user_shares == 0:
             return apology("You do not have enough shares.")
+
+        x = user_share_real - quantity
 
         #store updated cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
