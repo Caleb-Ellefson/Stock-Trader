@@ -132,19 +132,14 @@ def history():
         user_id = session["user_id"]
 
         #Select the symbol of stock add the shares togther and seperate the sum of shares by symbol
-        purchases_db = db.execute("SELECT  FROM purchases WHERE user_id = ? GROUP BY symbol", user_id)
-
-        #total amount of stocks purchased
-        total = db.execute("SELECT SUM(price) AS total FROM purchases WHERE user_id = ?", user_id)
-        total = total[0]['total']
+        purchases_db = db.execute("SELECT * FROM purchases WHERE user_id = ? GROUP BY symbol", user_id)
 
         #find users cash
         cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
         cash = round(cash_db[0]["cash"], 2)
 
         #render the database to the template
-        return render_template("index.html", database=purchases_db, cash=cash, total=total)
-        return render_template("history.html")
+        return render_template("history.html", database=purchases_db)
 
 
 
