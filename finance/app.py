@@ -130,6 +130,9 @@ def history():
     if request.method == "GET":
         return render_template("history.html")
 
+    else:
+        
+
 
 
 
