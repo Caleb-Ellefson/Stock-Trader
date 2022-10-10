@@ -68,7 +68,15 @@ def buy():
 
     #display buy form
     if request.method == "GET":
-        return render_template("buy.html")
+        user_id = session["user_id"]
+
+        #Select the symbol of stock add the shares togther and seperate the sum of shares by symbol
+        purchases_db = db.execute("SELECT symbol, SUM(SHARES) AS shares, price FROM purchases WHERE user_id = ? GROUP BY symbol", user_id)
+
+        #find users cash
+        cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+        cash = cash_db[0]["cash"]
+        return render_template("buy.html", database=purchases_db, cash=cash)
 
     else:
         symbol = request.form.get("symbol")

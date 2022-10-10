@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block main %}
+
     <form action="/sell" method="post">
         <div class="mb-3">
             <input class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text">
@@ -17,7 +18,7 @@
         </div>
 
     </form>
-<h3>Balence: ${{ cash }} </h3>
+<h3 style="float: left; padding: 1rem;">Balence: ${{ cash }} </h3>
 
 <div class="section" >
  <table class="table table-striped-columns">
