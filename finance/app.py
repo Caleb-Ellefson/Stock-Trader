@@ -337,7 +337,7 @@ def sell():
 
         date = datetime.datetime.now()
 
-        db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id, transaction) VALUES (?, ?, ?, ?, ?, SELL)", stock["symbol"], quantity, stock["price"], date, user_id)
+        db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id, type) VALUES (?, ?, ?, ?, ?, 'BUY')", stock["symbol"], quantity, stock["price"], date, user_id)
         flash("Sold!")
 
         return redirect("/")
