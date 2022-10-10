@@ -302,7 +302,7 @@ def sell():
         user_share_real = user_shares[0]["shares"]
 
         if quantity > user_share_real:
-            return return apology("You do not have enough shares.")
+            return apology("You do not have enough shares.")
 
 
         #store updated cash
