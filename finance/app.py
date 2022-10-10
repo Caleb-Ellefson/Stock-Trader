@@ -116,7 +116,7 @@ def buy():
         date = datetime.datetime.now()
 
         db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id) VALUES (?, ?, ?, ?, ?)", stock["symbol"], quantity, stock["price"], date, user_id)
-        db.execute("INSERT INTO purchases transactions ('BUY') WHERE user_id= ?", user_id)
+        db.execute("INSERT INTO purchases (transactions) VALUES ('BUY'))
 
         flash("Purschased!")
 
