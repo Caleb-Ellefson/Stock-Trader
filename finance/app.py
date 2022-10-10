@@ -350,7 +350,7 @@ def sell():
 
         date = datetime.datetime.now()
 
-        db.execute("INSERT INTO sell (symbol, shares, price, date, user_id, type) VALUES (?, ?, ?, ?, ?, 'SELL')", stock["symbol"], quantity, stock["price"], date, user_id)
+        db.execute("INSERT INTO sell (symbol, shares, price, date, user_id, type) VALUES (?, ?, ?, ?, ?, 'SELL') WHERE ", stock["symbol"], quantity, stock["price"], date, user_id)
         db.execute("INSERT INTO history (symbol, shares, price, date, user_id, type) VALUES (?, ?, ?, ?, ?, 'SELL')", stock["symbol"], quantity, stock["price"], date, user_id)
 
 
