@@ -90,6 +90,9 @@ def buy():
         if not request.form.get("quantity"):
             return apology("must provide quantity")
 
+        if quantity < 1:
+            return apology("must provide positive value")
+
         #lookup stock
         stock = lookup(symbol.upper())
 
