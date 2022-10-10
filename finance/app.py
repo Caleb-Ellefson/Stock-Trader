@@ -126,10 +126,6 @@ def buy():
         db.execute("DELETE FROM purchases WHERE symbol = ? AND ")
         db.execute("INSERT INTO history (symbol, shares, price, date, user_id, type, owned) VALUES (?, ?, ?, ?, ?, 'BUY', 1)", stock["symbol"], quantity, stock["price"], date, user_id)
 
-        #add sum of stock symbol wanting to be sold
-        #Select the symbol of stock add the shares togther and seperate the sum of shares by symbol
-        purchases_db = db.execute("SELECT symbol, SUM(SHARES) AS shares, price FROM purchases WHERE user_id = ? AND shares >= 1 AND type = 'BUY' GROUP BY symbol", user_id)
-        # if stock symbol = 0 delete it from purchases
 
         flash("Purschased!")
 
@@ -343,6 +339,13 @@ def sell():
         date = datetime.datetime.now()
 
         db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id, type) VALUES (?, ?, ?, ?, ?, 'SELL')", stock["symbol"], quantity, stock["price"], date, user_id)
+        db.execute("INSERT INTO history (symbol, shares, price, date, user_id, type, owned) VALUES (?, ?, ?, ?, ?, 'BUY', 1)", stock["symbol"], quantity, stock["price"], date, user_id)
+
+
+        #add sum of stock symbol wanting to be sold
+        #Select the symbol of stock add the shares togther and seperate the sum of shares by symbol
+        owned_shares = db.execute("SELECT ?, SUM(SHARES) AS shares, price FROM purchases WHERE user_id = ?", symbol, user_id)
+        # if stock symbol = 0 delete it from purchases
         flash("Sold!")
 
         return redirect("/")
