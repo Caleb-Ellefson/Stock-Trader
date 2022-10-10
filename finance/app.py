@@ -219,8 +219,9 @@ def quote():
         #if stock does not exist
         if stock == None:
             return apology("No stock found. :(")
-
-        return render_template("quoted.html", name = stock["name"], price = stock["price"], symbol = stock["symbol"])
+        price = stock["price"]
+        usd(price)
+        return render_template("quoted.html", name = stock["name"], price, symbol = stock["symbol"])
 
 
 
