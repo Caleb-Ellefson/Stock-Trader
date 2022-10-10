@@ -71,7 +71,7 @@ def buy():
         user_id = session["user_id"]
 
         #Select the symbol of stock add the shares togther and seperate the sum of shares by symbol
-        purchases_db = db.execute("SELECT symbol, SUM(SHARES) AS shares, price FROM purchases WHERE user_id = ? AND shares >= 1 GROUP BY symbol", user_id)
+        purchases_db = db.execute("SELECT symbol, SUM(SHARES) AS shares, price FROM purchases WHERE user_id = ? AND shares >= 1 AND type = 'BUY' GROUP BY symbol", user_id)
 
         #find users cash
         cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
@@ -337,7 +337,7 @@ def sell():
 
         date = datetime.datetime.now()
 
-        db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id, type) VALUES (?, ?, ?, ?, ?, 'BUY')", stock["symbol"], quantity, stock["price"], date, user_id)
+        db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id, type) VALUES (?, ?, ?, ?, ?, 'SELL')", stock["symbol"], quantity, stock["price"], date, user_id)
         flash("Sold!")
 
         return redirect("/")
