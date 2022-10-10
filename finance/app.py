@@ -295,11 +295,7 @@ def sell():
         #take user cash from user_cash_db returned dict
         user_cash = user_cash_db[0]["cash"]
 
-        #check if user has enough cash
-        if total_price > user_cash:
-            return apology("Not enough funds. :(")
-
-        updt_cash = user_cash - total_price
+        updt_cash = user_cash + total_price
 
         #store updated cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
@@ -308,7 +304,7 @@ def sell():
 
         db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id) VALUES (?, ?, ?, ?, ?)", stock["symbol"], quantity, stock["price"], date, user_id)
 
-        flash("Purschased!")
+        flash("Sold!")
 
         return redirect("/")
 
