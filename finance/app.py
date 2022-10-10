@@ -123,7 +123,8 @@ def buy():
 
         date = datetime.datetime.now()
 
-        db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id, type, owned) VALUES (?, ?, ?, ?, ?, 'BUY', 1)", stock["symbol"], quantity, stock["price"], date, user_id)
+        db.execute("DELETE FROM purchases WHERE symbol = ? AND ")
+        db.execute("INSERT INTO history (symbol, shares, price, date, user_id, type, owned) VALUES (?, ?, ?, ?, ?, 'BUY', 1)", stock["symbol"], quantity, stock["price"], date, user_id)
 
 
         flash("Purschased!")
