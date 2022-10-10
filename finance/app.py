@@ -262,29 +262,10 @@ def sell():
         return render_template("sell.html")
 
     else:
-        #get users id
-        user_id = session["user_id"]
-
-        #get symbol and quanity that was submitted
         symbol = request.form.get("symbol")
         quantity = int(request.form.get("shares"))
 
-        #find the amount of shares user has in submitted stock
-        shares = db.execute("SELECT shares FROM Purchases WHERE user_id = ? AND symbol = ?", user_id, symbol)
-
-        #find stock
-        stock = lookup(symbol.upper())
-
-        #find total price
-        total_price = quantity * stock["price"]
-
-        #find user cash
-        user_balence = db.execute("SELECT cash FROM users WHERE id= ?", user_id)
-
-
-        new_user_balence = user_balence + total_price
-
-        #ensure symbol was submitted
+        #ensure a stock was submitted
         if not request.form.get("symbol"):
             return apology("must provide symbol")
 
@@ -292,21 +273,44 @@ def sell():
         if not request.form.get("shares"):
             return apology("must provide quantity")
 
-        #check if user has enough shares to sell.
-        if quantity > shares:
-            return apology("You don't have enough shares to sell.")
+        #lookup stock
+        stock = lookup(symbol.upper())
 
-        udpt_shares = (shares - quantity)
+        #if stock does not exist
+        if stock == None:
+            return apology("No stock found. :(")
 
-        #update users shares
-        db.execute("UPDATE purchases SET shares= ? WHERE user_id = ? AND symbol = ?", udpt_shares, user_id, symbol)
+        #find stock
+        stock = lookup(symbol.upper())
 
-        #update users balence
-        db.execute("UPDATE users SET cash= ? WHERE id = ?", new_user_balence, user_id)
+        #find total price
+        total_price = quantity * stock["price"]
 
-        flash("Sold!")
+        #find user id to select from database
+        user_id = session["user_id"]
 
-        return redirect("sell.html")
+        #find user cash from data base
+        user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
+
+        #take user cash from user_cash_db returned dict
+        user_cash = user_cash_db[0]["cash"]
+
+        #check if user has enough cash
+        if total_price > user_cash:
+            return apology("Not enough funds. :(")
+
+        updt_cash = user_cash - total_price
+
+        #store updated cash
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
+
+        date = datetime.datetime.now()
+
+        db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id) VALUES (?, ?, ?, ?, ?)", stock["symbol"], quantity, stock["price"], date, user_id)
+
+        flash("Purschased!")
+
+        return redirect("/")
 
 
 
