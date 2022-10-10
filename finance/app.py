@@ -333,13 +333,15 @@ def sell():
         if user_shares == 0:
             return apology("You do not have enough shares.")
 
+        x
+
         #store updated cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
 
         date = datetime.datetime.now()
 
         db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id, type) VALUES (?, ?, ?, ?, ?, 'SELL')", stock["symbol"], quantity, stock["price"], date, user_id)
-        db.execute("INSERT INTO history (symbol, shares, price, date, user_id, type, owned) VALUES (?, ?, ?, ?, ?, 'SELL', 1)", stock["symbol"], quantity, stock["price"], date, user_id)
+        db.execute("INSERT INTO history (symbol, shares, price, date, user_id, type, owned) VALUES (?, ?, ?, ?, ?, 'BUY', 1)", stock["symbol"], quantity, stock["price"], date, user_id)
 
 
         #add sum of stock symbol wanting to be sold
