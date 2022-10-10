@@ -265,7 +265,7 @@ def register():
             new_user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
         except:
             #if user name is already in data base return error
-            return apology("Username already exists.", 403)
+            return apology("Username already exists.")
 
         #log user in
         session["user_id"] = new_user
