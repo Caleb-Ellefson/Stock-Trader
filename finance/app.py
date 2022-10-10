@@ -333,8 +333,10 @@ def sell():
         if user_shares == 0:
             return apology("You do not have enough shares.")
 
-        #get the sum of buy shares
-        
+        #create a buy and sell table
+        #when a stock is bought generate a sell row with same ID
+        #when the user wants to sell the stock remove the BUY row from the table with the same ID and BUY type
+
 
         #store updated cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
