@@ -56,7 +56,7 @@ def index():
 
     #find users cash
     cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-    cash = round(cash_db[0]["cash"], 2)
+    cash = cash_db[0]["cash"]
 
     #render the database to the template
     return render_template("index.html", database=purchases_db, cash=cash, total=total)
@@ -136,7 +136,7 @@ def history():
 
 
         #render the database to the template
-        return render_template("history.html", transactions=purchases_db)
+        return render_template("history.html", database=purchases_db)
 
 
 
@@ -277,7 +277,7 @@ def sell():
 
         #find users cash
         cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-        cash = round(cash_db[0]["cash"], 2)
+        cash = cash_db[0]["cash"]
 
         return render_template("sell.html", database=purchases_db, cash=cash)
 
