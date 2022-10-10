@@ -56,7 +56,7 @@ def index():
 
     #find users cash
     cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-    cash = cash_db[0]["cash"]
+    cash = usd(cash_db[0]["cash"])
 
     #render the database to the template
     return render_template("index.html", database=purchases_db, cash=cash, total=total)
@@ -75,7 +75,7 @@ def buy():
 
         #find users cash
         cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-        cash = cash_db[0]["cash"]
+        cash = usd(cash_db[0]["cash"])
         return render_template("buy.html", database=purchases_db, cash=cash)
 
     else:
@@ -219,8 +219,8 @@ def quote():
         #if stock does not exist
         if stock == None:
             return apology("No stock found. :(")
-        
-        return render_template("quoted.html", name = stock["name"], price = stock["price"], symbol = stock["symbol"])
+
+        return render_template("quoted.html", name = stock["name"], price = usd(stock["price"]), symbol = stock["symbol"])
 
 
 
