@@ -122,8 +122,8 @@ def buy():
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
 
         date = datetime.datetime.now()
-
-        db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id) VALUES (?, ?, ?, ?, ?)", stock["symbol"], quantity, stock["price"], date, user_id)
+        buy=("BUY")
+        db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id, transaction) VALUES (?, ?, ?, ?, ?, ?)", stock["symbol"], quantity, stock["price"], date, user_id, buy)
 
         flash("Purschased!")
 
@@ -336,7 +336,8 @@ def sell():
 
         date = datetime.datetime.now()
 
-        db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id) VALUES (?, ?, ?, ?, ?)", stock["symbol"], (-1)*quantity, stock["price"], date, user_id, )
+        sell=("SELL")
+        db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id, transaction) VALUES (?, ?, ?, ?, ?, ?)", stock["symbol"], quantity, stock["price"], date, user_id, sell)
         flash("Sold!")
 
         return redirect("/")
