@@ -291,8 +291,9 @@ def sell():
         #find users cash
         cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
         cash = cash_db[0]["cash"]
+        symbols_user = db.execute("SELECT symbol FROM purchases WHERE user_id = ? HAVING SUM(shares) > 0", user_id)
 
-        return render_template("sell.html", database=purchases_db, cash=cash)
+        return render_template("sell.html", database=purchases_db, cash=cash, [row["symbol"] for row in rows])
 
     else:
         symbol = request.form.get("symbol")
