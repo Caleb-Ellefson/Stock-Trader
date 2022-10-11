@@ -56,7 +56,7 @@ def index():
 
     #find users cash
     cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-    cash = usd(cash_db[0]["cash"])
+    cash = cash_db[0]["cash"]
 
     #render the database to the template
     return render_template("index.html", database=purchases_db, cash=cash, total=total)
@@ -87,11 +87,8 @@ def buy():
             return apology("must provide symbol")
 
         #ensure quanity is submitted
-        if not request.form.get("quantity"):
+        if not request.form.get("shares"):
             return apology("must provide quantity")
-
-        if quantity < 0:
-            return apology("must provide positive value")
 
         #lookup stock
         stock = lookup(symbol.upper())
@@ -113,7 +110,7 @@ def buy():
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
 
         #take user cash from user_cash_db returned dict
-        user_cash = usd(user_cash_db[0]["cash"])
+        user_cash = float(user_cash_db[0]["cash"])
 
         #check if user has enough cash
         if total_price > user_cash:
@@ -321,7 +318,7 @@ def sell():
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
 
         #take user cash from user_cash_db returned dict
-        user_cash = float(user_cash_db[0]["cash"])
+        user_cash = user_cash_db[0]["cash"]
         updt_cash = user_cash + total_price
 
         #find user shares
