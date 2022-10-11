@@ -100,6 +100,9 @@ def buy():
         if quantity < 0:
             return apology("Share not allowed. :(")
 
+        if not quantity.isdigit():
+            return apology("You cannot purchase partial shares.")
+
         #find stock
         stock = lookup(symbol.upper())
 
