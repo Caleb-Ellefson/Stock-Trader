@@ -75,7 +75,7 @@ def buy():
 
         #find users cash
         cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-        cash = usd(cash_db[0]["cash"])
+        cash = cash_db[0]["cash"]
         return render_template("buy.html", database=purchases_db, cash=cash)
 
     else:
@@ -318,7 +318,7 @@ def sell():
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
 
         #take user cash from user_cash_db returned dict
-        user_cash = (user_cash_db[0]["cash"])
+        user_cash = user_cash_db[0]["cash"]
         updt_cash = user_cash + total_price
 
         #find user shares
