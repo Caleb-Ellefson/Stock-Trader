@@ -345,9 +345,12 @@ def sell():
         print(purchases_db)
         total_shares = (purchases_db[1]["shares"])
 
-        new_shares = total_shares + ((-1) * quantity)
+        new_shares = total_shares + ( -1 * quantity)
 
-        
+        x = db.execute("UPDATE purchases SET shares = ? WHERE (SELECT SUM(shares) FROM purchases WHERE user_id = ? AND symbol = ? GROUP BY symbol)", new_shares, user_id, symbol)
+
+        print(x)
+
 
 
 
