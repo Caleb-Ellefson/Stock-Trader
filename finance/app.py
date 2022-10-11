@@ -56,7 +56,7 @@ def index():
 
     #find users cash
     cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-    cash = cash_db[0]["cash"]
+    cash = usd(cash_db[0]["cash"])
 
     #render the database to the template
     return render_template("index.html", database=purchases_db, cash=cash, total=total)
@@ -75,7 +75,7 @@ def buy():
 
         #find users cash
         cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-        cash = cash_db[0]["cash"]
+        cash = usd(cash_db[0]["cash"])
         return render_template("buy.html", database=purchases_db, cash=cash)
 
     else:
@@ -290,7 +290,7 @@ def sell():
 
         #find users cash
         cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-        cash = cash_db[0]["cash"]
+        cash = usd(cash_db[0]["cash"])
 
         return render_template("sell.html", database=purchases_db, cash=cash)
 
@@ -350,11 +350,6 @@ def sell():
         x = db.execute("UPDATE purchases SET shares = ? WHERE (SELECT SUM(shares) FROM purchases WHERE user_id = ? AND symbol = ? GROUP BY symbol)", new_shares, user_id, symbol)
 
         print(x)
-
-
-
-
-
 
         db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id, type) VALUES (?, ?, ?, ?, ?, 'SELL')", stock["symbol"], quantity, stock["price"], date, user_id)
 
