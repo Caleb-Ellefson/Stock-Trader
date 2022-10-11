@@ -111,9 +111,10 @@ def buy():
 
         #find user cash from data base
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
+        print(user_cash_db)
 
         #take user cash from user_cash_db returned dict
-        user_cash = float(user_cash_db[0]["cash"])
+        user_cash = user_cash_db[0]["cash"]
 
 
         #check if user has enough cash
