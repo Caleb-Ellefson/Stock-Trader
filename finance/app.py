@@ -341,6 +341,9 @@ def sell():
 
         date = datetime.datetime.now()
 
+        purchases_db = db.execute("SELECT ?, SUM(SHARES) AS shares, price FROM purchases WHERE user_id = ? AND shares >= 1 AND type = 'BUY' GROUP BY symbol", symbol, user_id)
+        print(purchases_db)
+
         db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id, type) VALUES (?, ?, ?, ?, ?, 'SELL')", stock["symbol"], quantity, stock["price"], date, user_id)
 
 
