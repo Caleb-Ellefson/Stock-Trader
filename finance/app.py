@@ -76,7 +76,7 @@ def buy():
         #find users cash
         cash_db = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
         cash = usd(cash_db[0]["cash"])
-        return render_template("buy.html", database=purchases_db, cash=cash)
+        return render_template("buy.html", database=purchases_db, balence=cash)
 
     else:
         symbol = request.form.get("symbol")
