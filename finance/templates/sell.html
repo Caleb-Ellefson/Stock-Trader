@@ -11,11 +11,10 @@
             <select name="symbol" id="cars">
 
                 {% for symbol in symbols %}
-                
-                    <option value=" {{ symbol }} ">{{ symbol }}</option>
 
-                {% endfor % }
+                    <option value="{{ symbol }}">{{ symbol }}</option>
 
+                {% endfor %}
             </select>
         </div>
         <div>
