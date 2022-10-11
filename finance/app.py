@@ -318,7 +318,7 @@ def sell():
         user_cash_db = db.execute("SELECT cash FROM users WHERE id = :id", id=user_id)
 
         #take user cash from user_cash_db returned dict
-        user_cash = user_cash_db[0]["cash"]
+        user_cash = float(user_cash_db[0]["cash"]
         updt_cash = user_cash + total_price
 
         #find user shares
