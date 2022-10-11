@@ -80,7 +80,7 @@ def buy():
 
     else:
         symbol = request.form.get("symbol")
-        quantity = int(request.form.get("shares"))
+        quantity = float(request.form.get("shares"))
 
         #ensure a stock was submitted
         if not request.form.get("symbol"):
