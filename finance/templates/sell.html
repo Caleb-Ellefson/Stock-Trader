@@ -8,7 +8,13 @@
 
     <form action="/sell" method="post">
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text">
+            <select name="symbol" id="cars">
+
+                {% for symbol in symbols %}
+                    <option value=" {{ symbol }} ">{{ symbol }}</option>
+                {% endfor % }
+
+            </select>
         </div>
         <div>
             <input class="form-control mx-auto w-auto" name="shares" placeholder="# of stock to sell" type="number" min="1">
