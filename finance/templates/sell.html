@@ -39,7 +39,7 @@
             <td class="table-dark"> {{ row["symbol"] }} </td>
             <td class="table-dark"> {{ row["shares"] }} </td>
             <td class="table-dark"> {{ row["price"] }} </td>
-            <td class="table-dark"> </td>
+            <td class="table-dark"> {{ row["shares"] * row["price"] }} </td>
           </tr>
         {% endfor %}
     </tbody>
