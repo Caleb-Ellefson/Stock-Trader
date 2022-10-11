@@ -114,7 +114,7 @@ def buy():
 
         #take user cash from user_cash_db returned dict
         user_cash = user_cash_db[0]["cash"]
-        print(user_cash)
+
 
         #check if user has enough cash
         if total_price > user_cash:
