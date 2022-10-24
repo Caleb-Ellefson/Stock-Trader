@@ -126,9 +126,7 @@ def buy():
         #store updated cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
 
-        date = datetime.datetime.now()
-
-        db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id, type) VALUES (?, ?, ?, ?, ?, 'BUY')", stock["symbol"], quantity, (stock["price"]), date, user_id)
+        db.execute("INSERT INTO purchases (symbol, shares, price, user_id, type) VALUES (?, ?, ?, ?, 'BUY')", stock["symbol"], quantity, (stock["price"]), user_id)
 
         flash("Purschased!")
 
@@ -340,22 +338,7 @@ def sell():
         #store updated cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
 
-        date = datetime.datetime.now()
-
-        """
-        purchases_db = db.execute("SELECT ?, SUM(SHARES) AS shares, price FROM purchases WHERE user_id = ? AND shares >= 1 AND type = 'BUY' GROUP BY symbol", symbol, user_id)
-
-        total_shares = (purchases_db[1]["shares"])
-
-        new_shares = total_shares +  -1 * quantity
-
-        x = db.execute("UPDATE purchases SET shares = ? WHERE (SELECT SUM(shares) FROM purchases WHERE user_id = ? AND symbol = ? GROUP BY symbol)", new_shares, user_id, symbol)
-
-        print(x)
-        """
-
-
-        db.execute("INSERT INTO purchases (symbol, shares, price, date, user_id, type) VALUES (?, ?, ?, ?, ?, 'SELL')", stock["symbol"], quantity, stock["price"], date, user_id)
+        db.execute("INSERT INTO purchases (symbol, shares, price, user_id, type) VALUES (?, ?, ?, ?, 'SELL')", stock["symbol"], quantity, stock["price"], user_id)
 
         flash("Sold!")
 
