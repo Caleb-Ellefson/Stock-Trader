@@ -27,5 +27,29 @@
     </form>
 <h3 style="float: left; padding: 1rem;">Balence: {{ cash | usd }} </h3>
 
+<div class="section" >
+ <table class="table table-striped-columns">
+    <thead>
+        <tr>
+            <th scope="col">Shares</th>
+            <th cope="col">Amount of Shares</th>
+            <th scope="col">Price / Share</th>
+            <th scope="col">Total</th>
 
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for row in database %}
+
+        <tr class="table-dark">
+            <td class="table-dark"> {{ row["symbol"] }} </td>
+            <td class="table-dark"> {{ row["shares"] }} </td>
+            <td class="table-dark"> {{ row["price"] | usd }} </td>
+            <td class="table-dark"> {{ (row["shares"] * row["price"]) | usd }} </td>
+          </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+ </div>
 {% endblock %}
