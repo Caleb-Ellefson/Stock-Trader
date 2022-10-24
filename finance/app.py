@@ -48,7 +48,8 @@ def index():
     user_id = session["user_id"]
 
     #Select the symbol of stock add the shares togther and seperate the sum of shares by symbol
-    purchases_db = db.execute("SELECT symbol, SUM(SHARES) AS shares, price FROM purchases WHERE user_id = ? AND shares > 0 AND type = 'BUY' GROUP BY symbol", user_id)
+    purchases_db = db.execute("SELECT symbol, SUM(SHARES) AS shares, price FROM purchases WHERE user_id = ? AND shares > 0 GROUP BY symbol", user_id)
+    print(purchases_db)
 
     #total amount of stocks purchased
     total = db.execute("SELECT SUM(price) AS total FROM purchases WHERE user_id = ?", user_id)
