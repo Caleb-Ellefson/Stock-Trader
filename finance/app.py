@@ -100,6 +100,11 @@ def buy():
         if quantity < 0:
             return apology("Share not allowed. :(")
 
+        try:
+            shares = int(request.form.get("shares"))
+        except ValueError:
+            return apology("shares must be a posative integer", 400)
+
         #find stock
         stock = lookup(symbol.upper())
 
