@@ -340,7 +340,7 @@ def sell():
         #store updated cash
         db.execute("UPDATE users SET cash = ? WHERE id = ?", updt_cash, user_id)
 
-        db.execute("INSERT INTO purchases (symbol, shares, price, user_id, type) VALUES (?, ?, ?, ?, 'SELL')", stock["symbol"], quantity, stock["price"], user_id)
+        db.execute("INSERT INTO purchases (symbol, shares, price, user_id, type) VALUES (?, ?, ?, ?, 'SELL')", (-1 * stock["symbol"]), quantity, stock["price"], user_id)
 
         flash("Sold!")
 
