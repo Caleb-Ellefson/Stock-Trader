@@ -97,7 +97,7 @@ def buy():
         if stock == None:
             return apology("No stock found. :(")
 
-        if quantity < 0:
+        if quantity <= 0:
             return apology("Share not allowed. :(")
 
         #find stock
