@@ -80,7 +80,10 @@ def buy():
 
     else:
         symbol = request.form.get("symbol")
-        quantity = int(request.form.get("shares"))
+        try:
+            quantity = int(request.form.get("shares"))
+        except ValueError:
+            return apology("shares must be a posative integer", 400)
 
         #ensure a stock was submitted
         if not request.form.get("symbol"):
