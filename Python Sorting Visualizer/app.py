@@ -33,7 +33,6 @@ class DrawInformation:
         self.block_width = round((self.width - self.SIDE_PAD) / len(lst))
         #Find the height of each bar
         self.block_height = round((self.height - self.TOP_PAD) / (self.max_val - self.min_val))
-
         #int divide to get a whole number
         self.start_x = self.SIDE_PAD // 2
 
