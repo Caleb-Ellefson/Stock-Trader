@@ -10,6 +10,7 @@ class DrawInformation:
     GRAY = 128, 128, 128
     BACKGROUND_COLOR = WHITE
 
+    #Pygame window
     def __init__(self, width, height, lst):
         self.width = width
         self.height = height
