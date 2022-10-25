@@ -36,6 +36,9 @@ class DrawInformation:
         #int divide to get a whole number
         self.start_x = self.SIDE_PAD // 2
 
+def generate_starting_list(n, min_val, max_val):
+    
+
 
 
 
