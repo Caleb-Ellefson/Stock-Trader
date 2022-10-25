@@ -39,7 +39,35 @@ class DrawInformation:
 
 def generate_starting_list(n, min_val, max_val):
     lst = []
-    
+
+    #generate list
+    for _ in range(n):
+        #random int including max and min val
+        val = random.randint(min_val, max_val)
+        lst.append(val)
+
+    return lst
+
+def main():
+    run = True
+    clock = pygame.time.Clock()
+
+    #game loop
+    while run:
+        clock.tick(60)
+
+        pygame.display.update()
+
+        #quit
+        for event in pygame.event.get()
+            if event == pygame.QUIT:
+                run = False
+
+    pygame.quit()
+
+if __name__ == "__main__":
+    main()
+
 
 
 
