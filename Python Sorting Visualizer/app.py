@@ -25,3 +25,4 @@ class DrawInformation:
         self.lst = lst
         self.min_val = min(lst)
         self.max_val = max(lst)
+        
