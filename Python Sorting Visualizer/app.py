@@ -21,4 +21,4 @@ class DrawInformation:
         self.set_list(lst)
 
     def set_list(self, lst):
-        
+        pass
