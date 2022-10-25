@@ -20,5 +20,8 @@ class DrawInformation:
         pygame.display.set_caption("Sorting Algroith Visualization")
         self.set_list(lst)
 
+    #Bar attribute
     def set_list(self, lst):
-        pass
+        self.lst = lst
+        self.min_val = min(lst)
+        self.max_val = max(lst)
