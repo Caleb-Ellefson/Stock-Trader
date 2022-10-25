@@ -17,3 +17,8 @@ class DrawInformation:
 
         #create the pygame window
         self.window = pygame.display.set_mode((width, height))
+        pygame.display.set_caption("Sorting Algroith Visualization")
+        self.set_list(lst)
+
+    def set_list(self, lst):
+        
