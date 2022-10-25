@@ -37,8 +37,9 @@ class DrawInformation:
         self.start_x = self.SIDE_PAD // 2
 
 def draw(draw_info):
-    draw_info.window.fill()
-    
+    draw_info.window.fill(draw_info.BACKGROUND_COLOR)
+    pygame.display.update()
+
 
 
 def generate_starting_list(n, min_val, max_val):
@@ -66,6 +67,8 @@ def main():
     #game loop
     while run:
         clock.tick(60)
+
+        draw(draw_info)
 
         pygame.display.update()
 
