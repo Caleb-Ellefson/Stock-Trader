@@ -10,6 +10,8 @@ class DrawInformation:
     GRAY = 128, 128, 128
     BACKGROUND_COLOR = WHITE
 
+    SIDE_PAD = 100
+
     #Pygame window
     def __init__(self, width, height, lst):
         self.width = width
@@ -25,4 +27,5 @@ class DrawInformation:
         self.lst = lst
         self.min_val = min(lst)
         self.max_val = max(lst)
-        
+
+        self.pixel_width = (self.width - self.SIDE_PAD) / len(lst)
