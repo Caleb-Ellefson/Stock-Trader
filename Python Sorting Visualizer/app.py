@@ -11,6 +11,7 @@ class DrawInformation:
     BACKGROUND_COLOR = WHITE
 
     SIDE_PAD = 100
+    TOP_PAD = 150
 
     #Pygame window
     def __init__(self, width, height, lst):
@@ -28,6 +29,11 @@ class DrawInformation:
         self.min_val = min(lst)
         self.max_val = max(lst)
 
-        self.pixel_width = (self.width - self.SIDE_PAD) / len(lst)
+        #Find width of each bar
+        self.block_width = round((self.width - self.SIDE_PAD) / len(lst))
+        #Find the height of each bar                              Find number of vals in array
+        self.block_height = round((self.height - self.TOP_PAD) / (self.max_val - self.min_val))
 
-        
+
+
+
