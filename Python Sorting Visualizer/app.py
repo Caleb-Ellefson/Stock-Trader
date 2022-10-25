@@ -29,3 +29,5 @@ class DrawInformation:
         self.max_val = max(lst)
 
         self.pixel_width = (self.width - self.SIDE_PAD) / len(lst)
+
+        
