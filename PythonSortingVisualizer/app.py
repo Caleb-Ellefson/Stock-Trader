@@ -18,7 +18,7 @@ class DrawInformation:
         self.width = width
         self.height = height
 
-        #create the pygame window
+        #create the pygame windowpi
         self.window = pygame.display.set_mode((width, height))
         pygame.display.set_caption("Sorting Algroith Visualization")
         self.set_list(lst)
@@ -44,7 +44,6 @@ def draw(draw_info):
 
 def generate_starting_list(n, min_val, max_val):
     lst = []
-
     #generate list
     for _ in range(n):
         #random int including max and min val

@@ -5,6 +5,7 @@
     "cs50.ddb50",
     "cs50.extension-uninstaller",
     "cs50.lab50",
+    "cs50.markdown50",
     "cs50.vscode-presentation-mode",
     "ms-python.python",
     "ms-vscode.cpptools",
@@ -15,13 +16,14 @@
     "vscjava.vscode-java-debug",
     "vsls-contrib.gitdoc"
   ],
-  "image": "ghcr.io/cs50/codespace:700a75850b6e2fca70217f9a0e42197e909c84d4",
+  "image": "ghcr.io/cs50/codespace:ac8d1a02b14ac4394e28e586b6de0602fed1cef7",
   "postCreateCommand": "/opt/cs50/bin/postCreateCommand",
   "settings": {
     "C_Cpp.autocomplete": "Disabled",
     "C_Cpp.codeFolding": "Disabled",
     "C_Cpp.debugShortcut": false,
     "C_Cpp.dimInactiveRegions": false,
+    "C_Cpp.doxygen.generateOnType": false,
     "C_Cpp.enhancedColorization": "Enabled",
     "C_Cpp.errorSquiggles": "Disabled",
     "breadcrumbs.enabled": false,
