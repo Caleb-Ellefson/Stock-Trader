@@ -39,6 +39,7 @@ function generateBars(noBar=60){
 
 document.getElementById("newarr").addEventListener("click",function(){
     (arrsizer.value);
+    generateBars()
     enableSortingBtn();
     enableSizeSlider();
 });
