@@ -27,7 +27,7 @@ function generateBars(noBar=60){
 
 const divs=document.querySelector('#bar');
 
-for(let x=0; x<noBar; x++)
+for(let x=0; x < noBar; x++)
     {
         const temp=document.createElement("div");
         temp.classList.add('sort');
