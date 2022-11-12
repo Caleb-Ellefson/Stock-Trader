@@ -1,6 +1,6 @@
 
 // Finding Size of Array
-let arrsizer=document.querySelector('#size');
+let arrsizer = document.querySelector('#size');
 arrsizer.addEventListener('input', function(){
     generateBars(parseInt(arrsizer.value))});
 generateBars();
