@@ -1,7 +1,7 @@
 // Finding Size of Array
 let arrsizer = document.querySelector('#size');
 if(arrsizer){
-    
+
 }
 arrsizer.addEventListener('input', function(){
     generateBars(parseInt(arrsizer.value))});
@@ -9,7 +9,7 @@ generateBars();
 
 // Finding Sorting Speed
 let time=100;
-let sortspeed=document.quertSelector('#speed');
+let sortspeed=document.querySelector('#speed');
 sortspeed.addEventListener('input', function(){
     time=245-parseInt(sortspeed.value);
 })
@@ -19,9 +19,9 @@ sortspeed.addEventListener('input', function(){
 function generateBars(noBar=60){
     document.getElementById("bar").innerHTML='';
     let bars=[];
-    for(let i=0; i<noBar; i++)
+    for(let i=0; i< noBar; i++)
     {
-        bar.push(Math.floor(Math.random()*400)+1);
+        bars.push(Math.floor(Math.random()*400)+1);
     }
 }
 
