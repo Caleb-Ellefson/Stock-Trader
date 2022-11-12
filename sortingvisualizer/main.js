@@ -77,7 +77,7 @@ function disableSizeSlider(){
 }
 
 function enableSizeSlider(){
-    //document.getElementById("sizer").disabled = false;
+    document.getElementById("sizer").disabled = false;
 }
 
 
