@@ -73,11 +73,11 @@ function enableSortingBtn(){
 }
 
 function disableSizeSlider(){
-    document.getElementById("sizer").disabled = true;
+    document.getElementById("size").disabled = true;
 }
 
 function enableSizeSlider(){
-    document.getElementById("sizer").disabled = false;
+    document.getElementById("size").disabled = false;
 }
 
 
