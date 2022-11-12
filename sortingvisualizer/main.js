@@ -35,7 +35,7 @@ for(let x=0; x<noBar; x++)
     }
 
 document.getElementById("newarr").addEventListener("click",function(){
-    generateBars(arrsizer.value);
+    (arrsizer.value);
     enableSortingBtn();
     enableSizeSlider();
 });
@@ -91,7 +91,7 @@ function bubble (){
 
             if(parseInt(ele[j].style.height) > parseInt(ele[j+1].style.height))
             {
-                await delay(time);
+                delay(time);
                 swap(ele[j], ele[j+1]);
             }
 
