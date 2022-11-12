@@ -17,12 +17,11 @@
   color: red;
   display: flex;
   justify-content: center;
-  height: 400px;
   flex-direction: row;
   padding: 20px 30px 0px 10px;
 }
 
-.baritem {
+.Baritem {
   background: yellow;
   border: 1.25px solid blue;
   width: 0.75%;
