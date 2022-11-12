@@ -1,6 +1,6 @@
 
 // Finding Size of Array
-let arrsize=document.querySelector('#sizer');
+let arrsizer=document.querySelector('#sizer');
 arrsizer.addEventListener('input', function(){
     generatebars(parseInt(arrsizer.value))});
 generatebars();
@@ -81,7 +81,7 @@ function enableSizeSlider(){
 function bubble (){
 
     const ele=document.querySelectorAll(".sort");
-    
+
     for (let i=0; i<ele.length-1; i++)
     {
         for (j=0; j<ele.length-1-i; j++)
