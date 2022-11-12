@@ -78,6 +78,7 @@ function enableSizeSlider(){
 }
 
 
+
 function bubble (){
 
     const ele=document.querySelectorAll(".sort");
