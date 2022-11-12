@@ -1,4 +1,3 @@
-
 // Finding Size of Array
 let arrsizer = document.querySelector('#size');
 arrsizer.addEventListener('input', function(){
