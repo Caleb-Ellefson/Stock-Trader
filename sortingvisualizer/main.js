@@ -105,11 +105,12 @@ function bubble (){
         }
         ele[0].style.background='green';
     }
-    document.getElementById('bubble').addEventListener("click", function(){
-        disableSizeSlider();
-        disableSortingBtn();
-        bubble();
-        enableSizeSlider();
-        enableSortingBtn();
-    });
 }
+
+document.getElementById('bubble').addEventListener("click", function(){
+    disableSizeSlider();
+    disableSortingBtn();
+    bubble();
+    enableSizeSlider();
+    enableSortingBtn();
+});
