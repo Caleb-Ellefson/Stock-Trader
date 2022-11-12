@@ -23,8 +23,8 @@ async function selection(){
         }
         await delay(time);
         swap(ele[i],ele[x]);
-        ele[x].style.background='yellow';
-        ele[i].style.background='green';
+        ele[x].style.background='gray';
+        ele[i].style.background='gray';
     }
     }
     document.getElementById("selection").addEventListener('click', async function(){
