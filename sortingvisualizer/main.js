@@ -39,3 +39,39 @@ document.getElementById("newarr").addEventListener("click",function(){
     enableSortingBtn();
     enableSizeSlider();
 });
+
+function swap(ele1, ele2)
+{
+    let temp=ele1.style.height;
+    ele1.style.height=ele2.style.height;
+    ele2.style.height=temp;
+}
+
+function delay(milisec) {
+    return new Promise(resolve => {
+        setTimeout(() => { resolve('') }, milisec);
+    })
+}
+
+function disableSortingBtn(){
+    document.querySelector("#bubble").disabled = true;
+    document.querySelector("#insertion").disabled = true;
+    document.querySelector("#merge").disabled = true;
+    document.querySelector("#quick").disabled = true;
+    document.querySelector("#selection").disabled = true;
+}
+
+function enableSortingBtn(){
+    document.querySelector("#bubble").disabled = false;
+    document.querySelector("#insertion").disabled = false;
+    document.querySelector("#merge").disabled = false;
+    document.querySelector("#quick").disabled = false;
+    document.querySelector("#selection").disabled = false;
+}
+
+function disableSizeSlider(){
+    document.getElementById("sizer").disabled = true;
+}
+
+function enableSizeSlider(){
+    document.getElementById("sizer").disabled = false;
