@@ -23,11 +23,11 @@ function generateBars(noBar=60){
     {
         bars.push(Math.floor(Math.random()*400)+1);
     }
-}
 
-const divs=document.querySelector('#bar');
 
-for(let x=0; x < noBar; x++)
+    const divs=document.querySelector('#bar');
+
+    for(let x=0; x < noBar; x++)
     {
         const temp=document.createElement("div");
         temp.classList.add('sort');
@@ -35,6 +35,7 @@ for(let x=0; x < noBar; x++)
         temp.style.height=bars[x]+"px";
         divs.append(temp);
     }
+}
 
 document.getElementById("newarr").addEventListener("click",function(){
     (arrsizer.value);
