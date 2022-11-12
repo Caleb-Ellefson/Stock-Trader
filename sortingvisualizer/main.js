@@ -11,3 +11,7 @@ let sortspeed=document.quertSelector('#speed');
 sortspeed.addEventListener('input', function(){
     time=245-parseInt(sortspeed.value);
 })
+
+
+// Generate bars
+function generatebars()
