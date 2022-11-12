@@ -13,29 +13,29 @@
         <h1 class="title"> Sorting Visualizer </h1>
         <div class="flex-container">
             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-secondary">Randomize Array</button>
-                </div>
                 <span style="font-size: large; color: white;">
-                    Size:<input id="speed" type="range" min=10 max=240 step=1 value=100>
+                    Size:  <input class="btn-group" id="speed" type="range" min=10 max=240 step=1 value=100>
+                </span>
+                <span style="font-size: large; color: white;">
+                    Speed: <input class="btn-group" id="speed" type="range" min=10 max=240 step=1 value=100>
                 </span>
                 <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-secondary">Insertion Sort</button>
+                    <button id="newarr" type="button" class="btn btn-secondary">Randomize Array</button>
                 </div>
                 <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-secondary">Selection Sort</button>
+                    <button id="insertion" type="button" class="btn btn-secondary">Insertion Sort</button>
                 </div>
                 <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-secondary">Bubble Sort</button>
+                    <button id="selection" type="button" class="btn btn-secondary">Selection Sort</button>
                 </div>
                 <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-secondary">Quick Sort</button>
+                    <button id="bubble" type="button" class="btn btn-secondary">Bubble Sort</button>
                 </div>
                 <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-secondary">Merge Sort</button>
+                    <button id="quick" type="button" class="btn btn-secondary">Quick Sort</button>
                 </div>
                 <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-secondary">Shell Sort</button>
+                    <button id="merge" type="button" class="btn btn-secondary">Merge Sort</button>
                 </div>
             </div>
         </div>
