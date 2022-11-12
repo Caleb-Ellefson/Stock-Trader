@@ -14,4 +14,11 @@ sortspeed.addEventListener('input', function(){
 
 
 // Generate bars
-function generatebars()
+function generatebars(noBar=60){
+    document.getElementById("bar").innerHTML='';
+    let bars=[];
+    for(let i=0; i<noBar; i++)
+    {
+        bar.push()
+    }
+}
