@@ -75,3 +75,4 @@ function disableSizeSlider(){
 
 function enableSizeSlider(){
     document.getElementById("sizer").disabled = false;
+}
