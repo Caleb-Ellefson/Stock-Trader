@@ -15,8 +15,8 @@ async function bubble(){
                 swap(ele[j], ele[j+1]);
             }
 
-            ele[j].style.background='yellow';
-            ele[j+1].style.background='yellow';
+            ele[j].style.background='gray';
+            ele[j+1].style.background='gray';
         }
 
         ele[ele.length-i-1].style.background='green';
