@@ -19,6 +19,6 @@ function generatebars(noBar=60){
     let bars=[];
     for(let i=0; i<noBar; i++)
     {
-        bar.push()
+        bar.push(Math.floor(Math.random()*400)+1);
     }
 }
