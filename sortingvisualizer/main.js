@@ -96,7 +96,7 @@ function bubble (){
 
             if(parseInt(ele[j].style.height) > parseInt(ele[j+1].style.height))
             {
-                delay(time);
+                delay(sortspeed);
                 swap(ele[j], ele[j+1]);
             }
 
