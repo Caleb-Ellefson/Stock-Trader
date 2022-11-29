@@ -3,7 +3,7 @@ import memesData from "../memesData.js";
 
 function generate(){
     let num = Math.floor(Math.random() * 100);
-    
+    data[num[]]
 }
 
 
