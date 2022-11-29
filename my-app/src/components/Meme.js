@@ -3,8 +3,10 @@ import memesData from "../memesData.js";
 
 function generate(){
     const memeArray = memesData.data.memes
-    let num = Math.floor(Math.random() * memesArray.length);
-    const url = memesArray[randomNumber].url
+    const num = Math.floor(Math.random() * memesArray.length);
+    last_num = num
+
+    const url = memeArray[randomNumber].url
 }
 
 
