@@ -4,7 +4,7 @@ import memesData from "../memesData.js";
 function generate(){
     const memeArray = memesData.data.memes
     let num = Math.floor(Math.random() * memesArray.length);
-    
+    const url = memesArray[randomNumber].url
 }
 
 
@@ -14,7 +14,13 @@ export default function Meme () {
             <div className="form">
                 <input className="meme--input" type="text" placeholder="Top text" />
                 <input className="meme--input" type="text" placeholder="Bottom text" />
-                <button  className="meme--button"> Get a new meme image 🖼️</button>
+
+                <button
+                onClick={generate}
+                className="meme--button">
+                Get a new meme image 🖼️
+                </button>
+
             </div>
         </main>
     )
