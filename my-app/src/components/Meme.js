@@ -1,6 +1,10 @@
 import React from 'react';
 import memesData from "../memesData.js";
 
+function generate(){
+    
+}
+
 
 export default function Meme () {
     return(
