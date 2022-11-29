@@ -63,10 +63,18 @@ body {
     display: grid;
     grid-template: 40px 40px / 1fr 1fr;
     gap: 17px;
+    padding: 36px;
 }
 
 .meme--input {
+    text-indent: 5px;
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 14px;
 
+    color: #0D0D0D;
 }
 
 .meme--button {
