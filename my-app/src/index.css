@@ -1,3 +1,23 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+
 body {
 
 }
+
+.Nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav--logo {
+    display: flex;
+    height: 24px;
+    width: 30px;
+    margin-left: 20;
+    margin-top: 20;
+}
+
