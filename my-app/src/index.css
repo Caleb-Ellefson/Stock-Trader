@@ -44,4 +44,15 @@ body {
 
 .nav--course {
     margin-right: 40px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 15px;
+    text-align: right;
+
+    color: #FFFFFF;
+
+
 }
