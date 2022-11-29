@@ -5,6 +5,10 @@ function generate(){
     const memeArray = memesData.data.memes
     const num = Math.floor(Math.random() * memesArray.length);
     last_num = num
+    if last_num === num;
+        const num = Math.floor(Math.random() * memesArray.length);
+    
+
 
     const url = memeArray[randomNumber].url
 }
