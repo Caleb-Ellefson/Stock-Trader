@@ -13,19 +13,32 @@ body {
     justify-content: center;
     width: 100%vw;
     height: 65px;
-    margin-top: 20px;
     align-items: center;
+
+
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
 }
 
 .nav--logo {
     display: flex;
-    height: 24px;
-    width: 30px;
+    height: 30px;
     margin-left: 20px;
     margin-right: 10px;
+    max-width: 100%;
+
 }
 
 .nav--title {
     margin-right: auto;
+
+
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25.7482px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+
+    color: #FFFFFF;
 }
 
