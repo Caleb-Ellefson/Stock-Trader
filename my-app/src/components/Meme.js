@@ -3,14 +3,9 @@ import memesData from "../memesData.js";
 
 function generate(){
     const memeArray = memesData.data.memes
-    const num = Math.floor(Math.random() * memesArray.length);
-    last_num = num
-    if last_num === num;
-        const num = Math.floor(Math.random() * memesArray.length);
-    
-
-
-    const url = memeArray[randomNumber].url
+    let num = Math.floor(Math.random() * memeArray.length);
+    const url = memeArray[num].url
+    console.log(url)
 }
 
 
