@@ -2,7 +2,8 @@ import React from 'react';
 import memesData from "../memesData.js";
 
 function generate(){
-    let num = Math.floor(Math.random() * 100);
+    const memeArray = memesData.data.memes
+    let num = Math.floor(Math.random() * memesArray.length);
     data[num[]]
 }
 
