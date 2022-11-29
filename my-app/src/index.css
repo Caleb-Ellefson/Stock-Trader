@@ -73,10 +73,24 @@ body {
     font-weight: 500;
     font-size: 15px;
     line-height: 14px;
+    border-radius: 5px;
 
     color: #0D0D0D;
 }
 
 .meme--button {
     grid-column: 1/-1;
+    border-radius: 5px;
+
+    background:
+        linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+
+    font-size: 15px;
+
+    font-family: 'Karla';
+    font-style: normal;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
 }
