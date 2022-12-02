@@ -6,7 +6,7 @@ import memesData from "../memesData.js";
 function generate(){
     const memeArray = memesData.data.memes
     let num = Math.floor(Math.random() * memeArray.length);
-    const url = memeArray[num].url
+    funcconst url = memeArray[num].url
     console.log(url)
 }
 
@@ -29,7 +29,7 @@ export default function Meme () {
             </div>
 
             <div>
-                <img className="meme--image" src="{Image}" alt="meme" />
+                <img className="meme--image" src="${Image}" alt="meme" />
             </div>
         </main>
     )
