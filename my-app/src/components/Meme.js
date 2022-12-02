@@ -23,6 +23,10 @@ export default function Meme () {
                 </button>
 
             </div>
+
+            <div>
+                
+            </div>
         </main>
     )
 }
