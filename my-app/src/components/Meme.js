@@ -30,10 +30,8 @@ export default function Meme () {
                 </button>
 
             </div>
-
-            <div>
                 <img className="meme--image" src={Image} alt="meme" />
-            </div>
+
         </main>
     )
 }
