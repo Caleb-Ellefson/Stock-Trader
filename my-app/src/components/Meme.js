@@ -6,7 +6,7 @@ import memesData from "../memesData.js";
 
 
 export default function Meme () {
-    const [image, current_meme] = React.useState(memesArray[randomNumber].url)
+    const [Image, current_meme] = React.useState("Image")
 
     function generate() {
         const memesArray = memesData.data.memes
