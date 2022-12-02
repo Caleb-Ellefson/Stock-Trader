@@ -97,6 +97,9 @@ body {
 
 
 .meme--image {
-    margin-left: 35px;
-    margin-right: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 500px;
+    padding: 1rem;
 }
