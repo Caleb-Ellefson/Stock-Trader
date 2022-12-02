@@ -1,6 +1,8 @@
 import React from 'react';
 import memesData from "../memesData.js";
 
+
+
 function generate(){
     const memeArray = memesData.data.memes
     let num = Math.floor(Math.random() * memeArray.length);
@@ -25,7 +27,7 @@ export default function Meme () {
             </div>
 
             <div>
-                
+                <img src="{}
             </div>
         </main>
     )
