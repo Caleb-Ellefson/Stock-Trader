@@ -8,6 +8,10 @@ body {
 
 }
 
+main {
+    padding: 36px;
+}
+
 .Nav {
     display: flex;
     justify-content: center;
