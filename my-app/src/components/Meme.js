@@ -11,7 +11,8 @@ export default function Meme () {
     function generate() {
         const memesArray = memesData.data.memes
         const randomNumber = Math.floor(Math.random() * memesArray.length)
-        current_meme(memesArray[randomNumber].url)
+        current_meme(old => old = (memesArray[randomNumber].url))
+        console.log(current_meme)
 
     }
 
@@ -30,7 +31,7 @@ export default function Meme () {
             </div>
 
             <div>
-                <img className="meme--image" src="${Image}" alt="meme" />
+                <img className="meme--image" src={Image} alt="meme" />
             </div>
         </main>
     )
