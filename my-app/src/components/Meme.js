@@ -6,13 +6,13 @@ import memesData from "../memesData.js";
 function generate(){
     const memeArray = memesData.data.memes
     let num = Math.floor(Math.random() * memeArray.length);
-    funcconst url = memeArray[num].url
+    current_meme(const url = memeArray[num].url)
     console.log(url)
 }
 
 
 export default function Meme () {
-    const [isImportant, func] = React.useState("Image")
+    const [isImportant, current_meme] = React.useState("Image")
 
     return(
         <main className="meme">
