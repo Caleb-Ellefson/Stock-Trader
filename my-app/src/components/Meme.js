@@ -8,11 +8,11 @@ import memesData from "../memesData.js";
 export default function Meme () {
     const [isImportant, current_meme] = React.useState("Image")
 
-    function generate(){
-        const memeArray = memesData.data.memes
-        let num = Math.floor(Math.random() * memeArray.length);
-        current_meme(const url = memeArray[num].url)
-        console.log(url)
+    function generate() {
+        const memesArray = memesData.data.memes
+        const randomNumber = Math.floor(Math.random() * memesArray.length)
+        current_meme(memesArray[randomNumber].url)
+
     }
 
     return(
