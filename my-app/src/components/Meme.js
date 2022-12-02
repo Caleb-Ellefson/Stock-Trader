@@ -12,6 +12,8 @@ function generate(){
 
 
 export default function Meme () {
+    const [isImportant, func] = React.useState("Image")
+
     return(
         <main className="meme">
             <div className="form">
@@ -27,7 +29,7 @@ export default function Meme () {
             </div>
 
             <div>
-                <img src="{}
+                <img className="meme--image" src="{Image}" alt="meme" />
             </div>
         </main>
     )
