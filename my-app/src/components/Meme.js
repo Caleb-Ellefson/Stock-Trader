@@ -7,6 +7,14 @@ const memesArray = memesData.data.memes
 const randomNumber = Math.floor(Math.random() * memesArray.length)
 
 export default function Meme () {
+    const [meme, setMeme] = react.useState({
+        topText: "",
+        bottomText "",
+        randomImage:"http://i.imgflip.com/1bij.jpg"
+    })
+
+    const [allMemeImages, setMemeImages] = react.useState(memesArray)
+
     const [Image, current_meme] = React.useState(memesArray[randomNumber].url)
 
     function generate() {
