@@ -9,7 +9,7 @@ const randomNumber = Math.floor(Math.random() * memesArray.length)
 export default function Meme () {
     const [meme, setMeme] = react.useState({
         topText: "",
-        bottomText "",
+        bottomText: "",
         randomImage:"http://i.imgflip.com/1bij.jpg"
     })
 
@@ -41,7 +41,7 @@ export default function Meme () {
                 </button>
 
             </div>
-                <img className="meme--image" src={Image} alt="meme" />
+                <img className="meme--image" src={meme.randomImage} alt="meme" />
 
         </main>
     )
