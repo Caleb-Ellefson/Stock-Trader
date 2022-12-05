@@ -20,8 +20,11 @@ export default function Meme () {
     function generate() {
         const memesArray = memesData.data.memes
         const randomNumber = Math.floor(Math.random() * memesArray.length)
-        current_meme(old => old = (memesArray[randomNumber].url))
-        console.log(current_meme)
+        const url = memesArray[randomNumber].url
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            randomImage: url
+        }))
 
     }
 
