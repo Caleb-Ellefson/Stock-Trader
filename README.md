@@ -42,21 +42,6 @@ Don't forget to give the project a star! Thanks again!
 
 
 
-
-<!-- CONTACT -->
-## Contact
-
-Caleb Ellefson - [MyWebsite]((https://caleb-ellefson.com/)) 
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
