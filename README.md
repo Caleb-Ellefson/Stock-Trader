@@ -46,7 +46,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Caleb Ellefson - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Caleb Ellefson - [MyWebsite]((https://caleb-ellefson.com/)) 
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
